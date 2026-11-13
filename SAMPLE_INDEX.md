@@ -1,8 +1,9 @@
-# Danh mục input scanner
+# Scanner Input Catalog / Danh mục input scanner
 
-100 source snapshot gồm 100 mẫu SIM. Admission lấy từ benchmark-manifest.json, không suy từ tên thư mục.
+> **English:** 100 source snapshots comprising 100 SIM samples. Admission is drawn from `benchmark-manifest.json`, not inferred from folder names.  
+> **Tiếng Việt:** 100 source snapshot gồm 100 mẫu SIM. Admission lấy từ `benchmark-manifest.json`, không suy từ tên thư mục.
 
-| ID | Nhãn đề xuất | Cơ chế quan sát tĩnh | Admission | Source | Evidence |
+| ID | Proposed Label / Nhãn đề xuất | Observed Mechanism / Cơ chế quan sát tĩnh | Admission | Source | Evidence |
 |---|---|---|---|---|---|
 | SIM001 | malicious | persisted_tool_contract_mismatch | accepted_review_record | [folder](samples/SIM001/) | [static](evaluation/static-evidence/SIM001.json) |
 | SIM002 | malicious | persisted_tool_contract_mismatch | accepted_review_record | [folder](samples/SIM002/) | [static](evaluation/static-evidence/SIM002.json) |

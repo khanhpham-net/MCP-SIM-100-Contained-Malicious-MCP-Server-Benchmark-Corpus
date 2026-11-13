@@ -1,7 +1,7 @@
 {
   "schema_version": "3.0",
   "scope": "Snapshot-bound review and benchmark admission",
-  "static_audit_sha256": "20482d831ff73e68b1ebaac4bc8fbd1f698413580c780713f058e558beba68bf",
+  "static_audit_sha256": "1f8c763ff08c78afadcc1e9313ba5b6d221ba1bc6506cf4e9659044b0d738f03",
   "reviews_sha256": "78e12098f2c6861b5f55b4931034f943332ecc58bcde624d9624a36e708648e2",
   "readiness": {
     "total": 100,

@@ -1,8 +1,9 @@
-# Hồ sơ 100 mẫu SIM
+# SIM-100 Sample Index / Hồ sơ 100 mẫu SIM
 
-Nhãn đề xuất, bằng chứng tĩnh và admission được ghi riêng. Bảng này không khẳng định hành vi runtime mới đã thành công.
+> **English:** Proposed labels, static evidence, and admission statuses are recorded independently. This table does not assert runtime behavior success.  
+> **Tiếng Việt:** Nhãn đề xuất, bằng chứng tĩnh và admission được ghi riêng. Bảng này không khẳng định hành vi runtime mới đã thành công.
 
-| SIM | Họ | Nhóm chia tập | Cơ chế SIM đọc từ source | Evidence |
+| SIM | Family / Họ | Split Group / Nhóm chia tập | Observed Mechanism / Cơ chế SIM đọc từ source | Evidence |
 |---|---|---|---|---|
 | [SIM001](samples/SIM001/) | M01 | GROUP01 | persisted_tool_contract_mismatch | [static](evaluation/static-evidence/SIM001.json) |
 | [SIM002](samples/SIM002/) | M01 | GROUP01 | persisted_tool_contract_mismatch | [static](evaluation/static-evidence/SIM002.json) |

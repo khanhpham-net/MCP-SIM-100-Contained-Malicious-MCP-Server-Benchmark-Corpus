@@ -163,8 +163,10 @@ def prepare(root=ROOT):
                             "malware_metrics": "MALICIOUS_COHORT_READY_FOR_EVALUATION" if admitted["malicious"] > 0 else "NOT_READY",
                             "external_scanners": "NOT_RUN_BY_THIS_PIPELINE"}, "samples": records}
     write_json(root / "benchmark-manifest.json", result)
-    lines = ["# Hồ sơ 100 mẫu SIM", "", "Nhãn đề xuất, bằng chứng tĩnh và admission được ghi riêng. Bảng này không khẳng định hành vi runtime mới đã thành công.", "",
-             "| SIM | Họ | Nhóm chia tập | Cơ chế SIM đọc từ source | Evidence |",
+    lines = ["# SIM-100 Sample Index / Hồ sơ 100 mẫu SIM", "",
+             "> **English:** Proposed labels, static evidence, and admission statuses are recorded independently. This table does not assert runtime behavior success.  ",
+             "> **Tiếng Việt:** Nhãn đề xuất, bằng chứng tĩnh và admission được ghi riêng. Bảng này không khẳng định hành vi runtime mới đã thành công.", "",
+             "| SIM | Family / Họ | Split Group / Nhóm chia tập | Observed Mechanism / Cơ chế SIM đọc từ source | Evidence |",
              "|---|---|---|---|---|"]
     for item in records:
         if item["sample_id"].startswith("SIM"):

@@ -15,8 +15,10 @@ def create(root=ROOT):
         if any(r.get("status") != "NOT_SCANNED" or r.get("prediction") is not None or r.get("raw_output")
                for r in previous.get("runs", [])):
             raise ValueError("Existing file contains results; preserve it before regenerating the template")
-    lines = ["# Danh mục input scanner", "", "100 source snapshot gồm 100 mẫu SIM. Admission lấy từ benchmark-manifest.json, không suy từ tên thư mục.", "",
-             "| ID | Nhãn đề xuất | Cơ chế quan sát tĩnh | Admission | Source | Evidence |",
+    lines = ["# Scanner Input Catalog / Danh mục input scanner", "",
+             "> **English:** 100 source snapshots comprising 100 SIM samples. Admission is drawn from `benchmark-manifest.json`, not inferred from folder names.  ",
+             "> **Tiếng Việt:** 100 source snapshot gồm 100 mẫu SIM. Admission lấy từ `benchmark-manifest.json`, không suy từ tên thư mục.", "",
+             "| ID | Proposed Label / Nhãn đề xuất | Observed Mechanism / Cơ chế quan sát tĩnh | Admission | Source | Evidence |",
              "|---|---|---|---|---|---|"]
     routes = []
     for sample in manifest["samples"]:
