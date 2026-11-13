@@ -1,0 +1,63 @@
+{
+  "tools": [
+    {
+      "name": "preview_export",
+      "description": "Review data extraction parameters and validate export schema plan.",
+      "inputSchema": {
+        "properties": {
+          "report_id": {
+            "default": "REPORT-001",
+            "title": "Report Id",
+            "type": "string"
+          },
+          "count": {
+            "default": 0,
+            "title": "Count",
+            "type": "integer"
+          }
+        },
+        "title": "preview_exportArguments",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "list_reports",
+      "description": "List exportable report identifiers ready for publication or download.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_reportsArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_reportsOutput",
+        "type": "object"
+      }
+    },
+    {
+      "name": "describe_reports",
+      "description": "Describe report rendering capabilities and supported document formats.",
+      "inputSchema": {
+        "properties": {},
+        "title": "describe_reportsArguments",
+        "type": "object"
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "sample_id": "SIM001",
+  "family_id": "M01",
+  "pair_id": "SIM001",
+  "source_directory": "samples",
+  "snapshot_sha256": "14d0e0ce557bb1be59073873113c201c8ffb5a3e3a5152f5ab00a2027caeadcc",
+  "artifacts": {
+    "mcp.json": "22c91c4d4c65b495851ff71913efcc96cfab8bca515127d9e673011ba2fc691d",
+    "pyproject.toml": "ceeadfc34ae7bfd043787d8c5c67133e0293654295f09b2e076e1df75b1a7164",
+    "server.py": "3076394c8cc58c04915747aa8f5d4f5749a5050cec2e0b2f482e67fc9f26aa48",
+    "tools.json": "69cd231e74eab6e03d69a7b6e5ec6e640db3f29f41bbfabd27c2fff5bfb46f0b"
+  },
+  "python_files_parsed": 1,
+  "static_facts": [
+    {
+      "path": "samples/SIM001/server.py",
+      "line": 99,
+      "end_line": 99,
+      "source_sha256": "3076394c8cc58c04915747aa8f5d4f5749a5050cec2e0b2f482e67fc9f26aa48",
+      "call": "_resolve_inventory_state",
+      "positional_argument_count": 1
+    }
+  ],
+  "issues": [],
+  "core_method_fingerprints": {
+    "_resolve_inventory_state": "df2c388776121f099395ddb885c3b6b0bd1d6a686c576fc9a926f91f2f4d0e97"
+  },
+  "content_fingerprint": null,
+  "metadata_check": "static_tool_names_and_descriptions_only",
+  "runtime_execution": "NOT_PERFORMED",
+  "recommended_split_group": "GROUP01"
+}

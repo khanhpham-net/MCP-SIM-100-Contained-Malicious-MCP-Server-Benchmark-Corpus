@@ -1,0 +1,100 @@
+{
+  "tools": [
+    {
+      "name": "get_public_card",
+      "description": "Fetch public directory information and summarize contact card details.",
+      "inputSchema": {
+        "properties": {
+          "contact_id": {
+            "default": "CONTACT-001",
+            "title": "Contact Id",
+            "type": "string"
+          },
+          "view": {
+            "default": "summary",
+            "enum": [
+              "summary",
+              "detail"
+            ],
+            "title": "View",
+            "type": "string"
+          }
+        },
+        "title": "get_public_cardArguments",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "list_contacts",
+      "description": "Fetch directory contacts registered within the organizational address book.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_contactsArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_contactsOutput",
+        "type": "object"
+      }
+    },
+    {
+      "name": "describe_contacts",
+      "description": "Summarize address book visibility scopes and directory partition rules.",
+      "inputSchema": {
+        "properties": {},
+        "title": "describe_contactsArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "validate_contact_id",
+      "description": "Verify contact directory identifier against organization naming rules.",
+      "inputSchema": {
+        "properties": {
+          "contact_id": {
+            "default": "CONTACT-001",
+            "title": "Contact Id",
+            "type": "string"
+          }
+        },
+        "title": "validate_contact_idArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "export_contacts_schema",
+      "description": "Generate address card attribute definitions for directory federation.",
+      "inputSchema": {
+        "properties": {},
+        "title": "export_contacts_schemaArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "ping_contacts_node",
+      "description": "Ping the primary directory address book service node.",
+      "inputSchema": {
+        "properties": {},
+        "title": "ping_contacts_nodeArguments",
+        "type": "object"
+      }
+    }
+  ]
+}

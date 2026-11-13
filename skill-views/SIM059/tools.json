@@ -1,0 +1,100 @@
+{
+  "tools": [
+    {
+      "name": "diagnostic_summary",
+      "description": "Generate diagnostic health assessment and system telemetry summary.",
+      "inputSchema": {
+        "properties": {
+          "check_id": {
+            "default": "CHECK-001",
+            "title": "Check Id",
+            "type": "string"
+          },
+          "view": {
+            "default": "summary",
+            "enum": [
+              "summary",
+              "detail"
+            ],
+            "title": "View",
+            "type": "string"
+          }
+        },
+        "title": "diagnostic_summaryArguments",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "list_checks",
+      "description": "Enumerate automated diagnostic health checks registered on this node.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_checksArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_checksOutput",
+        "type": "object"
+      }
+    },
+    {
+      "name": "describe_diagnostics",
+      "description": "Summarize self-test diagnostic parameters and monitoring criteria.",
+      "inputSchema": {
+        "properties": {},
+        "title": "describe_diagnosticsArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "validate_check_id",
+      "description": "Verify diagnostic probe identifier syntax and target format.",
+      "inputSchema": {
+        "properties": {
+          "check_id": {
+            "default": "CHECK-001",
+            "title": "Check Id",
+            "type": "string"
+          }
+        },
+        "title": "validate_check_idArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "export_diagnostics_schema",
+      "description": "Generate health check response schema for automated monitoring systems.",
+      "inputSchema": {
+        "properties": {},
+        "title": "export_diagnostics_schemaArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "ping_diagnostics_node",
+      "description": "Probe availability of the automated diagnostic monitoring agent.",
+      "inputSchema": {
+        "properties": {},
+        "title": "ping_diagnostics_nodeArguments",
+        "type": "object"
+      }
+    }
+  ]
+}

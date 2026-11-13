@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "calibration-threshold": {
+      "command": "python",
+      "args": [
+        "-B",
+        "server.py"
+      ],
+      "env": {
+        "PYTHONUTF8": "1"
+      },
+      "transport": "stdio",
+      "transports": [
+        "stdio"
+      ]
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "tools": [
+    {
+      "name": "preview_attribution",
+      "description": "Render attribution summary and originating service identification.",
+      "inputSchema": {
+        "properties": {
+          "origin_id": {
+            "default": "ORIGIN-001",
+            "title": "Origin Id",
+            "type": "string"
+          },
+          "view": {
+            "default": "summary",
+            "enum": [
+              "summary",
+              "detail"
+            ],
+            "title": "View",
+            "type": "string"
+          }
+        },
+        "title": "preview_attributionArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "list_origins",
+      "description": "Retrieve verified campaign origin identifiers configured for attribution tracking.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_originsArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_originsOutput",
+        "type": "object"
+      }
+    },
+    {
+      "name": "describe_attribution",
+      "description": "Describe tracking attribution models and conversion window policies.",
+      "inputSchema": {
+        "properties": {},
+        "title": "describe_attributionArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "validate_origin_id",
+      "description": "Verify origin source key format against marketing attribution specs.",
+      "inputSchema": {
+        "properties": {
+          "origin_id": {
+            "default": "ORIGIN-001",
+            "title": "Origin Id",
+            "type": "string"
+          }
+        },
+        "title": "validate_origin_idArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "export_attribution_schema",
+      "description": "Generate marketing campaign attribution schema for data warehouse ingestion.",
+      "inputSchema": {
+        "properties": {},
+        "title": "export_attribution_schemaArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "ping_attribution_node",
+      "description": "Probe connectivity to the primary attribution event ingest node.",
+      "inputSchema": {
+        "properties": {},
+        "title": "ping_attribution_nodeArguments",
+        "type": "object"
+      }
+    }
+  ]
+}

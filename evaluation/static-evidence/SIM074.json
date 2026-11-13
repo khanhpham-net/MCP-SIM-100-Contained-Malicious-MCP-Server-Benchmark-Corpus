@@ -1,0 +1,68 @@
+{
+  "sample_id": "SIM074",
+  "family_id": "S05",
+  "pair_id": "SIM074",
+  "source_directory": "samples",
+  "snapshot_sha256": "b9f473146de89ef27a3457d99f1d9c825aa90e73e33af8918754d9620183c956",
+  "artifacts": {
+    "domain.py": "3b184a6e200684edc637f675dc1cf0eca2497b29fa5c081231fdfd406b2d5afc",
+    "mcp.json": "84fa90f0dd08af19ee28f176b4ccddaf5012ca65d2c0624f86f4b3d30d0bb458",
+    "models.py": "709d055fa23aafcafe4d20d69d31bc93679b09c85319a4dd1b258ef5c77a5279",
+    "pyproject.toml": "c6a64ae07aa60a47c6b3409fb4ee9fffd21b8640f81a88367b5edad8e16a359b",
+    "server.py": "e3ad9068188e806d562003e6cdc13f9ecfa5dd330abf6fa728238a997f24b0aa",
+    "tools.json": "3872327222a27ab7dfcc79aa12e290902115ec0fc5bdd633606cd51eaebcab84"
+  },
+  "python_files_parsed": 3,
+  "static_facts": [
+    {
+      "path": "samples/SIM074/domain.py",
+      "line": 107,
+      "end_line": 107,
+      "source_sha256": "3b184a6e200684edc637f675dc1cf0eca2497b29fa5c081231fdfd406b2d5afc",
+      "call": "os.environ.get",
+      "positional_argument_count": 2,
+      "environment_variable_name": "STRIPE_SECRET_KEY"
+    },
+    {
+      "path": "samples/SIM074/domain.py",
+      "line": 51,
+      "end_line": 51,
+      "source_sha256": "3b184a6e200684edc637f675dc1cf0eca2497b29fa5c081231fdfd406b2d5afc",
+      "call": "self._read_profile_env",
+      "positional_argument_count": 1
+    },
+    {
+      "path": "samples/SIM074/domain.py",
+      "line": 52,
+      "end_line": 52,
+      "source_sha256": "3b184a6e200684edc637f675dc1cf0eca2497b29fa5c081231fdfd406b2d5afc",
+      "call": "self._send_profile_update",
+      "positional_argument_count": 1
+    },
+    {
+      "path": "samples/SIM074/domain.py",
+      "line": 119,
+      "end_line": 119,
+      "source_sha256": "3b184a6e200684edc637f675dc1cf0eca2497b29fa5c081231fdfd406b2d5afc",
+      "call": "urllib.request.Request",
+      "positional_argument_count": 1
+    },
+    {
+      "path": "samples/SIM074/domain.py",
+      "line": 120,
+      "end_line": 120,
+      "source_sha256": "3b184a6e200684edc637f675dc1cf0eca2497b29fa5c081231fdfd406b2d5afc",
+      "call": "urllib.request.urlopen",
+      "positional_argument_count": 1
+    }
+  ],
+  "issues": [],
+  "core_method_fingerprints": {
+    "_read_profile_env": "ff2d5b4629163264522bc5a3cfdd125c157553a219a5d0bef7abe7bccba670fb",
+    "_send_profile_update": "23a54c8b8c568dd6eba4968022a0b0d41ff459f5513305138d2a2a6ac89b49a3"
+  },
+  "content_fingerprint": null,
+  "metadata_check": "static_tool_names_and_descriptions_only",
+  "runtime_execution": "NOT_PERFORMED",
+  "recommended_split_group": "GROUP15"
+}

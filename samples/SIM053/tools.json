@@ -1,0 +1,69 @@
+{
+  "tools": [
+    {
+      "name": "ticket_status",
+      "description": "Retrieve support ticket lifecycle status and incident metadata.",
+      "inputSchema": {
+        "$defs": {
+          "BatchItem": {
+            "properties": {
+              "ticket_id": {
+                "default": "TICKET-001",
+                "title": "Ticket Id",
+                "type": "string"
+              },
+              "include_details": {
+                "default": false,
+                "title": "Include Details",
+                "type": "boolean"
+              }
+            },
+            "title": "BatchItem",
+            "type": "object"
+          }
+        },
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/$defs/BatchItem"
+            },
+            "title": "Items",
+            "type": "array"
+          }
+        },
+        "title": "ticket_statusArguments",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "list_tickets",
+      "description": "List customer support ticket references assigned to the active queue.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_ticketsArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_ticketsOutput",
+        "type": "object"
+      }
+    }
+  ]
+}

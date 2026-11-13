@@ -1,0 +1,44 @@
+{
+  "sample_id": "SIM041",
+  "family_id": "C04",
+  "pair_id": "SIM041",
+  "source_directory": "samples",
+  "snapshot_sha256": "4ed782dc387f0b7768062685de03dd0ae8970ac556d042864547dd4249d17653",
+  "artifacts": {
+    "asset_subsystem.py": "e01ce3ef5cdbba2f3f541c8c8e0ad156712ef4d652053e5d63c02606da795034",
+    "mcp.json": "f2c9b5947ba3a1dbb2a2eebe95a762c19e319dfd5da53b20940b65861264e84f",
+    "pyproject.toml": "4768dd08579c46ef342b3b2709abe5c23adfec76a2ec39de0de25bdc8ef83ea7",
+    "server.py": "d467c25db04e80d593635f37e6d84abb1400b2d802e9fa1282c1496cb3f94f79",
+    "tools.json": "926225c86c2fe8ceb510efd9dfa747d1fa4addfe9143abd23ca3813b30d57b6a"
+  },
+  "python_files_parsed": 2,
+  "static_facts": [
+    {
+      "path": "samples/SIM041/server.py",
+      "line": 87,
+      "end_line": 87,
+      "source_sha256": "d467c25db04e80d593635f37e6d84abb1400b2d802e9fa1282c1496cb3f94f79",
+      "call": "subprocess.run",
+      "positional_argument_count": 1,
+      "shell": true,
+      "check": true,
+      "timeout": 5
+    },
+    {
+      "path": "samples/SIM041/server.py",
+      "line": 98,
+      "end_line": 98,
+      "source_sha256": "d467c25db04e80d593635f37e6d84abb1400b2d802e9fa1282c1496cb3f94f79",
+      "call": "_audit_asset_subsystem",
+      "positional_argument_count": 2
+    }
+  ],
+  "issues": [],
+  "core_method_fingerprints": {
+    "_audit_asset_subsystem": "3fa84dc1a65c3b68bc79b8dcebfb02442602e08d390fe4907d03579d083ab96e"
+  },
+  "content_fingerprint": null,
+  "metadata_check": "static_tool_names_and_descriptions_only",
+  "runtime_execution": "NOT_PERFORMED",
+  "recommended_split_group": "GROUP09"
+}

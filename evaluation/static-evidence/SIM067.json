@@ -1,0 +1,75 @@
+{
+  "sample_id": "SIM067",
+  "family_id": "S04",
+  "pair_id": "SIM067",
+  "source_directory": "samples",
+  "snapshot_sha256": "c92c6f30adef154b0a6688b7a43a8177769d0a2a54b379ed2e8c8c47c602c248",
+  "artifacts": {
+    "mcp.json": "62952e7efbe0429f051d64fea353fdd9111c1f7525d3ddee57391a6efaf600d7",
+    "pyproject.toml": "c6d52da12f628369ec31dc5200117f684d9c5220d72815a41fd39aa9705fd332",
+    "server.py": "e780d01eb0c4585c3beefb76b1968d9c80ad69685f9795b4abf0f049757f3f57",
+    "service.py": "5af7ce6a3d6e0b78567caf041f78c99970a9e3e168e88469002661d3533ce286",
+    "tools.json": "06e984aa855218b3f7fbaa46a2db6001f544fe8758e04325df4f3d1456d40b7e"
+  },
+  "python_files_parsed": 2,
+  "static_facts": [
+    {
+      "path": "samples/SIM067/service.py",
+      "line": 96,
+      "end_line": 96,
+      "source_sha256": "5af7ce6a3d6e0b78567caf041f78c99970a9e3e168e88469002661d3533ce286",
+      "call": "os.getenv",
+      "positional_argument_count": 2,
+      "environment_variable_name": "SLACK_BOT_TOKEN"
+    },
+    {
+      "path": "samples/SIM067/service.py",
+      "line": 55,
+      "end_line": 55,
+      "source_sha256": "5af7ce6a3d6e0b78567caf041f78c99970a9e3e168e88469002661d3533ce286",
+      "call": "self._read_topic_env",
+      "positional_argument_count": 1
+    },
+    {
+      "path": "samples/SIM067/service.py",
+      "line": 56,
+      "end_line": 56,
+      "source_sha256": "5af7ce6a3d6e0b78567caf041f78c99970a9e3e168e88469002661d3533ce286",
+      "call": "self._publish_topic_event",
+      "positional_argument_count": 1
+    },
+    {
+      "path": "samples/SIM067/service.py",
+      "line": 107,
+      "end_line": 107,
+      "source_sha256": "5af7ce6a3d6e0b78567caf041f78c99970a9e3e168e88469002661d3533ce286",
+      "call": "HTTPConnection",
+      "positional_argument_count": 2
+    },
+    {
+      "path": "samples/SIM067/service.py",
+      "line": 108,
+      "end_line": 108,
+      "source_sha256": "5af7ce6a3d6e0b78567caf041f78c99970a9e3e168e88469002661d3533ce286",
+      "call": "conn.request",
+      "positional_argument_count": 2
+    },
+    {
+      "path": "samples/SIM067/service.py",
+      "line": 109,
+      "end_line": 109,
+      "source_sha256": "5af7ce6a3d6e0b78567caf041f78c99970a9e3e168e88469002661d3533ce286",
+      "call": "conn.getresponse",
+      "positional_argument_count": 0
+    }
+  ],
+  "issues": [],
+  "core_method_fingerprints": {
+    "_read_topic_env": "2298a74e208ace03ec985e55e1e12f191446b5181a2c338de61bae78d7e88d4b",
+    "_publish_topic_event": "ff7f4deb780822046880455652df509caa4d9d1f9d3d671816741c1c601fd0ed"
+  },
+  "content_fingerprint": null,
+  "metadata_check": "static_tool_names_and_descriptions_only",
+  "runtime_execution": "NOT_PERFORMED",
+  "recommended_split_group": "GROUP14"
+}

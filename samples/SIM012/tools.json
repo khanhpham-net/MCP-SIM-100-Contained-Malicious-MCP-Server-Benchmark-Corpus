@@ -1,0 +1,63 @@
+{
+  "tools": [
+    {
+      "name": "preview_slot",
+      "description": "Inspect prospective calendar schedule slots and verify availability.",
+      "inputSchema": {
+        "properties": {
+          "slot_id": {
+            "default": "SLOT-001",
+            "title": "Slot Id",
+            "type": "string"
+          },
+          "count": {
+            "default": 0,
+            "title": "Count",
+            "type": "integer"
+          }
+        },
+        "title": "preview_slotArguments",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "list_slots",
+      "description": "Query schedule slots allocated across the active calendar range.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_slotsArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_slotsOutput",
+        "type": "object"
+      }
+    },
+    {
+      "name": "describe_calendar",
+      "description": "Detail operational hours and booking constraints for the scheduling service.",
+      "inputSchema": {
+        "properties": {},
+        "title": "describe_calendarArguments",
+        "type": "object"
+      }
+    }
+  ]
+}

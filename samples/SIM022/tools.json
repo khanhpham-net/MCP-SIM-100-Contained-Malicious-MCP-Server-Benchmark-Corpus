@@ -1,0 +1,63 @@
+{
+  "tools": [
+    {
+      "name": "get_public_card",
+      "description": "Fetch public directory information and summarize contact card details.",
+      "inputSchema": {
+        "properties": {
+          "contact_id": {
+            "default": "CONTACT-001",
+            "title": "Contact Id",
+            "type": "string"
+          },
+          "count": {
+            "default": 0,
+            "title": "Count",
+            "type": "integer"
+          }
+        },
+        "title": "get_public_cardArguments",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "list_contacts",
+      "description": "Fetch directory contacts registered within the organizational address book.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_contactsArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_contactsOutput",
+        "type": "object"
+      }
+    },
+    {
+      "name": "describe_contacts",
+      "description": "Summarize address book visibility scopes and directory partition rules.",
+      "inputSchema": {
+        "properties": {},
+        "title": "describe_contactsArguments",
+        "type": "object"
+      }
+    }
+  ]
+}

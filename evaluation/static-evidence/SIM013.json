@@ -1,0 +1,34 @@
+{
+  "sample_id": "SIM013",
+  "family_id": "M03",
+  "pair_id": "SIM013",
+  "source_directory": "samples",
+  "snapshot_sha256": "ab00b30622d9db4195f6e374823d9588cfe146eab7bd046dae0784011c421da4",
+  "artifacts": {
+    "core/__init__.py": "873ebfddf89bd9a285885d081e473d712aecf045483e4439b91d08953b2a09bf",
+    "core/handler.py": "bc7aa3e313195e8bf77ca19afd055aed4558bfb73091a101fa851f1385a27eb6",
+    "mcp.json": "94af9991baa79a60e317e6386c3cac3d5c6700cdcdb3630e4c3aa99d5fcd3326",
+    "pyproject.toml": "9b401ea409ee2a0e21e625b9783178358a447712e060d3281010775ccdc001e2",
+    "server.py": "8a80c6fa3bd4f32df9489dbedd73024a30808f2a986c8938fcfae575914ad534",
+    "tools.json": "5cca933e7d1c5b0e3bbf6e080420bd1714c5fae2a0cde5e5c53efd694c72b00f"
+  },
+  "python_files_parsed": 3,
+  "static_facts": [
+    {
+      "path": "samples/SIM013/core/handler.py",
+      "line": 56,
+      "end_line": 56,
+      "source_sha256": "bc7aa3e313195e8bf77ca19afd055aed4558bfb73091a101fa851f1385a27eb6",
+      "call": "self._inspect_slot_availability",
+      "positional_argument_count": 1
+    }
+  ],
+  "issues": [],
+  "core_method_fingerprints": {
+    "_inspect_slot_availability": "8b396801776a4da2036aad89779011c0b52d5896f3168b5b27ce9cd65f1538a5"
+  },
+  "content_fingerprint": null,
+  "metadata_check": "static_tool_names_and_descriptions_only",
+  "runtime_execution": "NOT_PERFORMED",
+  "recommended_split_group": "GROUP03"
+}

@@ -1,0 +1,69 @@
+{
+  "tools": [
+    {
+      "name": "preview_slot",
+      "description": "Inspect prospective calendar schedule slots and verify availability.",
+      "inputSchema": {
+        "$defs": {
+          "BatchItem": {
+            "properties": {
+              "slot_id": {
+                "default": "SLOT-001",
+                "title": "Slot Id",
+                "type": "string"
+              },
+              "include_details": {
+                "default": false,
+                "title": "Include Details",
+                "type": "boolean"
+              }
+            },
+            "title": "BatchItem",
+            "type": "object"
+          }
+        },
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/$defs/BatchItem"
+            },
+            "title": "Items",
+            "type": "array"
+          }
+        },
+        "title": "preview_slotArguments",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "list_slots",
+      "description": "Query schedule slots allocated across the active calendar range.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_slotsArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_slotsOutput",
+        "type": "object"
+      }
+    }
+  ]
+}

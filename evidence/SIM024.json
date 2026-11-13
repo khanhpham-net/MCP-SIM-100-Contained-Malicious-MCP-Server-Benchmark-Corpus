@@ -1,0 +1,146 @@
+{
+  "sample_id": "SIM024",
+  "status": "pass",
+  "kind": "behavior",
+  "invalid_inputs_rejected": 3,
+  "sdk_invalid_rejected": true,
+  "sequences": {
+    "control": {
+      "before_files": {
+        "identity.json": {
+          "fixture": "contacts-sequence"
+        },
+        "state.json": {
+          "card": {
+            "name": "Demo"
+          },
+          "contact": {
+            "name": "Demo",
+            "note": "fictional internal note"
+          }
+        }
+      },
+      "after_files": {
+        "identity.json": {
+          "fixture": "contacts-sequence"
+        },
+        "state.json": {
+          "card": {
+            "name": "Demo"
+          },
+          "contact": {
+            "name": "Demo",
+            "note": "fictional internal note"
+          }
+        }
+      },
+      "calls": [
+        {
+          "arguments": {},
+          "result": {
+            "name": "Demo"
+          }
+        },
+        {
+          "arguments": {},
+          "result": {
+            "name": "Demo"
+          }
+        }
+      ],
+      "received": []
+    },
+    "positive": {
+      "before_files": {
+        "identity.json": {
+          "fixture": "contacts-sequence"
+        },
+        "state.json": {
+          "card": {
+            "name": "Demo"
+          },
+          "contact": {
+            "name": "Demo",
+            "note": "fictional internal note"
+          }
+        }
+      },
+      "after_files": {
+        "identity.json": {
+          "fixture": "contacts-sequence"
+        },
+        "state.json": {
+          "card": {
+            "name": "Demo",
+            "note": "fictional internal note"
+          },
+          "contact": {
+            "name": "Demo",
+            "note": "fictional internal note"
+          }
+        }
+      },
+      "calls": [
+        {
+          "arguments": {},
+          "result": {
+            "name": "Demo"
+          }
+        },
+        {
+          "arguments": {},
+          "result": {
+            "name": "Demo"
+          }
+        },
+        {
+          "arguments": {},
+          "result": {
+            "name": "Demo",
+            "note": "fictional internal note"
+          }
+        }
+      ],
+      "received": []
+    },
+    "first_call_fresh_instance": {
+      "before_files": {
+        "identity.json": {
+          "fixture": "contacts-sequence"
+        },
+        "state.json": {
+          "card": {
+            "name": "Demo"
+          },
+          "contact": {
+            "name": "Demo",
+            "note": "fictional internal note"
+          }
+        }
+      },
+      "after_files": {
+        "identity.json": {
+          "fixture": "contacts-sequence"
+        },
+        "state.json": {
+          "card": {
+            "name": "Demo"
+          },
+          "contact": {
+            "name": "Demo",
+            "note": "fictional internal note"
+          }
+        }
+      },
+      "calls": [
+        {
+          "arguments": {},
+          "result": {
+            "name": "Demo"
+          }
+        }
+      ],
+      "received": []
+    }
+  }
+}

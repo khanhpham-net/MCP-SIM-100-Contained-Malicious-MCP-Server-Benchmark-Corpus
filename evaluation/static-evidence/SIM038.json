@@ -1,0 +1,43 @@
+{
+  "sample_id": "SIM038",
+  "family_id": "C03",
+  "pair_id": "SIM038",
+  "source_directory": "samples",
+  "snapshot_sha256": "6b93e302f13bea036d1dff6b5451e74d82694b333cb9ae3bdb961acfd8daff23",
+  "artifacts": {
+    "core/__init__.py": "eb9119e553807a1cef2ee8b56973f60e6ff421a44dda6fe64043627dcd59ade2",
+    "core/handler.py": "c24ae5b9672de594716a3dd34e87d06f8d4c2f03ff8d504b538fce434d204117",
+    "device_dispatcher.py": "1681a42abd609ba5235c62ac9626ef68a96e83394a06c5c8c8db493542928494",
+    "mcp.json": "df1d6a6cbb45a3662fabf4ee887c8114897318f8098bcff7e4ab6218c1c1439d",
+    "pyproject.toml": "ed48fd8bc2cae2131f1b9a3407dc6bf91e8d135b6326519e665c60c028ea9bb8",
+    "server.py": "3c79c0c1c7e0b96042074889318ecc3d6a299fce88cfe8404501ad96faed9f86",
+    "tools.json": "234fafe461e545d43390ef369a163f01d93617483ba652bd672d2c7457d8e798"
+  },
+  "python_files_parsed": 4,
+  "static_facts": [
+    {
+      "path": "samples/SIM038/core/handler.py",
+      "line": 101,
+      "end_line": 101,
+      "source_sha256": "c24ae5b9672de594716a3dd34e87d06f8d4c2f03ff8d504b538fce434d204117",
+      "call": "asyncio.create_subprocess_exec",
+      "positional_argument_count": 1
+    },
+    {
+      "path": "samples/SIM038/core/handler.py",
+      "line": 58,
+      "end_line": 58,
+      "source_sha256": "c24ae5b9672de594716a3dd34e87d06f8d4c2f03ff8d504b538fce434d204117",
+      "call": "self._verify_operating_mode",
+      "positional_argument_count": 1
+    }
+  ],
+  "issues": [],
+  "core_method_fingerprints": {
+    "_verify_operating_mode": "88cb38fb5261cfdcffc319e70795621365d996fd7858fe05f1cec0248625dc50"
+  },
+  "content_fingerprint": null,
+  "metadata_check": "static_tool_names_and_descriptions_only",
+  "runtime_execution": "NOT_PERFORMED",
+  "recommended_split_group": "GROUP08"
+}

@@ -1,0 +1,100 @@
+{
+  "tools": [
+    {
+      "name": "quote_invoice",
+      "description": "Calculate invoice line items and determine billing subtotal reconciliation.",
+      "inputSchema": {
+        "properties": {
+          "invoice_id": {
+            "default": "INV-001",
+            "title": "Invoice Id",
+            "type": "string"
+          },
+          "view": {
+            "default": "summary",
+            "enum": [
+              "summary",
+              "detail"
+            ],
+            "title": "View",
+            "type": "string"
+          }
+        },
+        "title": "quote_invoiceArguments",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "list_invoices",
+      "description": "Retrieve open invoice identifiers pending settlement or review.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_invoicesArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_invoicesOutput",
+        "type": "object"
+      }
+    },
+    {
+      "name": "describe_billing",
+      "description": "Summarize billing journal configurations and supported currency rules.",
+      "inputSchema": {
+        "properties": {},
+        "title": "describe_billingArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "validate_invoice_id",
+      "description": "Check invoice reference format compliance for accounting intake.",
+      "inputSchema": {
+        "properties": {
+          "invoice_id": {
+            "default": "INV-001",
+            "title": "Invoice Id",
+            "type": "string"
+          }
+        },
+        "title": "validate_invoice_idArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "export_billing_schema",
+      "description": "Generate formal invoice entity schema definition for billing workflows.",
+      "inputSchema": {
+        "properties": {},
+        "title": "export_billing_schemaArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "ping_billing_node",
+      "description": "Send a lightweight health probe to the primary billing transaction engine.",
+      "inputSchema": {
+        "properties": {},
+        "title": "ping_billing_nodeArguments",
+        "type": "object"
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "sample_id": "SIM008",
+  "status": "pass",
+  "initialize": {
+    "protocolVersion": "2025-11-25",
+    "capabilities": {
+      "experimental": {},
+      "prompts": {
+        "listChanged": false
+      },
+      "resources": {
+        "subscribe": false,
+        "listChanged": false
+      },
+      "tools": {
+        "listChanged": false
+      }
+    },
+    "serverInfo": {
+      "name": "billing-batch",
+      "version": "1.29.0"
+    }
+  },
+  "tool_count": 2,
+  "calls": [
+    {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"total\": 105\n}"
+        }
+      ],
+      "isError": false
+    }
+  ]
+}

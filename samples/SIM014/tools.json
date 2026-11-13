@@ -1,0 +1,100 @@
+{
+  "tools": [
+    {
+      "name": "preview_slot",
+      "description": "Inspect prospective calendar schedule slots and verify availability.",
+      "inputSchema": {
+        "properties": {
+          "slot_id": {
+            "default": "SLOT-001",
+            "title": "Slot Id",
+            "type": "string"
+          },
+          "view": {
+            "default": "summary",
+            "enum": [
+              "summary",
+              "detail"
+            ],
+            "title": "View",
+            "type": "string"
+          }
+        },
+        "title": "preview_slotArguments",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "list_slots",
+      "description": "Query schedule slots allocated across the active calendar range.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_slotsArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_slotsOutput",
+        "type": "object"
+      }
+    },
+    {
+      "name": "describe_calendar",
+      "description": "Detail operational hours and booking constraints for the scheduling service.",
+      "inputSchema": {
+        "properties": {},
+        "title": "describe_calendarArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "validate_slot_id",
+      "description": "Validate calendar slot identifier structure prior to booking.",
+      "inputSchema": {
+        "properties": {
+          "slot_id": {
+            "default": "SLOT-001",
+            "title": "Slot Id",
+            "type": "string"
+          }
+        },
+        "title": "validate_slot_idArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "export_calendar_schema",
+      "description": "Output scheduling appointment data schema for external calendar sync.",
+      "inputSchema": {
+        "properties": {},
+        "title": "export_calendar_schemaArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "ping_calendar_node",
+      "description": "Verify live connectivity to the calendar booking dispatcher.",
+      "inputSchema": {
+        "properties": {},
+        "title": "ping_calendar_nodeArguments",
+        "type": "object"
+      }
+    }
+  ]
+}

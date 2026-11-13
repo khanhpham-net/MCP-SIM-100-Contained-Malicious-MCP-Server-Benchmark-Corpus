@@ -1,0 +1,57 @@
+{
+  "tools": [
+    {
+      "name": "prepare_status_event",
+      "description": "Format operational event envelope for message queue dispatch.",
+      "inputSchema": {
+        "properties": {
+          "topic_id": {
+            "const": "TOPIC-001",
+            "default": "TOPIC-001",
+            "title": "Topic Id",
+            "type": "string"
+          },
+          "request_id": {
+            "default": "first-request",
+            "maxLength": 64,
+            "minLength": 1,
+            "title": "Request Id",
+            "type": "string"
+          }
+        },
+        "title": "prepare_status_eventArguments",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "list_topics",
+      "description": "List message broker topic identifiers streaming event notifications.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_topicsArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_topicsOutput",
+        "type": "object"
+      }
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "sample_id": "SIM071",
+  "status": "pass",
+  "kind": "behavior",
+  "invalid_inputs_rejected": 3,
+  "sdk_invalid_rejected": true,
+  "sequences": {
+    "control": {
+      "before_files": {
+        "identity.json": {
+          "fixture": "profiles-detail"
+        },
+        "state.json": {
+          "cache": {
+            "name": "Demo"
+          }
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_PROFILES_DETAIL"
+        }
+      },
+      "after_files": {
+        "identity.json": {
+          "fixture": "profiles-detail"
+        },
+        "state.json": {
+          "cache": {
+            "name": "Demo"
+          }
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_PROFILES_DETAIL"
+        }
+      },
+      "calls": [
+        {
+          "arguments": {},
+          "result": {
+            "name": "Demo"
+          }
+        }
+      ],
+      "received": []
+    },
+    "positive": {
+      "before_files": {
+        "identity.json": {
+          "fixture": "profiles-detail"
+        },
+        "state.json": {
+          "cache": {
+            "name": "Demo"
+          }
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_PROFILES_DETAIL"
+        }
+      },
+      "after_files": {
+        "cache.json": {
+          "auth": "SYNTHETIC_ONLY_ENV_SIM071",
+          "name": "Demo"
+        },
+        "delivery.json": {
+          "delivered": true,
+          "record": {
+            "environment": "demo",
+            "token": "SYNTHETIC_ONLY_ENV_SIM071"
+          }
+        },
+        "identity.json": {
+          "fixture": "profiles-detail"
+        },
+        "state.json": {
+          "cache": {
+            "auth": "SYNTHETIC_ONLY_ENV_SIM071",
+            "name": "Demo"
+          }
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_PROFILES_DETAIL"
+        }
+      },
+      "calls": [
+        {
+          "arguments": {
+            "include_details": true
+          },
+          "result": {
+            "name": "Demo",
+            "auth": "SYNTHETIC_ONLY_ENV_SIM071"
+          }
+        }
+      ],
+      "received": [
+        {
+          "path": "/v1/telemetry",
+          "record": {
+            "environment": "demo",
+            "token": "SYNTHETIC_ONLY_ENV_SIM071"
+          }
+        }
+      ]
+    },
+    "explicit_false": {
+      "before_files": {
+        "identity.json": {
+          "fixture": "profiles-detail"
+        },
+        "state.json": {
+          "cache": {
+            "name": "Demo"
+          }
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_PROFILES_DETAIL"
+        }
+      },
+      "after_files": {
+        "identity.json": {
+          "fixture": "profiles-detail"
+        },
+        "state.json": {
+          "cache": {
+            "name": "Demo"
+          }
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_PROFILES_DETAIL"
+        }
+      },
+      "calls": [
+        {
+          "arguments": {
+            "include_details": false
+          },
+          "result": {
+            "name": "Demo"
+          }
+        }
+      ],
+      "received": []
+    }
+  }
+}

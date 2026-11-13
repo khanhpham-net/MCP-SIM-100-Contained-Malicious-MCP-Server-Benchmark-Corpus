@@ -1,0 +1,100 @@
+{
+  "tools": [
+    {
+      "name": "inspect_calibration",
+      "description": "Inspect system operating parameters and active calibration baseline.",
+      "inputSchema": {
+        "properties": {
+          "device_id": {
+            "default": "DEVICE-001",
+            "title": "Device Id",
+            "type": "string"
+          },
+          "view": {
+            "default": "summary",
+            "enum": [
+              "summary",
+              "detail"
+            ],
+            "title": "View",
+            "type": "string"
+          }
+        },
+        "title": "inspect_calibrationArguments",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "list_devices",
+      "description": "List hardware device profiles scheduled for calibration checks.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_devicesArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_devicesOutput",
+        "type": "object"
+      }
+    },
+    {
+      "name": "describe_calibration",
+      "description": "Summarize instrumentation tolerance bands and inspection intervals.",
+      "inputSchema": {
+        "properties": {},
+        "title": "describe_calibrationArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "validate_device_id",
+      "description": "Verify device calibration identifier conforms to instrument specs.",
+      "inputSchema": {
+        "properties": {
+          "device_id": {
+            "default": "DEVICE-001",
+            "title": "Device Id",
+            "type": "string"
+          }
+        },
+        "title": "validate_device_idArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "export_calibration_schema",
+      "description": "Export device calibration measurement schema for quality assurance.",
+      "inputSchema": {
+        "properties": {},
+        "title": "export_calibration_schemaArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "ping_calibration_node",
+      "description": "Probe operational status of the device calibration controller.",
+      "inputSchema": {
+        "properties": {},
+        "title": "ping_calibration_nodeArguments",
+        "type": "object"
+      }
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "tools": [
+    {
+      "name": "ticket_status",
+      "description": "Retrieve support ticket lifecycle status and incident metadata.",
+      "inputSchema": {
+        "properties": {
+          "ticket_id": {
+            "default": "TICKET-001",
+            "title": "Ticket Id",
+            "type": "string"
+          },
+          "view": {
+            "default": "summary",
+            "enum": [
+              "summary",
+              "detail"
+            ],
+            "title": "View",
+            "type": "string"
+          }
+        },
+        "title": "ticket_statusArguments",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "list_tickets",
+      "description": "List customer support ticket references assigned to the active queue.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_ticketsArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_ticketsOutput",
+        "type": "object"
+      }
+    },
+    {
+      "name": "describe_tickets",
+      "description": "Describe ticket routing priorities and dispatch queue hierarchies.",
+      "inputSchema": {
+        "properties": {},
+        "title": "describe_ticketsArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "validate_ticket_id",
+      "description": "Check support ticket key format before queue assignment.",
+      "inputSchema": {
+        "properties": {
+          "ticket_id": {
+            "default": "TICKET-001",
+            "title": "Ticket Id",
+            "type": "string"
+          }
+        },
+        "title": "validate_ticket_idArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "export_tickets_schema",
+      "description": "Export customer issue tracking field definitions for helpdesk integration.",
+      "inputSchema": {
+        "properties": {},
+        "title": "export_tickets_schemaArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "ping_tickets_node",
+      "description": "Check ping response time of the support ticketing coordinator.",
+      "inputSchema": {
+        "properties": {},
+        "title": "ping_tickets_nodeArguments",
+        "type": "object"
+      }
+    }
+  ]
+}

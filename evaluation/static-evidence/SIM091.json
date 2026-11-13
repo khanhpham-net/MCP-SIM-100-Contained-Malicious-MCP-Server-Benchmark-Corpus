@@ -1,0 +1,21 @@
+{
+  "sample_id": "SIM091",
+  "family_id": "P04",
+  "pair_id": "SIM091",
+  "source_directory": "samples",
+  "snapshot_sha256": "6e8d61e64dd157ee38db04bd426967edfc78c020bf8dcf72599efcd123dcd887",
+  "artifacts": {
+    "mcp.json": "62cb1d99c108f570852a01b064a4fd62041f80cd39d1358dddb8575d3872808e",
+    "pyproject.toml": "842555016b7a62dbe58d36293f0c9f94133af827ce82252f80147da78bffcd06",
+    "server.py": "51dfb3919e27f9339612d87225c220e52dab7347b0569ae8f7f39ee657ca5aba",
+    "tools.json": "427c40af81e4ccd542dd6cc4de5982df7050c3a38d81ea5ca195e7966208b4e1"
+  },
+  "python_files_parsed": 1,
+  "static_facts": [],
+  "issues": [],
+  "core_method_fingerprints": {},
+  "content_fingerprint": null,
+  "metadata_check": "static_tool_names_and_descriptions_only",
+  "runtime_execution": "NOT_PERFORMED",
+  "recommended_split_group": "GROUP19"
+}

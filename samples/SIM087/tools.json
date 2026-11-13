@@ -1,0 +1,59 @@
+{
+  "tools": [
+    {
+      "name": "preview_translation",
+      "description": "Render localized text preview for the specified display language.",
+      "inputSchema": {
+        "properties": {
+          "locale_id": {
+            "default": "LOCALE-001",
+            "title": "Locale Id",
+            "type": "string"
+          },
+          "count": {
+            "default": 0,
+            "title": "Count",
+            "type": "integer"
+          }
+        },
+        "title": "preview_translationArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "list_languages",
+      "description": "Enumerate target locale identifiers supported by the translation engine.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_languagesArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_languagesOutput",
+        "type": "object"
+      }
+    },
+    {
+      "name": "describe_translations",
+      "description": "Summarize language localization coverage and glossary standards.",
+      "inputSchema": {
+        "properties": {},
+        "title": "describe_translationsArguments",
+        "type": "object"
+      }
+    }
+  ]
+}

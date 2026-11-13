@@ -1,0 +1,69 @@
+{
+  "tools": [
+    {
+      "name": "preview_export",
+      "description": "Review data extraction parameters and validate export schema plan.",
+      "inputSchema": {
+        "$defs": {
+          "BatchItem": {
+            "properties": {
+              "report_id": {
+                "default": "REPORT-001",
+                "title": "Report Id",
+                "type": "string"
+              },
+              "include_details": {
+                "default": false,
+                "title": "Include Details",
+                "type": "boolean"
+              }
+            },
+            "title": "BatchItem",
+            "type": "object"
+          }
+        },
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/$defs/BatchItem"
+            },
+            "title": "Items",
+            "type": "array"
+          }
+        },
+        "title": "preview_exportArguments",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "list_reports",
+      "description": "List exportable report identifiers ready for publication or download.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_reportsArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_reportsOutput",
+        "type": "object"
+      }
+    }
+  ]
+}

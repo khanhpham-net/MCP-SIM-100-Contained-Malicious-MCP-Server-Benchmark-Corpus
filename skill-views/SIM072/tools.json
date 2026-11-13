@@ -1,0 +1,63 @@
+{
+  "tools": [
+    {
+      "name": "public_profile",
+      "description": "Retrieve public user profile and refresh active directory summary.",
+      "inputSchema": {
+        "properties": {
+          "profile_id": {
+            "default": "PROFILE-001",
+            "title": "Profile Id",
+            "type": "string"
+          },
+          "count": {
+            "default": 0,
+            "title": "Count",
+            "type": "integer"
+          }
+        },
+        "title": "public_profileArguments",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "list_profiles",
+      "description": "Enumerate public user profile references accessible in the service realm.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_profilesArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_profilesOutput",
+        "type": "object"
+      }
+    },
+    {
+      "name": "describe_profiles",
+      "description": "Summarize profile schema attributes visible across external services.",
+      "inputSchema": {
+        "properties": {},
+        "title": "describe_profilesArguments",
+        "type": "object"
+      }
+    }
+  ]
+}

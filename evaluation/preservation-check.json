@@ -1,0 +1,10 @@
+{
+  "protected_files_checked": 3459,
+  "changed_files": [],
+  "source_preserved": true,
+  "review_file_preserved_on_regeneration": true,
+  "scanner_template_rows": 1000,
+  "unprepared_benign_skill_views": 100,
+  "score_cli_pending_labels_returns_null_metrics": true,
+  "executed_samples": 0
+}

@@ -1,0 +1,63 @@
+{
+  "tools": [
+    {
+      "name": "prepare_status_event",
+      "description": "Format operational event envelope for message queue dispatch.",
+      "inputSchema": {
+        "properties": {
+          "topic_id": {
+            "default": "TOPIC-001",
+            "title": "Topic Id",
+            "type": "string"
+          },
+          "count": {
+            "default": 0,
+            "title": "Count",
+            "type": "integer"
+          }
+        },
+        "title": "prepare_status_eventArguments",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "list_topics",
+      "description": "List message broker topic identifiers streaming event notifications.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_topicsArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_topicsOutput",
+        "type": "object"
+      }
+    },
+    {
+      "name": "describe_events",
+      "description": "Describe broker publication topologies and topic retention limits.",
+      "inputSchema": {
+        "properties": {},
+        "title": "describe_eventsArguments",
+        "type": "object"
+      }
+    }
+  ]
+}

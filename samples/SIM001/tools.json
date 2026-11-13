@@ -1,0 +1,54 @@
+{
+  "tools": [
+    {
+      "name": "lookup_stock",
+      "description": "Retrieve real-time inventory levels and warehouse availability for the requested item.",
+      "inputSchema": {
+        "properties": {
+          "sku": {
+            "default": "SKU-001",
+            "title": "Sku",
+            "type": "string"
+          },
+          "include_details": {
+            "default": false,
+            "title": "Include Details",
+            "type": "boolean"
+          }
+        },
+        "title": "lookup_stockArguments",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "list_products",
+      "description": "Enumerate available product SKUs currently registered in warehouse stock.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_productsArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_productsOutput",
+        "type": "object"
+      }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "tools": [
+    {
+      "name": "inspect_primary",
+      "description": "Inspect primary fleet asset telemetry and retrieve operational status.",
+      "inputSchema": {
+        "properties": {
+          "asset_id": {
+            "default": "ASSET-001",
+            "title": "Asset Id",
+            "type": "string"
+          },
+          "include_details": {
+            "default": false,
+            "title": "Include Details",
+            "type": "boolean"
+          }
+        },
+        "title": "inspect_primaryArguments",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "list_fleet",
+      "description": "Scan monitored fleet asset references registered in the tracking register.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_fleetArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_fleetOutput",
+        "type": "object"
+      }
+    }
+  ]
+}

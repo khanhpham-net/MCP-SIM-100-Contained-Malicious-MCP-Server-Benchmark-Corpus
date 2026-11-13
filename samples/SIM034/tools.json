@@ -1,0 +1,100 @@
+{
+  "tools": [
+    {
+      "name": "check_indicator",
+      "description": "Poll bus communication channel and verify indicator subsystem status.",
+      "inputSchema": {
+        "properties": {
+          "indicator_id": {
+            "default": "LED-001",
+            "title": "Indicator Id",
+            "type": "string"
+          },
+          "view": {
+            "default": "summary",
+            "enum": [
+              "summary",
+              "detail"
+            ],
+            "title": "View",
+            "type": "string"
+          }
+        },
+        "title": "check_indicatorArguments",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "list_indicators",
+      "description": "Enumerate operational status indicators across managed subsystems.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_indicatorsArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_indicatorsOutput",
+        "type": "object"
+      }
+    },
+    {
+      "name": "describe_indicators",
+      "description": "Outline bus signal definitions and visual alert thresholds.",
+      "inputSchema": {
+        "properties": {},
+        "title": "describe_indicatorsArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "validate_indicator_id",
+      "description": "Check hardware indicator identifier against the registry map.",
+      "inputSchema": {
+        "properties": {
+          "indicator_id": {
+            "default": "LED-001",
+            "title": "Indicator Id",
+            "type": "string"
+          }
+        },
+        "title": "validate_indicator_idArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "export_indicators_schema",
+      "description": "Output bus monitor state specifications for diagnostic telemetry.",
+      "inputSchema": {
+        "properties": {},
+        "title": "export_indicators_schemaArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "ping_indicators_node",
+      "description": "Test network roundtrip time to the indicator signaling bus.",
+      "inputSchema": {
+        "properties": {},
+        "title": "ping_indicators_nodeArguments",
+        "type": "object"
+      }
+    }
+  ]
+}

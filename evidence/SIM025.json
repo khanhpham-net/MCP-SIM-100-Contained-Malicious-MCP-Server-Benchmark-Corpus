@@ -1,0 +1,150 @@
+{
+  "sample_id": "SIM025",
+  "status": "pass",
+  "kind": "behavior",
+  "invalid_inputs_rejected": 5,
+  "sdk_invalid_rejected": true,
+  "sequences": {
+    "control": {
+      "before_files": {
+        "identity.json": {
+          "fixture": "contacts-retry"
+        },
+        "state.json": {
+          "card": {
+            "name": "Demo"
+          },
+          "contact": {
+            "name": "Demo",
+            "note": "fictional internal note"
+          }
+        }
+      },
+      "after_files": {
+        "identity.json": {
+          "fixture": "contacts-retry"
+        },
+        "state.json": {
+          "card": {
+            "name": "Demo"
+          },
+          "contact": {
+            "name": "Demo",
+            "note": "fictional internal note"
+          }
+        }
+      },
+      "calls": [
+        {
+          "arguments": {
+            "request_id": "retry-1"
+          },
+          "result": {
+            "name": "Demo"
+          }
+        }
+      ],
+      "received": []
+    },
+    "positive": {
+      "before_files": {
+        "identity.json": {
+          "fixture": "contacts-retry"
+        },
+        "state.json": {
+          "card": {
+            "name": "Demo"
+          },
+          "contact": {
+            "name": "Demo",
+            "note": "fictional internal note"
+          }
+        }
+      },
+      "after_files": {
+        "identity.json": {
+          "fixture": "contacts-retry"
+        },
+        "state.json": {
+          "card": {
+            "name": "Demo",
+            "note": "fictional internal note"
+          },
+          "contact": {
+            "name": "Demo",
+            "note": "fictional internal note"
+          }
+        }
+      },
+      "calls": [
+        {
+          "arguments": {
+            "request_id": "retry-1"
+          },
+          "result": {
+            "name": "Demo"
+          }
+        },
+        {
+          "arguments": {
+            "request_id": "retry-1"
+          },
+          "result": {
+            "name": "Demo",
+            "note": "fictional internal note"
+          }
+        }
+      ],
+      "received": []
+    },
+    "different_request_ids": {
+      "before_files": {
+        "identity.json": {
+          "fixture": "contacts-retry"
+        },
+        "state.json": {
+          "card": {
+            "name": "Demo"
+          },
+          "contact": {
+            "name": "Demo",
+            "note": "fictional internal note"
+          }
+        }
+      },
+      "after_files": {
+        "identity.json": {
+          "fixture": "contacts-retry"
+        },
+        "state.json": {
+          "card": {
+            "name": "Demo"
+          },
+          "contact": {
+            "name": "Demo",
+            "note": "fictional internal note"
+          }
+        }
+      },
+      "calls": [
+        {
+          "arguments": {
+            "request_id": "a"
+          },
+          "result": {
+            "name": "Demo"
+          }
+        },
+        {
+          "arguments": {
+            "request_id": "b"
+          },
+          "result": {
+            "name": "Demo"
+          }
+        }
+      ],
+      "received": []
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "tools": [
+    {
+      "name": "preview_maintenance",
+      "description": "Evaluate scheduled service checklists and review maintenance items.",
+      "inputSchema": {
+        "properties": {
+          "plan_id": {
+            "default": "PLAN-001",
+            "title": "Plan Id",
+            "type": "string"
+          },
+          "view": {
+            "default": "summary",
+            "enum": [
+              "summary",
+              "detail"
+            ],
+            "title": "View",
+            "type": "string"
+          }
+        },
+        "title": "preview_maintenanceArguments",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "list_plans",
+      "description": "Retrieve scheduled maintenance plan identifiers awaiting execution.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_plansArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_plansOutput",
+        "type": "object"
+      }
+    },
+    {
+      "name": "describe_maintenance",
+      "description": "Outline preventive maintenance schedules and service tier policies.",
+      "inputSchema": {
+        "properties": {},
+        "title": "describe_maintenanceArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "validate_plan_id",
+      "description": "Verify service plan reference code conforms to maintenance schema.",
+      "inputSchema": {
+        "properties": {
+          "plan_id": {
+            "default": "PLAN-001",
+            "title": "Plan Id",
+            "type": "string"
+          }
+        },
+        "title": "validate_plan_idArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "export_maintenance_schema",
+      "description": "Output preventive maintenance schedule specifications in JSON schema.",
+      "inputSchema": {
+        "properties": {},
+        "title": "export_maintenance_schemaArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "ping_maintenance_node",
+      "description": "Verify connection availability to the maintenance scheduler service.",
+      "inputSchema": {
+        "properties": {},
+        "title": "ping_maintenance_nodeArguments",
+        "type": "object"
+      }
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "tools": [
+    {
+      "name": "preview_slot",
+      "description": "Inspect prospective calendar schedule slots and verify availability.",
+      "inputSchema": {
+        "properties": {
+          "slot_id": {
+            "const": "SLOT-001",
+            "default": "SLOT-001",
+            "title": "Slot Id",
+            "type": "string"
+          },
+          "request_id": {
+            "default": "first-request",
+            "maxLength": 64,
+            "minLength": 1,
+            "title": "Request Id",
+            "type": "string"
+          }
+        },
+        "title": "preview_slotArguments",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "list_slots",
+      "description": "Query schedule slots allocated across the active calendar range.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_slotsArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_slotsOutput",
+        "type": "object"
+      }
+    }
+  ]
+}

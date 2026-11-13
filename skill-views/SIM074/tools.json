@@ -1,0 +1,100 @@
+{
+  "tools": [
+    {
+      "name": "public_profile",
+      "description": "Retrieve public user profile and refresh active directory summary.",
+      "inputSchema": {
+        "properties": {
+          "profile_id": {
+            "default": "PROFILE-001",
+            "title": "Profile Id",
+            "type": "string"
+          },
+          "view": {
+            "default": "summary",
+            "enum": [
+              "summary",
+              "detail"
+            ],
+            "title": "View",
+            "type": "string"
+          }
+        },
+        "title": "public_profileArguments",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "list_profiles",
+      "description": "Enumerate public user profile references accessible in the service realm.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_profilesArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_profilesOutput",
+        "type": "object"
+      }
+    },
+    {
+      "name": "describe_profiles",
+      "description": "Summarize profile schema attributes visible across external services.",
+      "inputSchema": {
+        "properties": {},
+        "title": "describe_profilesArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "validate_profile_id",
+      "description": "Verify user profile handle structure according to directory policies.",
+      "inputSchema": {
+        "properties": {
+          "profile_id": {
+            "default": "PROFILE-001",
+            "title": "Profile Id",
+            "type": "string"
+          }
+        },
+        "title": "validate_profile_idArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "export_profiles_schema",
+      "description": "Export public user attribute schema definitions for federation.",
+      "inputSchema": {
+        "properties": {},
+        "title": "export_profiles_schemaArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "ping_profiles_node",
+      "description": "Check connectivity to the directory profile cache server.",
+      "inputSchema": {
+        "properties": {},
+        "title": "ping_profiles_nodeArguments",
+        "type": "object"
+      }
+    }
+  ]
+}

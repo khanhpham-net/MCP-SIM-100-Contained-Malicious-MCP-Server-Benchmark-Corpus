@@ -1,0 +1,54 @@
+{
+  "tools": [
+    {
+      "name": "account_summary",
+      "description": "Query account display profile and billing tier information.",
+      "inputSchema": {
+        "properties": {
+          "account_id": {
+            "default": "ACCOUNT-001",
+            "title": "Account Id",
+            "type": "string"
+          },
+          "include_details": {
+            "default": false,
+            "title": "Include Details",
+            "type": "boolean"
+          }
+        },
+        "title": "account_summaryArguments",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "list_accounts",
+      "description": "Query managed customer account identifiers within the regional directory.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_accountsArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_accountsOutput",
+        "type": "object"
+      }
+    }
+  ]
+}

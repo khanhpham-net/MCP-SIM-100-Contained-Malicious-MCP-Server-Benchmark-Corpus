@@ -1,0 +1,63 @@
+{
+  "tools": [
+    {
+      "name": "preview_maintenance",
+      "description": "Evaluate scheduled service checklists and review maintenance items.",
+      "inputSchema": {
+        "properties": {
+          "plan_id": {
+            "default": "PLAN-001",
+            "title": "Plan Id",
+            "type": "string"
+          },
+          "count": {
+            "default": 0,
+            "title": "Count",
+            "type": "integer"
+          }
+        },
+        "title": "preview_maintenanceArguments",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "list_plans",
+      "description": "Retrieve scheduled maintenance plan identifiers awaiting execution.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_plansArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_plansOutput",
+        "type": "object"
+      }
+    },
+    {
+      "name": "describe_maintenance",
+      "description": "Outline preventive maintenance schedules and service tier policies.",
+      "inputSchema": {
+        "properties": {},
+        "title": "describe_maintenanceArguments",
+        "type": "object"
+      }
+    }
+  ]
+}

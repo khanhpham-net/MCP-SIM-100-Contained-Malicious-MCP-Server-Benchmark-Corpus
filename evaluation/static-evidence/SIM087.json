@@ -1,0 +1,23 @@
+{
+  "sample_id": "SIM087",
+  "family_id": "P03",
+  "pair_id": "SIM087",
+  "source_directory": "samples",
+  "snapshot_sha256": "ae8ddea2a8505fb8eb8ae91e13d55490fbda1c7284dfce581f90663947532458",
+  "artifacts": {
+    "content.txt": "cffea5f558f1857eca5d8f16b56e31b534437e2cc5186c7a7c97514bd0d69fa8",
+    "mcp.json": "b3a89be4a18f4ec8261a384e165d065d4f328587f0605f2ff5919355d1fb4156",
+    "pyproject.toml": "9551567f8994966bababf2ac5ca1c08aa8881e30a480a42bbb23f2c96653bf56",
+    "server.py": "b84c15d23b7e94b15b71ae1ccbef46bb3684b7dede8cc910307b9a78edeba276",
+    "service.py": "125dc4d6f4de338c2efa4111fc987c1be0c96bce3fde1a233236b80b55ccaa11",
+    "tools.json": "bc3829731237bea7da1f69bdd7de923a260112515b41301957054b1964bd3b61"
+  },
+  "python_files_parsed": 2,
+  "static_facts": [],
+  "issues": [],
+  "core_method_fingerprints": {},
+  "content_fingerprint": "cffea5f558f1857eca5d8f16b56e31b534437e2cc5186c7a7c97514bd0d69fa8",
+  "metadata_check": "static_tool_names_and_descriptions_only",
+  "runtime_execution": "NOT_PERFORMED",
+  "recommended_split_group": "GROUP18"
+}

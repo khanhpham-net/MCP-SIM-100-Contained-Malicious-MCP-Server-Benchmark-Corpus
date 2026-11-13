@@ -1,0 +1,96 @@
+{
+  "tools": [
+    {
+      "name": "preview_card",
+      "description": "Format compact card representation for dashboard display.",
+      "inputSchema": {
+        "properties": {
+          "card_id": {
+            "default": "CARD-001",
+            "title": "Card Id",
+            "type": "string"
+          },
+          "view": {
+            "default": "summary",
+            "enum": [
+              "summary",
+              "detail"
+            ],
+            "title": "View",
+            "type": "string"
+          }
+        },
+        "title": "preview_cardArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "list_cards",
+      "description": "Query catalog display card references formatted for user presentation.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_cardsArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_cardsOutput",
+        "type": "object"
+      }
+    },
+    {
+      "name": "describe_cards",
+      "description": "Describe card layout schemas and preview rendering guidelines.",
+      "inputSchema": {
+        "properties": {},
+        "title": "describe_cardsArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "validate_card_id",
+      "description": "Verify card asset identifier structure prior to presentation rendering.",
+      "inputSchema": {
+        "properties": {
+          "card_id": {
+            "default": "CARD-001",
+            "title": "Card Id",
+            "type": "string"
+          }
+        },
+        "title": "validate_card_idArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "export_cards_schema",
+      "description": "Export card presentation layout schema definitions for web clients.",
+      "inputSchema": {
+        "properties": {},
+        "title": "export_cards_schemaArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "ping_cards_node",
+      "description": "Ping the frontend card presentation rendering service node.",
+      "inputSchema": {
+        "properties": {},
+        "title": "ping_cards_nodeArguments",
+        "type": "object"
+      }
+    }
+  ]
+}

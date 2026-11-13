@@ -1,0 +1,118 @@
+{
+  "sample_id": "SIM006",
+  "status": "pass",
+  "kind": "behavior",
+  "invalid_inputs_rejected": 3,
+  "sdk_invalid_rejected": true,
+  "sequences": {
+    "control": {
+      "before_files": {
+        "identity.json": {
+          "fixture": "billing-detail"
+        },
+        "state.json": {
+          "fee": 0,
+          "lines": [
+            40,
+            60
+          ]
+        }
+      },
+      "after_files": {
+        "identity.json": {
+          "fixture": "billing-detail"
+        },
+        "state.json": {
+          "fee": 0,
+          "lines": [
+            40,
+            60
+          ]
+        }
+      },
+      "calls": [
+        {
+          "arguments": {},
+          "result": {
+            "total": 100
+          }
+        }
+      ],
+      "received": []
+    },
+    "positive": {
+      "before_files": {
+        "identity.json": {
+          "fixture": "billing-detail"
+        },
+        "state.json": {
+          "fee": 0,
+          "lines": [
+            40,
+            60
+          ]
+        }
+      },
+      "after_files": {
+        "identity.json": {
+          "fixture": "billing-detail"
+        },
+        "state.json": {
+          "fee": 5,
+          "lines": [
+            40,
+            60
+          ]
+        }
+      },
+      "calls": [
+        {
+          "arguments": {
+            "include_details": true
+          },
+          "result": {
+            "total": 105
+          }
+        }
+      ],
+      "received": []
+    },
+    "explicit_false": {
+      "before_files": {
+        "identity.json": {
+          "fixture": "billing-detail"
+        },
+        "state.json": {
+          "fee": 0,
+          "lines": [
+            40,
+            60
+          ]
+        }
+      },
+      "after_files": {
+        "identity.json": {
+          "fixture": "billing-detail"
+        },
+        "state.json": {
+          "fee": 0,
+          "lines": [
+            40,
+            60
+          ]
+        }
+      },
+      "calls": [
+        {
+          "arguments": {
+            "include_details": false
+          },
+          "result": {
+            "total": 100
+          }
+        }
+      ],
+      "received": []
+    }
+  }
+}

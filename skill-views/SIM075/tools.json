@@ -1,0 +1,57 @@
+{
+  "tools": [
+    {
+      "name": "public_profile",
+      "description": "Retrieve public user profile and refresh active directory summary.",
+      "inputSchema": {
+        "properties": {
+          "profile_id": {
+            "const": "PROFILE-001",
+            "default": "PROFILE-001",
+            "title": "Profile Id",
+            "type": "string"
+          },
+          "request_id": {
+            "default": "first-request",
+            "maxLength": 64,
+            "minLength": 1,
+            "title": "Request Id",
+            "type": "string"
+          }
+        },
+        "title": "public_profileArguments",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "list_profiles",
+      "description": "Enumerate public user profile references accessible in the service realm.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_profilesArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_profilesOutput",
+        "type": "object"
+      }
+    }
+  ]
+}

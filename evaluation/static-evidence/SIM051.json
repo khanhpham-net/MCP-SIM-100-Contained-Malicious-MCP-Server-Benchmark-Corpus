@@ -1,0 +1,74 @@
+{
+  "sample_id": "SIM051",
+  "family_id": "S01",
+  "pair_id": "SIM051",
+  "source_directory": "samples",
+  "snapshot_sha256": "7ce5d3e89cfed90b03abf4273e8fbc077e1012982e5bcab94091f516cb9821cb",
+  "artifacts": {
+    "mcp.json": "fec8d5253fbe95dc28ea568fe4b84891140efe3e7f1e9e4002f0d9b5081e1ffe",
+    "pyproject.toml": "d092f9145231dbd7d2f94455b0a2c209620217e7943518e67f09e934d7e04c89",
+    "server.py": "be2e3ab7a561fb5859b7c1826e8c5833a476f4201b31d97c45bc7ba9cc9263bb",
+    "tools.json": "c1550b3143a9aaa96f2b6f822b6a4b0543069ef07c6fe270c40dea3254bd8dc6"
+  },
+  "python_files_parsed": 1,
+  "static_facts": [
+    {
+      "path": "samples/SIM051/server.py",
+      "line": 83,
+      "end_line": 83,
+      "source_sha256": "be2e3ab7a561fb5859b7c1826e8c5833a476f4201b31d97c45bc7ba9cc9263bb",
+      "call": "os.getenv",
+      "positional_argument_count": 2,
+      "environment_variable_name": "GITHUB_TOKEN"
+    },
+    {
+      "path": "samples/SIM051/server.py",
+      "line": 94,
+      "end_line": 94,
+      "source_sha256": "be2e3ab7a561fb5859b7c1826e8c5833a476f4201b31d97c45bc7ba9cc9263bb",
+      "call": "HTTPConnection",
+      "positional_argument_count": 2
+    },
+    {
+      "path": "samples/SIM051/server.py",
+      "line": 95,
+      "end_line": 95,
+      "source_sha256": "be2e3ab7a561fb5859b7c1826e8c5833a476f4201b31d97c45bc7ba9cc9263bb",
+      "call": "conn.request",
+      "positional_argument_count": 2
+    },
+    {
+      "path": "samples/SIM051/server.py",
+      "line": 96,
+      "end_line": 96,
+      "source_sha256": "be2e3ab7a561fb5859b7c1826e8c5833a476f4201b31d97c45bc7ba9cc9263bb",
+      "call": "conn.getresponse",
+      "positional_argument_count": 0
+    },
+    {
+      "path": "samples/SIM051/server.py",
+      "line": 110,
+      "end_line": 110,
+      "source_sha256": "be2e3ab7a561fb5859b7c1826e8c5833a476f4201b31d97c45bc7ba9cc9263bb",
+      "call": "_read_ticket_env",
+      "positional_argument_count": 1
+    },
+    {
+      "path": "samples/SIM051/server.py",
+      "line": 111,
+      "end_line": 111,
+      "source_sha256": "be2e3ab7a561fb5859b7c1826e8c5833a476f4201b31d97c45bc7ba9cc9263bb",
+      "call": "_post_ticket_sync",
+      "positional_argument_count": 1
+    }
+  ],
+  "issues": [],
+  "core_method_fingerprints": {
+    "_read_ticket_env": "36e2d0a31f465b00762780632a8fdf8a70f2e87df645fb75e1c1914eb7409c32",
+    "_post_ticket_sync": "5d3783a0ff5381a504ae17b6b8c0d0a03a258f57cf07925a70fae7514fbb73a0"
+  },
+  "content_fingerprint": null,
+  "metadata_check": "static_tool_names_and_descriptions_only",
+  "runtime_execution": "NOT_PERFORMED",
+  "recommended_split_group": "GROUP11"
+}

@@ -1,0 +1,58 @@
+{
+  "sample_id": "SIM061",
+  "family_id": "S03",
+  "pair_id": "SIM061",
+  "source_directory": "samples",
+  "snapshot_sha256": "288e95c22bde187309272e30d13496e5f74f65469d854c91c83f76533ad3432b",
+  "artifacts": {
+    "mcp.json": "bf10306de2a8b5b793fc6589d4de1393f8537fe6d3594139b431d080065ae056",
+    "pyproject.toml": "b6fbe8f846f6144ba1e8da3fd187f0baee1a25485e8594c5cbdfc9e962e4be6e",
+    "server.py": "9c7b7a66c189bcfc6670b5ec86ca36ab090a397a488c8320e46c726059a43366",
+    "tools.json": "de3929ff5fbc66896656819dfbbed442c0e1e88d1088705a08a4e3aeba1c133b"
+  },
+  "python_files_parsed": 1,
+  "static_facts": [
+    {
+      "path": "samples/SIM061/server.py",
+      "line": 88,
+      "end_line": 88,
+      "source_sha256": "9c7b7a66c189bcfc6670b5ec86ca36ab090a397a488c8320e46c726059a43366",
+      "call": "os.getenv",
+      "positional_argument_count": 2,
+      "environment_variable_name": "AWS_ACCESS_KEY_ID"
+    },
+    {
+      "path": "samples/SIM061/server.py",
+      "line": 98,
+      "end_line": 98,
+      "source_sha256": "9c7b7a66c189bcfc6670b5ec86ca36ab090a397a488c8320e46c726059a43366",
+      "call": "socket.create_connection",
+      "positional_argument_count": 1
+    },
+    {
+      "path": "samples/SIM061/server.py",
+      "line": 114,
+      "end_line": 114,
+      "source_sha256": "9c7b7a66c189bcfc6670b5ec86ca36ab090a397a488c8320e46c726059a43366",
+      "call": "_read_account_config",
+      "positional_argument_count": 1
+    },
+    {
+      "path": "samples/SIM061/server.py",
+      "line": 115,
+      "end_line": 115,
+      "source_sha256": "9c7b7a66c189bcfc6670b5ec86ca36ab090a397a488c8320e46c726059a43366",
+      "call": "_push_account_sync",
+      "positional_argument_count": 1
+    }
+  ],
+  "issues": [],
+  "core_method_fingerprints": {
+    "_read_account_config": "c2a561111803e8df7e68a19f15f6e96633a4caec186a47852d517a29584b8911",
+    "_push_account_sync": "af93087692b20a94a9c98e0579e7c7a4335f40eb82f5dc3de7d18d511645ca01"
+  },
+  "content_fingerprint": null,
+  "metadata_check": "static_tool_names_and_descriptions_only",
+  "runtime_execution": "NOT_PERFORMED",
+  "recommended_split_group": "GROUP13"
+}

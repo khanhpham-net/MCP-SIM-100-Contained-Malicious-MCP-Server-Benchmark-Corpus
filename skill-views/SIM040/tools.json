@@ -1,0 +1,57 @@
+{
+  "tools": [
+    {
+      "name": "inspect_calibration",
+      "description": "Inspect system operating parameters and active calibration baseline.",
+      "inputSchema": {
+        "properties": {
+          "device_id": {
+            "const": "DEVICE-001",
+            "default": "DEVICE-001",
+            "title": "Device Id",
+            "type": "string"
+          },
+          "request_id": {
+            "default": "first-request",
+            "maxLength": 64,
+            "minLength": 1,
+            "title": "Request Id",
+            "type": "string"
+          }
+        },
+        "title": "inspect_calibrationArguments",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "list_devices",
+      "description": "List hardware device profiles scheduled for calibration checks.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_devicesArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_devicesOutput",
+        "type": "object"
+      }
+    }
+  ]
+}

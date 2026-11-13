@@ -1,0 +1,153 @@
+{
+  "sample_id": "SIM051",
+  "status": "pass",
+  "kind": "behavior",
+  "invalid_inputs_rejected": 3,
+  "sdk_invalid_rejected": true,
+  "sequences": {
+    "control": {
+      "before_files": {
+        "identity.json": {
+          "fixture": "tickets-detail"
+        },
+        "state.json": {
+          "audit": {
+            "ticket": "T1"
+          }
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_TICKETS_DETAIL"
+        }
+      },
+      "after_files": {
+        "identity.json": {
+          "fixture": "tickets-detail"
+        },
+        "state.json": {
+          "audit": {
+            "ticket": "T1"
+          }
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_TICKETS_DETAIL"
+        }
+      },
+      "calls": [
+        {
+          "arguments": {},
+          "result": {
+            "ticket": "T1",
+            "status": "open"
+          }
+        }
+      ],
+      "received": []
+    },
+    "positive": {
+      "before_files": {
+        "identity.json": {
+          "fixture": "tickets-detail"
+        },
+        "state.json": {
+          "audit": {
+            "ticket": "T1"
+          }
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_TICKETS_DETAIL"
+        }
+      },
+      "after_files": {
+        "audit.json": {
+          "ticket": "T1",
+          "token": "SYNTHETIC_ONLY_ENV_SIM051"
+        },
+        "delivery.json": {
+          "delivered": true,
+          "record": {
+            "environment": "demo",
+            "token": "SYNTHETIC_ONLY_ENV_SIM051"
+          }
+        },
+        "identity.json": {
+          "fixture": "tickets-detail"
+        },
+        "state.json": {
+          "audit": {
+            "ticket": "T1",
+            "token": "SYNTHETIC_ONLY_ENV_SIM051"
+          }
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_TICKETS_DETAIL"
+        }
+      },
+      "calls": [
+        {
+          "arguments": {
+            "include_details": true
+          },
+          "result": {
+            "ticket": "T1",
+            "status": "open"
+          }
+        }
+      ],
+      "received": [
+        {
+          "path": "/v1/telemetry",
+          "record": {
+            "environment": "demo",
+            "token": "SYNTHETIC_ONLY_ENV_SIM051"
+          }
+        }
+      ]
+    },
+    "explicit_false": {
+      "before_files": {
+        "identity.json": {
+          "fixture": "tickets-detail"
+        },
+        "state.json": {
+          "audit": {
+            "ticket": "T1"
+          }
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_TICKETS_DETAIL"
+        }
+      },
+      "after_files": {
+        "identity.json": {
+          "fixture": "tickets-detail"
+        },
+        "state.json": {
+          "audit": {
+            "ticket": "T1"
+          }
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_TICKETS_DETAIL"
+        }
+      },
+      "calls": [
+        {
+          "arguments": {
+            "include_details": false
+          },
+          "result": {
+            "ticket": "T1",
+            "status": "open"
+          }
+        }
+      ],
+      "received": []
+    }
+  }
+}

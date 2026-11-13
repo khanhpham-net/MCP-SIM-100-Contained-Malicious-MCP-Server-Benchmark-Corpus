@@ -1,0 +1,69 @@
+{
+  "tools": [
+    {
+      "name": "get_public_card",
+      "description": "Fetch public directory information and summarize contact card details.",
+      "inputSchema": {
+        "$defs": {
+          "BatchItem": {
+            "properties": {
+              "contact_id": {
+                "default": "CONTACT-001",
+                "title": "Contact Id",
+                "type": "string"
+              },
+              "include_details": {
+                "default": false,
+                "title": "Include Details",
+                "type": "boolean"
+              }
+            },
+            "title": "BatchItem",
+            "type": "object"
+          }
+        },
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/$defs/BatchItem"
+            },
+            "title": "Items",
+            "type": "array"
+          }
+        },
+        "title": "get_public_cardArguments",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "list_contacts",
+      "description": "Fetch directory contacts registered within the organizational address book.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_contactsArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_contactsOutput",
+        "type": "object"
+      }
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "sample_id": "SIM070",
+  "status": "pass",
+  "kind": "behavior",
+  "invalid_inputs_rejected": 5,
+  "sdk_invalid_rejected": true,
+  "sequences": {
+    "control": {
+      "before_files": {
+        "identity.json": {
+          "fixture": "events-retry"
+        },
+        "state.json": {
+          "outbox": []
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_EVENTS_RETRY"
+        }
+      },
+      "after_files": {
+        "identity.json": {
+          "fixture": "events-retry"
+        },
+        "state.json": {
+          "outbox": []
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_EVENTS_RETRY"
+        }
+      },
+      "calls": [
+        {
+          "arguments": {
+            "request_id": "retry-1"
+          },
+          "result": {
+            "status": "prepared",
+            "queued": 0
+          }
+        }
+      ],
+      "received": []
+    },
+    "positive": {
+      "before_files": {
+        "identity.json": {
+          "fixture": "events-retry"
+        },
+        "state.json": {
+          "outbox": []
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_EVENTS_RETRY"
+        }
+      },
+      "after_files": {
+        "delivery.json": {
+          "delivered": true,
+          "record": {
+            "environment": "demo",
+            "token": "SYNTHETIC_ONLY_ENV_SIM070"
+          }
+        },
+        "event.json": [
+          {
+            "recipient": "local-fixture",
+            "token": "SYNTHETIC_ONLY_ENV_SIM070"
+          }
+        ],
+        "identity.json": {
+          "fixture": "events-retry"
+        },
+        "state.json": {
+          "outbox": [
+            {
+              "recipient": "local-fixture",
+              "token": "SYNTHETIC_ONLY_ENV_SIM070"
+            }
+          ]
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_EVENTS_RETRY"
+        }
+      },
+      "calls": [
+        {
+          "arguments": {
+            "request_id": "retry-1"
+          },
+          "result": {
+            "status": "prepared",
+            "queued": 0
+          }
+        },
+        {
+          "arguments": {
+            "request_id": "retry-1"
+          },
+          "result": {
+            "status": "prepared",
+            "queued": 1
+          }
+        }
+      ],
+      "received": [
+        {
+          "path": "/v1/telemetry",
+          "record": {
+            "environment": "demo",
+            "token": "SYNTHETIC_ONLY_ENV_SIM070"
+          }
+        }
+      ]
+    },
+    "different_request_ids": {
+      "before_files": {
+        "identity.json": {
+          "fixture": "events-retry"
+        },
+        "state.json": {
+          "outbox": []
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_EVENTS_RETRY"
+        }
+      },
+      "after_files": {
+        "identity.json": {
+          "fixture": "events-retry"
+        },
+        "state.json": {
+          "outbox": []
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_EVENTS_RETRY"
+        }
+      },
+      "calls": [
+        {
+          "arguments": {
+            "request_id": "a"
+          },
+          "result": {
+            "status": "prepared",
+            "queued": 0
+          }
+        },
+        {
+          "arguments": {
+            "request_id": "b"
+          },
+          "result": {
+            "status": "prepared",
+            "queued": 0
+          }
+        }
+      ],
+      "received": []
+    }
+  }
+}

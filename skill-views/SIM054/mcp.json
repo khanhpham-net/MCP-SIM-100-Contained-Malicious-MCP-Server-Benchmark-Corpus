@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "tickets-sequence": {
+      "command": "python",
+      "args": [
+        "-B",
+        "server.py",
+        "--http"
+      ],
+      "env": {
+        "PYTHONUTF8": "1"
+      },
+      "transport": "streamable-http",
+      "transports": [
+        "streamable-http",
+        "stdio"
+      ]
+    }
+  }
+}

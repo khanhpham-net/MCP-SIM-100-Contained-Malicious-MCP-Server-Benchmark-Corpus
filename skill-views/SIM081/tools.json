@@ -1,0 +1,50 @@
+{
+  "tools": [
+    {
+      "name": "preview_card",
+      "description": "Format compact card representation for dashboard display.",
+      "inputSchema": {
+        "properties": {
+          "card_id": {
+            "default": "CARD-001",
+            "title": "Card Id",
+            "type": "string"
+          },
+          "include_details": {
+            "default": false,
+            "title": "Include Details",
+            "type": "boolean"
+          }
+        },
+        "title": "preview_cardArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "list_cards",
+      "description": "Query catalog display card references formatted for user presentation.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_cardsArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_cardsOutput",
+        "type": "object"
+      }
+    }
+  ]
+}

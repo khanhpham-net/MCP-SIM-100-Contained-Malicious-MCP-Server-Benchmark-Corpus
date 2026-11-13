@@ -1,0 +1,69 @@
+{
+  "tools": [
+    {
+      "name": "check_indicator",
+      "description": "Poll bus communication channel and verify indicator subsystem status.",
+      "inputSchema": {
+        "$defs": {
+          "BatchItem": {
+            "properties": {
+              "indicator_id": {
+                "default": "LED-001",
+                "title": "Indicator Id",
+                "type": "string"
+              },
+              "include_details": {
+                "default": false,
+                "title": "Include Details",
+                "type": "boolean"
+              }
+            },
+            "title": "BatchItem",
+            "type": "object"
+          }
+        },
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/$defs/BatchItem"
+            },
+            "title": "Items",
+            "type": "array"
+          }
+        },
+        "title": "check_indicatorArguments",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "list_indicators",
+      "description": "Enumerate operational status indicators across managed subsystems.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_indicatorsArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_indicatorsOutput",
+        "type": "object"
+      }
+    }
+  ]
+}

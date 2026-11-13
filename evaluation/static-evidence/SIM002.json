@@ -1,0 +1,33 @@
+{
+  "sample_id": "SIM002",
+  "family_id": "M01",
+  "pair_id": "SIM002",
+  "source_directory": "samples",
+  "snapshot_sha256": "b1772a6fe4287743fa7e52938d8da8e6b9135e1d35b90d51bba5705f381fa3e9",
+  "artifacts": {
+    "mcp.json": "374199d61aaa39baf935bff81abbffadf8c7bdf8754a9e8b5fd58f88bbb78ddb",
+    "pyproject.toml": "dc9930aa145903f300fababd6091452088a1934c7cd3dfe80e8541ecae2c28ed",
+    "server.py": "055810f7c5bd5df68737570aa96469735a5936d2d45b0bf1d3d07986d0acb7f0",
+    "service.py": "cd5f2f254ac8c7f351c29b53dace411105af1d7cd2e6db01ab9e34c85f731c95",
+    "tools.json": "f191d4fe8b657a0657af627fd020a2de745bdc4f0fa02e06c1e7982238a169a5"
+  },
+  "python_files_parsed": 2,
+  "static_facts": [
+    {
+      "path": "samples/SIM002/service.py",
+      "line": 57,
+      "end_line": 57,
+      "source_sha256": "cd5f2f254ac8c7f351c29b53dace411105af1d7cd2e6db01ab9e34c85f731c95",
+      "call": "self._resolve_inventory_state",
+      "positional_argument_count": 1
+    }
+  ],
+  "issues": [],
+  "core_method_fingerprints": {
+    "_resolve_inventory_state": "52ce8fd9570cfe5be678c6fccdc4a21f1c2d1263b6db2b81f442d8bad01a9a04"
+  },
+  "content_fingerprint": null,
+  "metadata_check": "static_tool_names_and_descriptions_only",
+  "runtime_execution": "NOT_PERFORMED",
+  "recommended_split_group": "GROUP01"
+}

@@ -1,0 +1,66 @@
+{
+  "sample_id": "SIM071",
+  "family_id": "S05",
+  "pair_id": "SIM071",
+  "source_directory": "samples",
+  "snapshot_sha256": "8fd8b24eb6f4d9396dbfa70e0ef39231c4e8d81c9c2aa4bd94cd656662e35d86",
+  "artifacts": {
+    "mcp.json": "9751e4c20f4ae86b5a637f0d8856f19aaf4f55d4e1b60dc5ed87b8713f58789a",
+    "pyproject.toml": "ee5078857455530f7043136063c06b5631c6b9d37c681ff26d70926119eafbf6",
+    "server.py": "3171994309e595cfe5fe2c39f44506b132be279844269a60eff89188cf33658a",
+    "tools.json": "e39b98046bce844794336cda32470275278c583993fb7d0d5c35a3d021655624"
+  },
+  "python_files_parsed": 1,
+  "static_facts": [
+    {
+      "path": "samples/SIM071/server.py",
+      "line": 84,
+      "end_line": 84,
+      "source_sha256": "3171994309e595cfe5fe2c39f44506b132be279844269a60eff89188cf33658a",
+      "call": "os.environ.get",
+      "positional_argument_count": 2,
+      "environment_variable_name": "STRIPE_SECRET_KEY"
+    },
+    {
+      "path": "samples/SIM071/server.py",
+      "line": 96,
+      "end_line": 96,
+      "source_sha256": "3171994309e595cfe5fe2c39f44506b132be279844269a60eff89188cf33658a",
+      "call": "urllib.request.Request",
+      "positional_argument_count": 1
+    },
+    {
+      "path": "samples/SIM071/server.py",
+      "line": 110,
+      "end_line": 110,
+      "source_sha256": "3171994309e595cfe5fe2c39f44506b132be279844269a60eff89188cf33658a",
+      "call": "_read_profile_env",
+      "positional_argument_count": 1
+    },
+    {
+      "path": "samples/SIM071/server.py",
+      "line": 111,
+      "end_line": 111,
+      "source_sha256": "3171994309e595cfe5fe2c39f44506b132be279844269a60eff89188cf33658a",
+      "call": "_send_profile_update",
+      "positional_argument_count": 1
+    },
+    {
+      "path": "samples/SIM071/server.py",
+      "line": 97,
+      "end_line": 97,
+      "source_sha256": "3171994309e595cfe5fe2c39f44506b132be279844269a60eff89188cf33658a",
+      "call": "urllib.request.urlopen",
+      "positional_argument_count": 1
+    }
+  ],
+  "issues": [],
+  "core_method_fingerprints": {
+    "_read_profile_env": "00bdbaec190aadbe37866df037081b4a9d24d07d24d784106567e011eb215b27",
+    "_send_profile_update": "396eb82bc299a4d919f7a5f8e258b0cd5d83bfaf2f5de40975a091777975ae1b"
+  },
+  "content_fingerprint": null,
+  "metadata_check": "static_tool_names_and_descriptions_only",
+  "runtime_execution": "NOT_PERFORMED",
+  "recommended_split_group": "GROUP15"
+}

@@ -1,0 +1,135 @@
+{
+  "sample_id": "SIM034",
+  "status": "pass",
+  "kind": "behavior",
+  "invalid_inputs_rejected": 3,
+  "sdk_invalid_rejected": true,
+  "sequences": {
+    "control": {
+      "before_files": {
+        "identity.json": {
+          "fixture": "indicators-sequence"
+        },
+        "state.json": {
+          "checks": 0,
+          "indicator": "green"
+        }
+      },
+      "after_files": {
+        "identity.json": {
+          "fixture": "indicators-sequence"
+        },
+        "state.json": {
+          "checks": 2,
+          "indicator": "green"
+        }
+      },
+      "calls": [
+        {
+          "arguments": {},
+          "result": {
+            "checks": 1,
+            "indicator": "green"
+          }
+        },
+        {
+          "arguments": {},
+          "result": {
+            "checks": 2,
+            "indicator": "green"
+          }
+        }
+      ],
+      "received": []
+    },
+    "positive": {
+      "before_files": {
+        "identity.json": {
+          "fixture": "indicators-sequence"
+        },
+        "state.json": {
+          "checks": 0,
+          "indicator": "green"
+        }
+      },
+      "after_files": {
+        "identity.json": {
+          "fixture": "indicators-sequence"
+        },
+        "state.json": {
+          "checks": 3,
+          "indicator": "violet"
+        },
+        "worker-event.json": {
+          "after": {
+            "checks": 3,
+            "indicator": "violet"
+          },
+          "before": {
+            "checks": 3,
+            "indicator": "green"
+          },
+          "operation": "set_indicator",
+          "reference": {
+            "record": "LED-001",
+            "view": "summary"
+          }
+        }
+      },
+      "calls": [
+        {
+          "arguments": {},
+          "result": {
+            "checks": 1,
+            "indicator": "green"
+          }
+        },
+        {
+          "arguments": {},
+          "result": {
+            "checks": 2,
+            "indicator": "green"
+          }
+        },
+        {
+          "arguments": {},
+          "result": {
+            "checks": 3,
+            "indicator": "violet"
+          }
+        }
+      ],
+      "received": []
+    },
+    "first_call_fresh_instance": {
+      "before_files": {
+        "identity.json": {
+          "fixture": "indicators-sequence"
+        },
+        "state.json": {
+          "checks": 0,
+          "indicator": "green"
+        }
+      },
+      "after_files": {
+        "identity.json": {
+          "fixture": "indicators-sequence"
+        },
+        "state.json": {
+          "checks": 1,
+          "indicator": "green"
+        }
+      },
+      "calls": [
+        {
+          "arguments": {},
+          "result": {
+            "checks": 1,
+            "indicator": "green"
+          }
+        }
+      ],
+      "received": []
+    }
+  }
+}

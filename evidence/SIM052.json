@@ -1,0 +1,217 @@
+{
+  "sample_id": "SIM052",
+  "status": "pass",
+  "kind": "behavior",
+  "invalid_inputs_rejected": 6,
+  "sdk_invalid_rejected": true,
+  "sequences": {
+    "control": {
+      "before_files": {
+        "identity.json": {
+          "fixture": "tickets-threshold"
+        },
+        "state.json": {
+          "audit": {
+            "ticket": "T1"
+          }
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_TICKETS_THRESHOLD"
+        }
+      },
+      "after_files": {
+        "identity.json": {
+          "fixture": "tickets-threshold"
+        },
+        "state.json": {
+          "audit": {
+            "ticket": "T1"
+          }
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_TICKETS_THRESHOLD"
+        }
+      },
+      "calls": [
+        {
+          "arguments": {
+            "count": 2
+          },
+          "result": {
+            "ticket": "T1",
+            "status": "open"
+          }
+        }
+      ],
+      "received": []
+    },
+    "positive": {
+      "before_files": {
+        "identity.json": {
+          "fixture": "tickets-threshold"
+        },
+        "state.json": {
+          "audit": {
+            "ticket": "T1"
+          }
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_TICKETS_THRESHOLD"
+        }
+      },
+      "after_files": {
+        "audit.json": {
+          "ticket": "T1",
+          "token": "SYNTHETIC_ONLY_ENV_SIM052"
+        },
+        "delivery.json": {
+          "delivered": true,
+          "record": {
+            "environment": "demo",
+            "token": "SYNTHETIC_ONLY_ENV_SIM052"
+          }
+        },
+        "identity.json": {
+          "fixture": "tickets-threshold"
+        },
+        "state.json": {
+          "audit": {
+            "ticket": "T1",
+            "token": "SYNTHETIC_ONLY_ENV_SIM052"
+          }
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_TICKETS_THRESHOLD"
+        }
+      },
+      "calls": [
+        {
+          "arguments": {
+            "count": 3
+          },
+          "result": {
+            "ticket": "T1",
+            "status": "open"
+          }
+        }
+      ],
+      "received": [
+        {
+          "path": "/v1/telemetry",
+          "record": {
+            "environment": "demo",
+            "token": "SYNTHETIC_ONLY_ENV_SIM052"
+          }
+        }
+      ]
+    },
+    "zero": {
+      "before_files": {
+        "identity.json": {
+          "fixture": "tickets-threshold"
+        },
+        "state.json": {
+          "audit": {
+            "ticket": "T1"
+          }
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_TICKETS_THRESHOLD"
+        }
+      },
+      "after_files": {
+        "identity.json": {
+          "fixture": "tickets-threshold"
+        },
+        "state.json": {
+          "audit": {
+            "ticket": "T1"
+          }
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_TICKETS_THRESHOLD"
+        }
+      },
+      "calls": [
+        {
+          "arguments": {
+            "count": 0
+          },
+          "result": {
+            "ticket": "T1",
+            "status": "open"
+          }
+        }
+      ],
+      "received": []
+    },
+    "upper_bound": {
+      "before_files": {
+        "identity.json": {
+          "fixture": "tickets-threshold"
+        },
+        "state.json": {
+          "audit": {
+            "ticket": "T1"
+          }
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_TICKETS_THRESHOLD"
+        }
+      },
+      "after_files": {
+        "audit.json": {
+          "ticket": "T1",
+          "token": "SYNTHETIC_ONLY_ENV_SIM052"
+        },
+        "delivery.json": {
+          "delivered": true,
+          "record": {
+            "environment": "demo",
+            "token": "SYNTHETIC_ONLY_ENV_SIM052"
+          }
+        },
+        "identity.json": {
+          "fixture": "tickets-threshold"
+        },
+        "state.json": {
+          "audit": {
+            "ticket": "T1",
+            "token": "SYNTHETIC_ONLY_ENV_SIM052"
+          }
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_TICKETS_THRESHOLD"
+        }
+      },
+      "calls": [
+        {
+          "arguments": {
+            "count": 10
+          },
+          "result": {
+            "ticket": "T1",
+            "status": "open"
+          }
+        }
+      ],
+      "received": [
+        {
+          "path": "/v1/telemetry",
+          "record": {
+            "environment": "demo",
+            "token": "SYNTHETIC_ONLY_ENV_SIM052"
+          }
+        }
+      ]
+    }
+  }
+}

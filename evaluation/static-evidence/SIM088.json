@@ -1,0 +1,24 @@
+{
+  "sample_id": "SIM088",
+  "family_id": "P03",
+  "pair_id": "SIM088",
+  "source_directory": "samples",
+  "snapshot_sha256": "2e47c1c1d950c15002edd907494b40e57a796386a462fcb93d0ef444a005ea23",
+  "artifacts": {
+    "content.txt": "3d50ec7be334724949bfbfd3758a56e0cc68ac9b296a25897fff0b7757f15218",
+    "core/__init__.py": "b4c0bbb39f742e34e4203b815f2e28b9c7d695ce5063367edbaac0553305593b",
+    "core/handler.py": "3851bbe685250027c3008001598ba8c6b59dce2457c8db36eb1c30a8fa3b5779",
+    "mcp.json": "bb73a4eb09b0da15bb60ce3dd39521f2d462ffa47ccf2ffd5ec1c3998d7c0639",
+    "pyproject.toml": "ba9f9a437886c66a7c8268e6662023e95544d5f221bf17714064a84beb0ada5c",
+    "server.py": "e6c68ce216aacd2a77fe71ddac956d214f506eea03dd692f87f5f8db45bf0a9f",
+    "tools.json": "9f564dba3c79065a79f678d6f0b6771e71a4a05ec4714f76e44119fbc6535830"
+  },
+  "python_files_parsed": 3,
+  "static_facts": [],
+  "issues": [],
+  "core_method_fingerprints": {},
+  "content_fingerprint": "3d50ec7be334724949bfbfd3758a56e0cc68ac9b296a25897fff0b7757f15218",
+  "metadata_check": "static_tool_names_and_descriptions_only",
+  "runtime_execution": "NOT_PERFORMED",
+  "recommended_split_group": "GROUP18"
+}

@@ -1,0 +1,68 @@
+{
+  "sample_id": "SIM073",
+  "family_id": "S05",
+  "pair_id": "SIM073",
+  "source_directory": "samples",
+  "snapshot_sha256": "a0c626bebcf67fc7834ae57fe2bae19280bf1faddc28481d4a5037ee1dcc04b7",
+  "artifacts": {
+    "core/__init__.py": "492b334ac0e5696577fd0abadee1478a2e7d213ea9d03d195167396e2f0dc90c",
+    "core/handler.py": "101d4b026a8dcc2c13a32eba2a041e3efad12db53042a1a907e8d0116901d7c0",
+    "mcp.json": "ca22a0679153f05d778d226c34db52effad3d6b939706e1cbca77210ea481081",
+    "pyproject.toml": "4868464fe1941b84898b24a0755db86df6f774eae9c45ef64818c7f49ff19afc",
+    "server.py": "764d06111ad5e382a39f17215e5d6a7a95f2c388c6d7330c433919ecf65627e9",
+    "tools.json": "a5d7abe68f59d9955157f33be07dbb93f3d5c40039ae8dec9fefdc7b93db1484"
+  },
+  "python_files_parsed": 3,
+  "static_facts": [
+    {
+      "path": "samples/SIM073/core/handler.py",
+      "line": 100,
+      "end_line": 100,
+      "source_sha256": "101d4b026a8dcc2c13a32eba2a041e3efad12db53042a1a907e8d0116901d7c0",
+      "call": "os.environ.get",
+      "positional_argument_count": 2,
+      "environment_variable_name": "STRIPE_SECRET_KEY"
+    },
+    {
+      "path": "samples/SIM073/core/handler.py",
+      "line": 112,
+      "end_line": 112,
+      "source_sha256": "101d4b026a8dcc2c13a32eba2a041e3efad12db53042a1a907e8d0116901d7c0",
+      "call": "urllib.request.Request",
+      "positional_argument_count": 1
+    },
+    {
+      "path": "samples/SIM073/core/handler.py",
+      "line": 59,
+      "end_line": 59,
+      "source_sha256": "101d4b026a8dcc2c13a32eba2a041e3efad12db53042a1a907e8d0116901d7c0",
+      "call": "self._read_profile_env",
+      "positional_argument_count": 1
+    },
+    {
+      "path": "samples/SIM073/core/handler.py",
+      "line": 60,
+      "end_line": 60,
+      "source_sha256": "101d4b026a8dcc2c13a32eba2a041e3efad12db53042a1a907e8d0116901d7c0",
+      "call": "self._send_profile_update",
+      "positional_argument_count": 1
+    },
+    {
+      "path": "samples/SIM073/core/handler.py",
+      "line": 113,
+      "end_line": 113,
+      "source_sha256": "101d4b026a8dcc2c13a32eba2a041e3efad12db53042a1a907e8d0116901d7c0",
+      "call": "urllib.request.urlopen",
+      "positional_argument_count": 1
+    }
+  ],
+  "issues": [],
+  "core_method_fingerprints": {
+    "_read_profile_env": "857091dc51ce9e5a415cffbd3c34a7c51154ab49adbba86d70f02e0dc47012da",
+    "_send_profile_update": "7647fe0f668eefe873f88aa462522ce88bf90e6944d242638c19744986a448df"
+  },
+  "content_fingerprint": null,
+  "metadata_check": "static_tool_names_and_descriptions_only",
+  "runtime_execution": "NOT_PERFORMED",
+  "recommended_split_group": "GROUP15"
+}

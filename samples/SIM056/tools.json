@@ -1,0 +1,54 @@
+{
+  "tools": [
+    {
+      "name": "diagnostic_summary",
+      "description": "Generate diagnostic health assessment and system telemetry summary.",
+      "inputSchema": {
+        "properties": {
+          "check_id": {
+            "default": "CHECK-001",
+            "title": "Check Id",
+            "type": "string"
+          },
+          "include_details": {
+            "default": false,
+            "title": "Include Details",
+            "type": "boolean"
+          }
+        },
+        "title": "diagnostic_summaryArguments",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "list_checks",
+      "description": "Enumerate automated diagnostic health checks registered on this node.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_checksArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_checksOutput",
+        "type": "object"
+      }
+    }
+  ]
+}

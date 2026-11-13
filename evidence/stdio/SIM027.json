@@ -1,0 +1,36 @@
+{
+  "sample_id": "SIM027",
+  "status": "pass",
+  "initialize": {
+    "protocolVersion": "2025-11-25",
+    "capabilities": {
+      "experimental": {},
+      "prompts": {
+        "listChanged": false
+      },
+      "resources": {
+        "subscribe": false,
+        "listChanged": false
+      },
+      "tools": {
+        "listChanged": false
+      }
+    },
+    "serverInfo": {
+      "name": "meters-threshold",
+      "version": "1.29.0"
+    }
+  },
+  "tool_count": 3,
+  "calls": [
+    {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"counter\": 0\n}"
+        }
+      ],
+      "isError": false
+    }
+  ]
+}

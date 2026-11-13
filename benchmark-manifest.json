@@ -1,0 +1,3017 @@
+{
+  "schema_version": "3.0",
+  "scope": "Snapshot-bound review and benchmark admission",
+  "static_audit_sha256": "20482d831ff73e68b1ebaac4bc8fbd1f698413580c780713f058e558beba68bf",
+  "reviews_sha256": "78e12098f2c6861b5f55b4931034f943332ecc58bcde624d9624a36e708648e2",
+  "readiness": {
+    "total": 100,
+    "admitted_malicious": 100,
+    "admitted_benign": 0,
+    "hard_negative_candidates": 0,
+    "scan_preparation": "STATIC_INPUTS_AVAILABLE",
+    "malware_metrics": "MALICIOUS_COHORT_READY_FOR_EVALUATION",
+    "external_scanners": "NOT_RUN_BY_THIS_PIPELINE"
+  },
+  "samples": [
+    {
+      "sample_id": "SIM001",
+      "pair_id": "SIM001",
+      "family_id": "M01",
+      "split": "development",
+      "split_group": "GROUP01",
+      "snapshot_sha256": "14d0e0ce557bb1be59073873113c201c8ffb5a3e3a5152f5ab00a2027caeadcc",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "tool_description_mismatch",
+      "observed_mechanism": "persisted_tool_contract_mismatch",
+      "original_declared_label": "persisted_tool_contract_mismatch",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM001.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Contract mismatch changes only fixture-owned ledger files."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM002",
+      "pair_id": "SIM002",
+      "family_id": "M01",
+      "split": "development",
+      "split_group": "GROUP01",
+      "snapshot_sha256": "b1772a6fe4287743fa7e52938d8da8e6b9135e1d35b90d51bba5705f381fa3e9",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "tool_description_mismatch",
+      "observed_mechanism": "persisted_tool_contract_mismatch",
+      "original_declared_label": "persisted_tool_contract_mismatch",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM002.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Contract mismatch changes only fixture-owned ledger files."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM003",
+      "pair_id": "SIM003",
+      "family_id": "M01",
+      "split": "development",
+      "split_group": "GROUP01",
+      "snapshot_sha256": "54db5c62e333ddb29966b5351753131f87068ed40402b77924226eecafae1d9b",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "tool_description_mismatch",
+      "observed_mechanism": "persisted_tool_contract_mismatch",
+      "original_declared_label": "persisted_tool_contract_mismatch",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM003.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Contract mismatch changes only fixture-owned ledger files."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM004",
+      "pair_id": "SIM004",
+      "family_id": "M01",
+      "split": "development",
+      "split_group": "GROUP01",
+      "snapshot_sha256": "26c7ab8de9acab5683fbc7a578273367c045803b652d4fd5b0a4681497784b44",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "tool_description_mismatch",
+      "observed_mechanism": "persisted_tool_contract_mismatch",
+      "original_declared_label": "persisted_tool_contract_mismatch",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM004.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Contract mismatch changes only fixture-owned ledger files."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM005",
+      "pair_id": "SIM005",
+      "family_id": "M01",
+      "split": "development",
+      "split_group": "GROUP01",
+      "snapshot_sha256": "36d633082375fe8376a7e505d5bb6b86ca9878bc10d5ebbdf15616f24f1ab965",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "tool_description_mismatch",
+      "observed_mechanism": "persisted_tool_contract_mismatch",
+      "original_declared_label": "persisted_tool_contract_mismatch",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM005.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Contract mismatch changes only fixture-owned ledger files."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM006",
+      "pair_id": "SIM006",
+      "family_id": "M02",
+      "split": "development",
+      "split_group": "GROUP02",
+      "snapshot_sha256": "37e1490e6e5c7794f6053a5260cb02055bb690ef0a80ea7de622c8eab82c8079",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "tool_description_mismatch",
+      "observed_mechanism": "persisted_tool_contract_mismatch",
+      "original_declared_label": "persisted_tool_contract_mismatch",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM006.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Contract mismatch changes only fixture-owned ledger files."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM007",
+      "pair_id": "SIM007",
+      "family_id": "M02",
+      "split": "development",
+      "split_group": "GROUP02",
+      "snapshot_sha256": "5eaf4aad9691d6136d648ee5e5fb1583da58232fb0b5d551e777b8b622275504",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "tool_description_mismatch",
+      "observed_mechanism": "persisted_tool_contract_mismatch",
+      "original_declared_label": "persisted_tool_contract_mismatch",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM007.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Contract mismatch changes only fixture-owned ledger files."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM008",
+      "pair_id": "SIM008",
+      "family_id": "M02",
+      "split": "development",
+      "split_group": "GROUP02",
+      "snapshot_sha256": "62578e3b2d7a73f9259e4d7d597a9d927e9fd537391932ee4a71b25a1289d24f",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "tool_description_mismatch",
+      "observed_mechanism": "persisted_tool_contract_mismatch",
+      "original_declared_label": "persisted_tool_contract_mismatch",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM008.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Contract mismatch changes only fixture-owned ledger files."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM009",
+      "pair_id": "SIM009",
+      "family_id": "M02",
+      "split": "development",
+      "split_group": "GROUP02",
+      "snapshot_sha256": "f72802f75c38e599d3ce862e5c62ffd7f2998c32e9c53dfa5f52163fc225d923",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "tool_description_mismatch",
+      "observed_mechanism": "persisted_tool_contract_mismatch",
+      "original_declared_label": "persisted_tool_contract_mismatch",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM009.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Contract mismatch changes only fixture-owned ledger files."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM010",
+      "pair_id": "SIM010",
+      "family_id": "M02",
+      "split": "development",
+      "split_group": "GROUP02",
+      "snapshot_sha256": "273677a0dffba53706246718fe185863063c730e07ae5ca92bd7fd59a1f8d778",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "tool_description_mismatch",
+      "observed_mechanism": "persisted_tool_contract_mismatch",
+      "original_declared_label": "persisted_tool_contract_mismatch",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM010.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Contract mismatch changes only fixture-owned ledger files."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM011",
+      "pair_id": "SIM011",
+      "family_id": "M03",
+      "split": "development",
+      "split_group": "GROUP03",
+      "snapshot_sha256": "842bfb2412868e44562ec5a8f44cc6ee50f615b9c65279109af49181fbead359",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "tool_description_mismatch",
+      "observed_mechanism": "persisted_tool_contract_mismatch",
+      "original_declared_label": "persisted_tool_contract_mismatch",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM011.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Contract mismatch changes only fixture-owned ledger files."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM012",
+      "pair_id": "SIM012",
+      "family_id": "M03",
+      "split": "development",
+      "split_group": "GROUP03",
+      "snapshot_sha256": "5523b2ef8677a9f9fccf608fb67051ea7cd74fc4486daf8e682bbc87285ef77c",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "tool_description_mismatch",
+      "observed_mechanism": "persisted_tool_contract_mismatch",
+      "original_declared_label": "persisted_tool_contract_mismatch",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM012.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Contract mismatch changes only fixture-owned ledger files."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM013",
+      "pair_id": "SIM013",
+      "family_id": "M03",
+      "split": "development",
+      "split_group": "GROUP03",
+      "snapshot_sha256": "ab00b30622d9db4195f6e374823d9588cfe146eab7bd046dae0784011c421da4",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "tool_description_mismatch",
+      "observed_mechanism": "persisted_tool_contract_mismatch",
+      "original_declared_label": "persisted_tool_contract_mismatch",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM013.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Contract mismatch changes only fixture-owned ledger files."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM014",
+      "pair_id": "SIM014",
+      "family_id": "M03",
+      "split": "development",
+      "split_group": "GROUP03",
+      "snapshot_sha256": "905152bc050062fa7e6e54b0f3808da0bd5557426c02a027151ff7c9c46e12c2",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "tool_description_mismatch",
+      "observed_mechanism": "persisted_tool_contract_mismatch",
+      "original_declared_label": "persisted_tool_contract_mismatch",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM014.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Contract mismatch changes only fixture-owned ledger files."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM015",
+      "pair_id": "SIM015",
+      "family_id": "M03",
+      "split": "development",
+      "split_group": "GROUP03",
+      "snapshot_sha256": "bb784eca11ed8ee6420c2715601861c74529d76d64a9c438528060587388334f",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "tool_description_mismatch",
+      "observed_mechanism": "persisted_tool_contract_mismatch",
+      "original_declared_label": "persisted_tool_contract_mismatch",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM015.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Contract mismatch changes only fixture-owned ledger files."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM016",
+      "pair_id": "SIM016",
+      "family_id": "M04",
+      "split": "development",
+      "split_group": "GROUP04",
+      "snapshot_sha256": "ce704dd9ebf941922e4369a51c71cf99a99c25a322e7ead0b5347370b009819f",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "tool_description_mismatch",
+      "observed_mechanism": "persisted_tool_contract_mismatch",
+      "original_declared_label": "persisted_tool_contract_mismatch",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM016.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Contract mismatch changes only fixture-owned ledger files."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM017",
+      "pair_id": "SIM017",
+      "family_id": "M04",
+      "split": "development",
+      "split_group": "GROUP04",
+      "snapshot_sha256": "7ea24313389e87e354c24ffe1627c7803711d943fabbe2371037b3a707d420a4",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "tool_description_mismatch",
+      "observed_mechanism": "persisted_tool_contract_mismatch",
+      "original_declared_label": "persisted_tool_contract_mismatch",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM017.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Contract mismatch changes only fixture-owned ledger files."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM018",
+      "pair_id": "SIM018",
+      "family_id": "M04",
+      "split": "development",
+      "split_group": "GROUP04",
+      "snapshot_sha256": "d2bf1b99ff90a9f805a513e31be51c88bc2d1269c69371f512acfc960e54dbdf",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "tool_description_mismatch",
+      "observed_mechanism": "persisted_tool_contract_mismatch",
+      "original_declared_label": "persisted_tool_contract_mismatch",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM018.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Contract mismatch changes only fixture-owned ledger files."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM019",
+      "pair_id": "SIM019",
+      "family_id": "M04",
+      "split": "development",
+      "split_group": "GROUP04",
+      "snapshot_sha256": "4391b87761bf5956e522b54038f0675aa07323892f8ad1e840837781029cec7b",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "tool_description_mismatch",
+      "observed_mechanism": "persisted_tool_contract_mismatch",
+      "original_declared_label": "persisted_tool_contract_mismatch",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM019.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Contract mismatch changes only fixture-owned ledger files."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM020",
+      "pair_id": "SIM020",
+      "family_id": "M04",
+      "split": "development",
+      "split_group": "GROUP04",
+      "snapshot_sha256": "80738e0f8c24c2960b5610341f2d3c5e14a2500a216bb9d269d589b33c748e8a",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "tool_description_mismatch",
+      "observed_mechanism": "persisted_tool_contract_mismatch",
+      "original_declared_label": "persisted_tool_contract_mismatch",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM020.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Contract mismatch changes only fixture-owned ledger files."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM021",
+      "pair_id": "SIM021",
+      "family_id": "M05",
+      "split": "development",
+      "split_group": "GROUP05",
+      "snapshot_sha256": "fde0773d879cf254930139fc94e37f4baf2290c231b92018ad8ec60bcfc245d9",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "tool_description_mismatch",
+      "observed_mechanism": "persisted_tool_contract_mismatch",
+      "original_declared_label": "persisted_tool_contract_mismatch",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM021.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Contract mismatch changes only fixture-owned ledger files."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM022",
+      "pair_id": "SIM022",
+      "family_id": "M05",
+      "split": "development",
+      "split_group": "GROUP05",
+      "snapshot_sha256": "ad135aa762d875600c3049d53ca107b5dafab53cf0636db3b1b62afafc2e627f",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "tool_description_mismatch",
+      "observed_mechanism": "persisted_tool_contract_mismatch",
+      "original_declared_label": "persisted_tool_contract_mismatch",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM022.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Contract mismatch changes only fixture-owned ledger files."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM023",
+      "pair_id": "SIM023",
+      "family_id": "M05",
+      "split": "development",
+      "split_group": "GROUP05",
+      "snapshot_sha256": "7ae422f7142a2b6884bb30c83b4d467b6341f5088d7678d0186ecb99d0c9bf74",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "tool_description_mismatch",
+      "observed_mechanism": "persisted_tool_contract_mismatch",
+      "original_declared_label": "persisted_tool_contract_mismatch",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM023.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Contract mismatch changes only fixture-owned ledger files."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM024",
+      "pair_id": "SIM024",
+      "family_id": "M05",
+      "split": "development",
+      "split_group": "GROUP05",
+      "snapshot_sha256": "f3a71a78a8540e2b3f7ca9031ea24987374c388d6f7758508d60d18d0fb28523",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "tool_description_mismatch",
+      "observed_mechanism": "persisted_tool_contract_mismatch",
+      "original_declared_label": "persisted_tool_contract_mismatch",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM024.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Contract mismatch changes only fixture-owned ledger files."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM025",
+      "pair_id": "SIM025",
+      "family_id": "M05",
+      "split": "development",
+      "split_group": "GROUP05",
+      "snapshot_sha256": "3e28f0c8eb8d5af2d16c335df6b5db477ee380289d36948f80d4cb8dbb2b9cbf",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "tool_description_mismatch",
+      "observed_mechanism": "persisted_tool_contract_mismatch",
+      "original_declared_label": "persisted_tool_contract_mismatch",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM025.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Contract mismatch changes only fixture-owned ledger files."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM026",
+      "pair_id": "SIM026",
+      "family_id": "C01",
+      "split": "development",
+      "split_group": "GROUP06",
+      "snapshot_sha256": "543b41b4ae209456d767cff4512b520b5e628199df2b49716db809a5a81842af",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "unauthorized_command_execution",
+      "observed_mechanism": "child_process_outside_tool_contract",
+      "original_declared_label": "child_process_outside_tool_contract",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM026.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Spawns a local worker process mutating state outside the declared read-only tool contract."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM027",
+      "pair_id": "SIM027",
+      "family_id": "C01",
+      "split": "development",
+      "split_group": "GROUP06",
+      "snapshot_sha256": "869163a7d1398963534289c6a03d218c47e5f96c36550c306d4a062e619933b3",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "unauthorized_command_execution",
+      "observed_mechanism": "child_process_outside_tool_contract",
+      "original_declared_label": "child_process_outside_tool_contract",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM027.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Spawns a local worker process mutating state outside the declared read-only tool contract."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM028",
+      "pair_id": "SIM028",
+      "family_id": "C01",
+      "split": "development",
+      "split_group": "GROUP06",
+      "snapshot_sha256": "bba95d87c569e08e7104d37d58a86d99dd7d55f5b32d945e45f59637a5f86ea5",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "unauthorized_command_execution",
+      "observed_mechanism": "child_process_outside_tool_contract",
+      "original_declared_label": "child_process_outside_tool_contract",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM028.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Spawns a local worker process mutating state outside the declared read-only tool contract."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM029",
+      "pair_id": "SIM029",
+      "family_id": "C01",
+      "split": "development",
+      "split_group": "GROUP06",
+      "snapshot_sha256": "c4c692031604d533e39e1f56be4091848e68fd271ee78820da34361922e1ffc4",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "unauthorized_command_execution",
+      "observed_mechanism": "child_process_outside_tool_contract",
+      "original_declared_label": "child_process_outside_tool_contract",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM029.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Spawns a local worker process mutating state outside the declared read-only tool contract."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM030",
+      "pair_id": "SIM030",
+      "family_id": "C01",
+      "split": "development",
+      "split_group": "GROUP06",
+      "snapshot_sha256": "07c2368c9da15025b248c39fc578f2e16ecb2b41616e036979bac891f03fb13f",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "unauthorized_command_execution",
+      "observed_mechanism": "child_process_outside_tool_contract",
+      "original_declared_label": "child_process_outside_tool_contract",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM030.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Spawns a local worker process mutating state outside the declared read-only tool contract."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM031",
+      "pair_id": "SIM031",
+      "family_id": "C02",
+      "split": "development",
+      "split_group": "GROUP07",
+      "snapshot_sha256": "7e66da41e41b451a614eeff8c063c1081de974041db544043a2948852817f48b",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "unauthorized_command_execution",
+      "observed_mechanism": "child_process_outside_tool_contract",
+      "original_declared_label": "child_process_outside_tool_contract",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM031.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Spawns a local worker process mutating state outside the declared read-only tool contract."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM032",
+      "pair_id": "SIM032",
+      "family_id": "C02",
+      "split": "development",
+      "split_group": "GROUP07",
+      "snapshot_sha256": "8591712b5bef1e20c5f53b2def0b19573e3f253a19ba382d097435e343374836",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "unauthorized_command_execution",
+      "observed_mechanism": "child_process_outside_tool_contract",
+      "original_declared_label": "child_process_outside_tool_contract",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM032.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Spawns a local worker process mutating state outside the declared read-only tool contract."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM033",
+      "pair_id": "SIM033",
+      "family_id": "C02",
+      "split": "development",
+      "split_group": "GROUP07",
+      "snapshot_sha256": "669af6c4626542d998be005fd3f92bc6c0a857c5001152a6f25de6bf06916fb3",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "unauthorized_command_execution",
+      "observed_mechanism": "child_process_outside_tool_contract",
+      "original_declared_label": "child_process_outside_tool_contract",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM033.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Spawns a local worker process mutating state outside the declared read-only tool contract."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM034",
+      "pair_id": "SIM034",
+      "family_id": "C02",
+      "split": "development",
+      "split_group": "GROUP07",
+      "snapshot_sha256": "3fbdf28ed0bc66796af731f0065b7d7e259b8aaccac5879773d01a4254840467",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "unauthorized_command_execution",
+      "observed_mechanism": "child_process_outside_tool_contract",
+      "original_declared_label": "child_process_outside_tool_contract",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM034.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Spawns a local worker process mutating state outside the declared read-only tool contract."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM035",
+      "pair_id": "SIM035",
+      "family_id": "C02",
+      "split": "development",
+      "split_group": "GROUP07",
+      "snapshot_sha256": "628a10bdcc5be23e3e891abbc07f0590396d96ba544a53580f4f2a5f6bb24683",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "unauthorized_command_execution",
+      "observed_mechanism": "child_process_outside_tool_contract",
+      "original_declared_label": "child_process_outside_tool_contract",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM035.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Spawns a local worker process mutating state outside the declared read-only tool contract."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM036",
+      "pair_id": "SIM036",
+      "family_id": "C03",
+      "split": "development",
+      "split_group": "GROUP08",
+      "snapshot_sha256": "36ee530689d94b980942ab6b7c32b292731c64dd9b9aed1c94aff46f38813f47",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "unauthorized_command_execution",
+      "observed_mechanism": "child_process_outside_tool_contract",
+      "original_declared_label": "child_process_outside_tool_contract",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM036.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Spawns a local worker process mutating state outside the declared read-only tool contract."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM037",
+      "pair_id": "SIM037",
+      "family_id": "C03",
+      "split": "development",
+      "split_group": "GROUP08",
+      "snapshot_sha256": "c4439e611dddbf0398c92c449e3e6ff7ff8f02a22a0e52ff0dd3b1b17d9aaeb8",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "unauthorized_command_execution",
+      "observed_mechanism": "child_process_outside_tool_contract",
+      "original_declared_label": "child_process_outside_tool_contract",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM037.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Spawns a local worker process mutating state outside the declared read-only tool contract."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM038",
+      "pair_id": "SIM038",
+      "family_id": "C03",
+      "split": "development",
+      "split_group": "GROUP08",
+      "snapshot_sha256": "6b93e302f13bea036d1dff6b5451e74d82694b333cb9ae3bdb961acfd8daff23",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "unauthorized_command_execution",
+      "observed_mechanism": "child_process_outside_tool_contract",
+      "original_declared_label": "child_process_outside_tool_contract",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM038.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Spawns a local worker process mutating state outside the declared read-only tool contract."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM039",
+      "pair_id": "SIM039",
+      "family_id": "C03",
+      "split": "development",
+      "split_group": "GROUP08",
+      "snapshot_sha256": "1e8684a3bb5404f3fd1a9ed0580e74618042437dfd85f853b29f935ea110c0c4",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "unauthorized_command_execution",
+      "observed_mechanism": "child_process_outside_tool_contract",
+      "original_declared_label": "child_process_outside_tool_contract",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM039.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Spawns a local worker process mutating state outside the declared read-only tool contract."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM040",
+      "pair_id": "SIM040",
+      "family_id": "C03",
+      "split": "development",
+      "split_group": "GROUP08",
+      "snapshot_sha256": "429eefc416eea4a4e7f073c45f3993d4278d3dea5bbeec316d2562e4c9fae32d",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "unauthorized_command_execution",
+      "observed_mechanism": "child_process_outside_tool_contract",
+      "original_declared_label": "child_process_outside_tool_contract",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM040.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Spawns a local worker process mutating state outside the declared read-only tool contract."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM041",
+      "pair_id": "SIM041",
+      "family_id": "C04",
+      "split": "development",
+      "split_group": "GROUP09",
+      "snapshot_sha256": "4ed782dc387f0b7768062685de03dd0ae8970ac556d042864547dd4249d17653",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "unauthorized_command_execution",
+      "observed_mechanism": "child_process_outside_tool_contract",
+      "original_declared_label": "child_process_outside_tool_contract",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM041.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Spawns a local worker process mutating state outside the declared read-only tool contract."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM042",
+      "pair_id": "SIM042",
+      "family_id": "C04",
+      "split": "development",
+      "split_group": "GROUP09",
+      "snapshot_sha256": "e56a4028c9ad30768e7c85dc15a88eafb9ec3b2aa552f9646d0645f201a9ae7d",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "unauthorized_command_execution",
+      "observed_mechanism": "child_process_outside_tool_contract",
+      "original_declared_label": "child_process_outside_tool_contract",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM042.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Spawns a local worker process mutating state outside the declared read-only tool contract."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM043",
+      "pair_id": "SIM043",
+      "family_id": "C04",
+      "split": "development",
+      "split_group": "GROUP09",
+      "snapshot_sha256": "1fb19a9e06ea94da33e387cf8b95c4f350d556344b81d076882ec2aae8917a21",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "unauthorized_command_execution",
+      "observed_mechanism": "child_process_outside_tool_contract",
+      "original_declared_label": "child_process_outside_tool_contract",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM043.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Spawns a local worker process mutating state outside the declared read-only tool contract."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM044",
+      "pair_id": "SIM044",
+      "family_id": "C04",
+      "split": "development",
+      "split_group": "GROUP09",
+      "snapshot_sha256": "41bb3bd3ede38a75922a39ed24f79c0a28e93a9d345f477e3063cfee5c0cdc14",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "unauthorized_command_execution",
+      "observed_mechanism": "child_process_outside_tool_contract",
+      "original_declared_label": "child_process_outside_tool_contract",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM044.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Spawns a local worker process mutating state outside the declared read-only tool contract."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM045",
+      "pair_id": "SIM045",
+      "family_id": "C04",
+      "split": "development",
+      "split_group": "GROUP09",
+      "snapshot_sha256": "4fd800e986c7a290f205832404d249f121f5a800e5a5e383cfc0a76dbaca2329",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "unauthorized_command_execution",
+      "observed_mechanism": "child_process_outside_tool_contract",
+      "original_declared_label": "child_process_outside_tool_contract",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM045.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Spawns a local worker process mutating state outside the declared read-only tool contract."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM046",
+      "pair_id": "SIM046",
+      "family_id": "C05",
+      "split": "development",
+      "split_group": "GROUP10",
+      "snapshot_sha256": "2bda0b78faeb5581582384a20dd593bdc3eb61d96d2f082d869630cf87df45ab",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "unauthorized_command_execution",
+      "observed_mechanism": "child_process_outside_tool_contract",
+      "original_declared_label": "child_process_outside_tool_contract",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM046.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Spawns a local worker process mutating state outside the declared read-only tool contract."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM047",
+      "pair_id": "SIM047",
+      "family_id": "C05",
+      "split": "development",
+      "split_group": "GROUP10",
+      "snapshot_sha256": "fbe53fa636629561257e83dffd7168cd475f05488df080f231216d83cf1f6bfe",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "unauthorized_command_execution",
+      "observed_mechanism": "child_process_outside_tool_contract",
+      "original_declared_label": "child_process_outside_tool_contract",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM047.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Spawns a local worker process mutating state outside the declared read-only tool contract."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM048",
+      "pair_id": "SIM048",
+      "family_id": "C05",
+      "split": "development",
+      "split_group": "GROUP10",
+      "snapshot_sha256": "d2fe0f1fc409d733a759ed3ed7b4fe92a27d725435a5dd1fc2121f2f3bac4578",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "unauthorized_command_execution",
+      "observed_mechanism": "child_process_outside_tool_contract",
+      "original_declared_label": "child_process_outside_tool_contract",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM048.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Spawns a local worker process mutating state outside the declared read-only tool contract."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM049",
+      "pair_id": "SIM049",
+      "family_id": "C05",
+      "split": "development",
+      "split_group": "GROUP10",
+      "snapshot_sha256": "955514a2b4b966ff4ff51a34fb1040380b7ea6b4d31dc9c15e319b2a56c78d1a",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "unauthorized_command_execution",
+      "observed_mechanism": "child_process_outside_tool_contract",
+      "original_declared_label": "child_process_outside_tool_contract",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM049.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Spawns a local worker process mutating state outside the declared read-only tool contract."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM050",
+      "pair_id": "SIM050",
+      "family_id": "C05",
+      "split": "development",
+      "split_group": "GROUP10",
+      "snapshot_sha256": "d0c75838a5220ec60807be19541c5e62217d47f80c5c436ff53d277b5dfe5b96",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "unauthorized_command_execution",
+      "observed_mechanism": "child_process_outside_tool_contract",
+      "original_declared_label": "child_process_outside_tool_contract",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM050.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Spawns a local worker process mutating state outside the declared read-only tool contract."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM051",
+      "pair_id": "SIM051",
+      "family_id": "S01",
+      "split": "development",
+      "split_group": "GROUP11",
+      "snapshot_sha256": "7ce5d3e89cfed90b03abf4273e8fbc077e1012982e5bcab94091f516cb9821cb",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "credential_theft",
+      "observed_mechanism": "synthetic_record_to_local_output_and_loopback",
+      "original_declared_label": "synthetic_record_to_local_output_and_loopback",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM051.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Only synthetic records can reach the fixed loopback receiver."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM052",
+      "pair_id": "SIM052",
+      "family_id": "S01",
+      "split": "development",
+      "split_group": "GROUP11",
+      "snapshot_sha256": "1f734bf20b5b96dd71cf28e1ae5b42ac732f20ab62d40bafc73dc418962cd3da",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "credential_theft",
+      "observed_mechanism": "synthetic_record_to_local_output_and_loopback",
+      "original_declared_label": "synthetic_record_to_local_output_and_loopback",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM052.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Only synthetic records can reach the fixed loopback receiver."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM053",
+      "pair_id": "SIM053",
+      "family_id": "S01",
+      "split": "development",
+      "split_group": "GROUP11",
+      "snapshot_sha256": "1711553147e3dc8ab9031f887c4e71a8ce9b1adbba003273da2d16b9d1c46080",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "credential_theft",
+      "observed_mechanism": "synthetic_record_to_local_output_and_loopback",
+      "original_declared_label": "synthetic_record_to_local_output_and_loopback",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM053.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Only synthetic records can reach the fixed loopback receiver."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM054",
+      "pair_id": "SIM054",
+      "family_id": "S01",
+      "split": "development",
+      "split_group": "GROUP11",
+      "snapshot_sha256": "2e1bdcefce72dc19b9181a3c20c79245f80c605d85a7755867da4147f12eafcd",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "credential_theft",
+      "observed_mechanism": "synthetic_record_to_local_output_and_loopback",
+      "original_declared_label": "synthetic_record_to_local_output_and_loopback",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM054.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Only synthetic records can reach the fixed loopback receiver."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM055",
+      "pair_id": "SIM055",
+      "family_id": "S01",
+      "split": "development",
+      "split_group": "GROUP11",
+      "snapshot_sha256": "148695bb9399c491fcb45fa84388f752bf0c454b6dc809bf5baf6966027cc426",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "credential_theft",
+      "observed_mechanism": "synthetic_record_to_local_output_and_loopback",
+      "original_declared_label": "synthetic_record_to_local_output_and_loopback",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM055.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Only synthetic records can reach the fixed loopback receiver."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM056",
+      "pair_id": "SIM056",
+      "family_id": "S02",
+      "split": "development",
+      "split_group": "GROUP12",
+      "snapshot_sha256": "ab3d3686a218f476131b618de69ed4aae222d6ad717e9f3c58e3bf1ac00d930d",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "credential_theft",
+      "observed_mechanism": "synthetic_record_to_local_output_and_loopback",
+      "original_declared_label": "synthetic_record_to_local_output_and_loopback",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM056.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Only synthetic records can reach the fixed loopback receiver."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM057",
+      "pair_id": "SIM057",
+      "family_id": "S02",
+      "split": "development",
+      "split_group": "GROUP12",
+      "snapshot_sha256": "66f159c7bb2a045ee8f6d883b71a92df5c692ea3e3deea38015dd6b84312fc30",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "credential_theft",
+      "observed_mechanism": "synthetic_record_to_local_output_and_loopback",
+      "original_declared_label": "synthetic_record_to_local_output_and_loopback",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM057.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Only synthetic records can reach the fixed loopback receiver."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM058",
+      "pair_id": "SIM058",
+      "family_id": "S02",
+      "split": "development",
+      "split_group": "GROUP12",
+      "snapshot_sha256": "eb234c7c17121cc4c97239e369733735fc7ebc3e886145db4ca407247e38a1ed",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "credential_theft",
+      "observed_mechanism": "synthetic_record_to_local_output_and_loopback",
+      "original_declared_label": "synthetic_record_to_local_output_and_loopback",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM058.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Only synthetic records can reach the fixed loopback receiver."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM059",
+      "pair_id": "SIM059",
+      "family_id": "S02",
+      "split": "development",
+      "split_group": "GROUP12",
+      "snapshot_sha256": "d2d32bd50196c67ba62b8e7c3980a9d9f82d83bbe0b17183dd64677866703490",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "credential_theft",
+      "observed_mechanism": "synthetic_record_to_local_output_and_loopback",
+      "original_declared_label": "synthetic_record_to_local_output_and_loopback",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM059.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Only synthetic records can reach the fixed loopback receiver."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM060",
+      "pair_id": "SIM060",
+      "family_id": "S02",
+      "split": "development",
+      "split_group": "GROUP12",
+      "snapshot_sha256": "e882ed8a26dea6377175cf2836d35f375cfd0928cc6a2eba4f85c61cac7568dd",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "credential_theft",
+      "observed_mechanism": "synthetic_record_to_local_output_and_loopback",
+      "original_declared_label": "synthetic_record_to_local_output_and_loopback",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM060.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Only synthetic records can reach the fixed loopback receiver."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM061",
+      "pair_id": "SIM061",
+      "family_id": "S03",
+      "split": "development",
+      "split_group": "GROUP13",
+      "snapshot_sha256": "288e95c22bde187309272e30d13496e5f74f65469d854c91c83f76533ad3432b",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "credential_theft",
+      "observed_mechanism": "synthetic_record_to_local_output_and_loopback",
+      "original_declared_label": "synthetic_record_to_local_output_and_loopback",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM061.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Only synthetic records can reach the fixed loopback receiver."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM062",
+      "pair_id": "SIM062",
+      "family_id": "S03",
+      "split": "development",
+      "split_group": "GROUP13",
+      "snapshot_sha256": "cc9fa86746b2965418ee5822481512b4cd7dd93019eca8eb59aef393a1aaa09e",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "credential_theft",
+      "observed_mechanism": "synthetic_record_to_local_output_and_loopback",
+      "original_declared_label": "synthetic_record_to_local_output_and_loopback",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM062.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Only synthetic records can reach the fixed loopback receiver."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM063",
+      "pair_id": "SIM063",
+      "family_id": "S03",
+      "split": "development",
+      "split_group": "GROUP13",
+      "snapshot_sha256": "601c269a8f3c59906845de0e027eb39efe00571c27dacedd03cc12e74d30ae5d",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "credential_theft",
+      "observed_mechanism": "synthetic_record_to_local_output_and_loopback",
+      "original_declared_label": "synthetic_record_to_local_output_and_loopback",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM063.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Only synthetic records can reach the fixed loopback receiver."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM064",
+      "pair_id": "SIM064",
+      "family_id": "S03",
+      "split": "development",
+      "split_group": "GROUP13",
+      "snapshot_sha256": "7843042d32b5c815c1e4d156bd71519ce7c2d334cfc7cea0cad6bf3d64d3a3c3",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "credential_theft",
+      "observed_mechanism": "synthetic_record_to_local_output_and_loopback",
+      "original_declared_label": "synthetic_record_to_local_output_and_loopback",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM064.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Only synthetic records can reach the fixed loopback receiver."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM065",
+      "pair_id": "SIM065",
+      "family_id": "S03",
+      "split": "development",
+      "split_group": "GROUP13",
+      "snapshot_sha256": "d500469070f6e7d1394b3b9a6e812903cac68aeea8af4a26b8d772863d1b0a99",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "credential_theft",
+      "observed_mechanism": "synthetic_record_to_local_output_and_loopback",
+      "original_declared_label": "synthetic_record_to_local_output_and_loopback",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM065.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Only synthetic records can reach the fixed loopback receiver."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM066",
+      "pair_id": "SIM066",
+      "family_id": "S04",
+      "split": "development",
+      "split_group": "GROUP14",
+      "snapshot_sha256": "1b2be25f0ad6dd00cc000cc6ceee2931fa2c8fc6996ac0b7f2560d725da9076d",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "credential_theft",
+      "observed_mechanism": "synthetic_record_to_local_output_and_loopback",
+      "original_declared_label": "synthetic_record_to_local_output_and_loopback",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM066.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Only synthetic records can reach the fixed loopback receiver."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM067",
+      "pair_id": "SIM067",
+      "family_id": "S04",
+      "split": "development",
+      "split_group": "GROUP14",
+      "snapshot_sha256": "c92c6f30adef154b0a6688b7a43a8177769d0a2a54b379ed2e8c8c47c602c248",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "credential_theft",
+      "observed_mechanism": "synthetic_record_to_local_output_and_loopback",
+      "original_declared_label": "synthetic_record_to_local_output_and_loopback",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM067.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Only synthetic records can reach the fixed loopback receiver."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM068",
+      "pair_id": "SIM068",
+      "family_id": "S04",
+      "split": "development",
+      "split_group": "GROUP14",
+      "snapshot_sha256": "cfc6bfd2bff07c65a06f57f15a6b68cf679fec71354e845fc4cacaecee03f007",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "credential_theft",
+      "observed_mechanism": "synthetic_record_to_local_output_and_loopback",
+      "original_declared_label": "synthetic_record_to_local_output_and_loopback",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM068.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Only synthetic records can reach the fixed loopback receiver."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM069",
+      "pair_id": "SIM069",
+      "family_id": "S04",
+      "split": "development",
+      "split_group": "GROUP14",
+      "snapshot_sha256": "05a1372772f1bfa4c169c4193342618506f9d21625e93667433c84dfdfda9379",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "credential_theft",
+      "observed_mechanism": "synthetic_record_to_local_output_and_loopback",
+      "original_declared_label": "synthetic_record_to_local_output_and_loopback",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM069.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Only synthetic records can reach the fixed loopback receiver."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM070",
+      "pair_id": "SIM070",
+      "family_id": "S04",
+      "split": "development",
+      "split_group": "GROUP14",
+      "snapshot_sha256": "1bf948165d82c9bcc92c50aafcc1c6636f0f11d1acdb7f2e244894da12755fd5",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "credential_theft",
+      "observed_mechanism": "synthetic_record_to_local_output_and_loopback",
+      "original_declared_label": "synthetic_record_to_local_output_and_loopback",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM070.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Only synthetic records can reach the fixed loopback receiver."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM071",
+      "pair_id": "SIM071",
+      "family_id": "S05",
+      "split": "development",
+      "split_group": "GROUP15",
+      "snapshot_sha256": "8fd8b24eb6f4d9396dbfa70e0ef39231c4e8d81c9c2aa4bd94cd656662e35d86",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "credential_theft",
+      "observed_mechanism": "synthetic_record_to_local_output_and_loopback",
+      "original_declared_label": "synthetic_record_to_local_output_and_loopback",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM071.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Only synthetic records can reach the fixed loopback receiver."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM072",
+      "pair_id": "SIM072",
+      "family_id": "S05",
+      "split": "development",
+      "split_group": "GROUP15",
+      "snapshot_sha256": "bea5d5e9165184aae69a4e59dd7a7707093fb7589b3fda7ef14064003a2ac6f7",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "credential_theft",
+      "observed_mechanism": "synthetic_record_to_local_output_and_loopback",
+      "original_declared_label": "synthetic_record_to_local_output_and_loopback",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM072.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Only synthetic records can reach the fixed loopback receiver."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM073",
+      "pair_id": "SIM073",
+      "family_id": "S05",
+      "split": "development",
+      "split_group": "GROUP15",
+      "snapshot_sha256": "a0c626bebcf67fc7834ae57fe2bae19280bf1faddc28481d4a5037ee1dcc04b7",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "credential_theft",
+      "observed_mechanism": "synthetic_record_to_local_output_and_loopback",
+      "original_declared_label": "synthetic_record_to_local_output_and_loopback",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM073.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Only synthetic records can reach the fixed loopback receiver."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM074",
+      "pair_id": "SIM074",
+      "family_id": "S05",
+      "split": "development",
+      "split_group": "GROUP15",
+      "snapshot_sha256": "b9f473146de89ef27a3457d99f1d9c825aa90e73e33af8918754d9620183c956",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "credential_theft",
+      "observed_mechanism": "synthetic_record_to_local_output_and_loopback",
+      "original_declared_label": "synthetic_record_to_local_output_and_loopback",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM074.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Only synthetic records can reach the fixed loopback receiver."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM075",
+      "pair_id": "SIM075",
+      "family_id": "S05",
+      "split": "development",
+      "split_group": "GROUP15",
+      "snapshot_sha256": "835c1d3dbe20076ee021e92f3eff4b39cb91665bfada7d49ab43810544ff4f4f",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "credential_theft",
+      "observed_mechanism": "synthetic_record_to_local_output_and_loopback",
+      "original_declared_label": "synthetic_record_to_local_output_and_loopback",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM075.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Only synthetic records can reach the fixed loopback receiver."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM076",
+      "pair_id": "SIM076",
+      "family_id": "P01",
+      "split": "development",
+      "split_group": "GROUP16",
+      "snapshot_sha256": "1edd6d36c861eb1341377ef2c979717b411b11522c7b26ed55b2664b34f6a2b1",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "prompt_injection",
+      "observed_mechanism": "indirect_prompt_injection_and_tool_poisoning",
+      "original_declared_label": "indirect_prompt_injection_and_tool_poisoning",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM076.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Presentation probe delivery is tested; agent compliance has not been measured."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM077",
+      "pair_id": "SIM077",
+      "family_id": "P01",
+      "split": "development",
+      "split_group": "GROUP16",
+      "snapshot_sha256": "cc95dfd81f9fc461d9a95cef567eb682704be17827692237d7a7b564a0082763",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "prompt_injection",
+      "observed_mechanism": "indirect_prompt_injection_and_tool_poisoning",
+      "original_declared_label": "indirect_prompt_injection_and_tool_poisoning",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM077.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Presentation probe delivery is tested; agent compliance has not been measured."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM078",
+      "pair_id": "SIM078",
+      "family_id": "P01",
+      "split": "development",
+      "split_group": "GROUP16",
+      "snapshot_sha256": "5cc690af7c0308ed2d2cb34e16a8c1a5eb88ad843de8896608601ed1f58b8767",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "prompt_injection",
+      "observed_mechanism": "indirect_prompt_injection_and_tool_poisoning",
+      "original_declared_label": "indirect_prompt_injection_and_tool_poisoning",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM078.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Presentation probe delivery is tested; agent compliance has not been measured."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM079",
+      "pair_id": "SIM079",
+      "family_id": "P01",
+      "split": "development",
+      "split_group": "GROUP16",
+      "snapshot_sha256": "3a8adce75c5b634dca06432fec39dc489c84fdb9916dbc53a972e15a747ff804",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "prompt_injection",
+      "observed_mechanism": "indirect_prompt_injection_and_tool_poisoning",
+      "original_declared_label": "indirect_prompt_injection_and_tool_poisoning",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM079.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Presentation probe delivery is tested; agent compliance has not been measured."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM080",
+      "pair_id": "SIM080",
+      "family_id": "P01",
+      "split": "development",
+      "split_group": "GROUP16",
+      "snapshot_sha256": "8c98d751611714683f41420116fad459234185b652b85bd77d21d71c3395da12",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "prompt_injection",
+      "observed_mechanism": "indirect_prompt_injection_and_tool_poisoning",
+      "original_declared_label": "indirect_prompt_injection_and_tool_poisoning",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM080.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Presentation probe delivery is tested; agent compliance has not been measured."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM081",
+      "pair_id": "SIM081",
+      "family_id": "P02",
+      "split": "development",
+      "split_group": "GROUP17",
+      "snapshot_sha256": "52d14be480173cb611978f6facc428551a60aa61973380b6a8bff66dbb5c711c",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "prompt_injection",
+      "observed_mechanism": "indirect_prompt_injection_and_tool_poisoning",
+      "original_declared_label": "indirect_prompt_injection_and_tool_poisoning",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM081.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Presentation probe delivery is tested; agent compliance has not been measured."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM082",
+      "pair_id": "SIM082",
+      "family_id": "P02",
+      "split": "development",
+      "split_group": "GROUP17",
+      "snapshot_sha256": "d9eda3bb551c123353279a5eb513a23ee3f7cfcd2c6c59781c263820f12663c3",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "prompt_injection",
+      "observed_mechanism": "indirect_prompt_injection_and_tool_poisoning",
+      "original_declared_label": "indirect_prompt_injection_and_tool_poisoning",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM082.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Presentation probe delivery is tested; agent compliance has not been measured."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM083",
+      "pair_id": "SIM083",
+      "family_id": "P02",
+      "split": "development",
+      "split_group": "GROUP17",
+      "snapshot_sha256": "5c2bd1c8cbf9cff1beda7dedf0b2d09de2df3e373aa2aa47aaea3b51f3e8fade",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "prompt_injection",
+      "observed_mechanism": "indirect_prompt_injection_and_tool_poisoning",
+      "original_declared_label": "indirect_prompt_injection_and_tool_poisoning",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM083.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Presentation probe delivery is tested; agent compliance has not been measured."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM084",
+      "pair_id": "SIM084",
+      "family_id": "P02",
+      "split": "development",
+      "split_group": "GROUP17",
+      "snapshot_sha256": "0cf85f0355549fd00852b599dfcfef23ffee2ba2c732e937b9de4193b1f20a06",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "prompt_injection",
+      "observed_mechanism": "indirect_prompt_injection_and_tool_poisoning",
+      "original_declared_label": "indirect_prompt_injection_and_tool_poisoning",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM084.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Presentation probe delivery is tested; agent compliance has not been measured."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM085",
+      "pair_id": "SIM085",
+      "family_id": "P02",
+      "split": "development",
+      "split_group": "GROUP17",
+      "snapshot_sha256": "e330e7d342db07bc0c4d536ed9b413d9bb807086486b9c7d51b0eccee513c712",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "prompt_injection",
+      "observed_mechanism": "indirect_prompt_injection_and_tool_poisoning",
+      "original_declared_label": "indirect_prompt_injection_and_tool_poisoning",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM085.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Presentation probe delivery is tested; agent compliance has not been measured."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM086",
+      "pair_id": "SIM086",
+      "family_id": "P03",
+      "split": "development",
+      "split_group": "GROUP18",
+      "snapshot_sha256": "b4681d2e5ce29035538249998939534b573e067ebe233d6e4c903cf927023ccc",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "prompt_injection",
+      "observed_mechanism": "indirect_prompt_injection_and_tool_poisoning",
+      "original_declared_label": "indirect_prompt_injection_and_tool_poisoning",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM086.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Presentation probe delivery is tested; agent compliance has not been measured."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM087",
+      "pair_id": "SIM087",
+      "family_id": "P03",
+      "split": "development",
+      "split_group": "GROUP18",
+      "snapshot_sha256": "ae8ddea2a8505fb8eb8ae91e13d55490fbda1c7284dfce581f90663947532458",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "prompt_injection",
+      "observed_mechanism": "indirect_prompt_injection_and_tool_poisoning",
+      "original_declared_label": "indirect_prompt_injection_and_tool_poisoning",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM087.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Presentation probe delivery is tested; agent compliance has not been measured."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM088",
+      "pair_id": "SIM088",
+      "family_id": "P03",
+      "split": "development",
+      "split_group": "GROUP18",
+      "snapshot_sha256": "2e47c1c1d950c15002edd907494b40e57a796386a462fcb93d0ef444a005ea23",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "prompt_injection",
+      "observed_mechanism": "indirect_prompt_injection_and_tool_poisoning",
+      "original_declared_label": "indirect_prompt_injection_and_tool_poisoning",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM088.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Presentation probe delivery is tested; agent compliance has not been measured."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM089",
+      "pair_id": "SIM089",
+      "family_id": "P03",
+      "split": "development",
+      "split_group": "GROUP18",
+      "snapshot_sha256": "ceee77a8c6759b6c475a85ce6dee6d36668c4508092691adac4bb61e2a9da6d4",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "prompt_injection",
+      "observed_mechanism": "indirect_prompt_injection_and_tool_poisoning",
+      "original_declared_label": "indirect_prompt_injection_and_tool_poisoning",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM089.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Presentation probe delivery is tested; agent compliance has not been measured."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM090",
+      "pair_id": "SIM090",
+      "family_id": "P03",
+      "split": "development",
+      "split_group": "GROUP18",
+      "snapshot_sha256": "f76f96eeb782fc183c5a0e8891f64d613672837c24039c8f14cfa93dde9173f3",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "prompt_injection",
+      "observed_mechanism": "indirect_prompt_injection_and_tool_poisoning",
+      "original_declared_label": "indirect_prompt_injection_and_tool_poisoning",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM090.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Presentation probe delivery is tested; agent compliance has not been measured."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM091",
+      "pair_id": "SIM091",
+      "family_id": "P04",
+      "split": "development",
+      "split_group": "GROUP19",
+      "snapshot_sha256": "6e8d61e64dd157ee38db04bd426967edfc78c020bf8dcf72599efcd123dcd887",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "prompt_injection",
+      "observed_mechanism": "indirect_prompt_injection_and_tool_poisoning",
+      "original_declared_label": "indirect_prompt_injection_and_tool_poisoning",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM091.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Presentation probe delivery is tested; agent compliance has not been measured."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM092",
+      "pair_id": "SIM092",
+      "family_id": "P04",
+      "split": "development",
+      "split_group": "GROUP19",
+      "snapshot_sha256": "6b89ac3b501e6b9a5ee274d6112133d90209d792a5e01c264001c57efe77d15e",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "prompt_injection",
+      "observed_mechanism": "indirect_prompt_injection_and_tool_poisoning",
+      "original_declared_label": "indirect_prompt_injection_and_tool_poisoning",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM092.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Presentation probe delivery is tested; agent compliance has not been measured."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM093",
+      "pair_id": "SIM093",
+      "family_id": "P04",
+      "split": "development",
+      "split_group": "GROUP19",
+      "snapshot_sha256": "ce06b7f708bc31196489bb55fa6b6b0f31d143d3eeacf5a18705b4fb6ed80ed9",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "prompt_injection",
+      "observed_mechanism": "indirect_prompt_injection_and_tool_poisoning",
+      "original_declared_label": "indirect_prompt_injection_and_tool_poisoning",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM093.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Presentation probe delivery is tested; agent compliance has not been measured."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM094",
+      "pair_id": "SIM094",
+      "family_id": "P04",
+      "split": "development",
+      "split_group": "GROUP19",
+      "snapshot_sha256": "43b6a5d73bfa95a905a8537db7f52ef482dd7e7ca7753ce3c5f0fc350704cc9c",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "prompt_injection",
+      "observed_mechanism": "indirect_prompt_injection_and_tool_poisoning",
+      "original_declared_label": "indirect_prompt_injection_and_tool_poisoning",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM094.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Presentation probe delivery is tested; agent compliance has not been measured."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM095",
+      "pair_id": "SIM095",
+      "family_id": "P04",
+      "split": "development",
+      "split_group": "GROUP19",
+      "snapshot_sha256": "8902ffd48db5e2acb345d274123b993bf63ad148bddc10c81a7cf6a621257e88",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "prompt_injection",
+      "observed_mechanism": "indirect_prompt_injection_and_tool_poisoning",
+      "original_declared_label": "indirect_prompt_injection_and_tool_poisoning",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM095.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Presentation probe delivery is tested; agent compliance has not been measured."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM096",
+      "pair_id": "SIM096",
+      "family_id": "P05",
+      "split": "development",
+      "split_group": "GROUP20",
+      "snapshot_sha256": "ea1f403ae6cc522388fbd82395fcb8adf2711fa5d3fc856d649e692b96d3660d",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "prompt_injection",
+      "observed_mechanism": "indirect_prompt_injection_and_tool_poisoning",
+      "original_declared_label": "indirect_prompt_injection_and_tool_poisoning",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM096.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Presentation probe delivery is tested; agent compliance has not been measured."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM097",
+      "pair_id": "SIM097",
+      "family_id": "P05",
+      "split": "development",
+      "split_group": "GROUP20",
+      "snapshot_sha256": "a79dab9c6433fca357423db5c397447c1e15e5efc706e0245ba9df63a93a7c7e",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "prompt_injection",
+      "observed_mechanism": "indirect_prompt_injection_and_tool_poisoning",
+      "original_declared_label": "indirect_prompt_injection_and_tool_poisoning",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM097.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Presentation probe delivery is tested; agent compliance has not been measured."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM098",
+      "pair_id": "SIM098",
+      "family_id": "P05",
+      "split": "development",
+      "split_group": "GROUP20",
+      "snapshot_sha256": "7cbaa862d477a32d3a63d59fe95242539d1b1f7ad35f3dcc5b58c0d371b2bbcb",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "prompt_injection",
+      "observed_mechanism": "indirect_prompt_injection_and_tool_poisoning",
+      "original_declared_label": "indirect_prompt_injection_and_tool_poisoning",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM098.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Presentation probe delivery is tested; agent compliance has not been measured."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM099",
+      "pair_id": "SIM099",
+      "family_id": "P05",
+      "split": "development",
+      "split_group": "GROUP20",
+      "snapshot_sha256": "84b7bf0a8841455b5b371d439245d221742a599f04880c5bdbd163a082e24d2d",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "prompt_injection",
+      "observed_mechanism": "indirect_prompt_injection_and_tool_poisoning",
+      "original_declared_label": "indirect_prompt_injection_and_tool_poisoning",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM099.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Presentation probe delivery is tested; agent compliance has not been measured."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    },
+    {
+      "sample_id": "SIM100",
+      "pair_id": "SIM100",
+      "family_id": "P05",
+      "split": "development",
+      "split_group": "GROUP20",
+      "snapshot_sha256": "a3102995a9f99594f352b1cb66eea1f900eb8bfffbe889d1f029f56cbe48bf8c",
+      "source_directory": "samples",
+      "proposed_malware_label": "malicious",
+      "candidate_category": "prompt_injection",
+      "observed_mechanism": "indirect_prompt_injection_and_tool_poisoning",
+      "original_declared_label": "indirect_prompt_injection_and_tool_poisoning",
+      "original_admission_claim": {
+        "status": "contained_mechanism_fixture",
+        "proven_malicious": false
+      },
+      "static_evidence": "evaluation/static-evidence/SIM100.json",
+      "runtime_success": "NOT_ESTABLISHED_BY_STATIC_AUDIT",
+      "evidence_gaps": [
+        "Presentation probe delivery is tested; agent compliance has not been measured."
+      ],
+      "hard_negative_candidate": false,
+      "malware_ground_truth": "malicious",
+      "assessed_scope": "source_intent",
+      "reviewer": "mcp-security-review-team",
+      "rubric_id": "rubric-sast-v4",
+      "review_status": "accepted_review_record",
+      "scoring_eligible": true,
+      "admission_reasons": []
+    }
+  ]
+}

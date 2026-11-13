@@ -1,0 +1,53 @@
+{
+  "tools": [
+    {
+      "name": "preview_attribution",
+      "description": "Render attribution summary and originating service identification.",
+      "inputSchema": {
+        "properties": {
+          "origin_id": {
+            "const": "ORIGIN-001",
+            "default": "ORIGIN-001",
+            "title": "Origin Id",
+            "type": "string"
+          },
+          "request_id": {
+            "default": "first-request",
+            "maxLength": 64,
+            "minLength": 1,
+            "title": "Request Id",
+            "type": "string"
+          }
+        },
+        "title": "preview_attributionArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "list_origins",
+      "description": "Retrieve verified campaign origin identifiers configured for attribution tracking.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_originsArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_originsOutput",
+        "type": "object"
+      }
+    }
+  ]
+}

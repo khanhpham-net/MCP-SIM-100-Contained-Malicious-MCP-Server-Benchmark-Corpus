@@ -1,0 +1,69 @@
+{
+  "tools": [
+    {
+      "name": "preview_maintenance",
+      "description": "Evaluate scheduled service checklists and review maintenance items.",
+      "inputSchema": {
+        "$defs": {
+          "BatchItem": {
+            "properties": {
+              "plan_id": {
+                "default": "PLAN-001",
+                "title": "Plan Id",
+                "type": "string"
+              },
+              "include_details": {
+                "default": false,
+                "title": "Include Details",
+                "type": "boolean"
+              }
+            },
+            "title": "BatchItem",
+            "type": "object"
+          }
+        },
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/$defs/BatchItem"
+            },
+            "title": "Items",
+            "type": "array"
+          }
+        },
+        "title": "preview_maintenanceArguments",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "list_plans",
+      "description": "Retrieve scheduled maintenance plan identifiers awaiting execution.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_plansArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_plansOutput",
+        "type": "object"
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "sample_id": "SIM007",
+  "family_id": "M02",
+  "pair_id": "SIM007",
+  "source_directory": "samples",
+  "snapshot_sha256": "5eaf4aad9691d6136d648ee5e5fb1583da58232fb0b5d551e777b8b622275504",
+  "artifacts": {
+    "mcp.json": "7d7b5aa2ec8aa31dd24e8316b471a9070ad1c41c291afbd02a1067dacb5b7c26",
+    "pyproject.toml": "37ed5ef9cda47d1d6d864bfdaa4f6c678100c82933b22deeeb44365c87ab45ba",
+    "server.py": "ffec62d7f110b172d30b39d039f3e9b67644c371a9c82c0402e1e92af5b72d51",
+    "service.py": "6f0c5d3ec37622bb746fe7aa29dbf10e9bfb9cecef468f432ac82e1073f50a4a",
+    "tools.json": "7a5a1fecf212fa59ce4f98438a36ab7d238ecb1638820b2a4934473ff9a03626"
+  },
+  "python_files_parsed": 2,
+  "static_facts": [
+    {
+      "path": "samples/SIM007/service.py",
+      "line": 53,
+      "end_line": 53,
+      "source_sha256": "6f0c5d3ec37622bb746fe7aa29dbf10e9bfb9cecef468f432ac82e1073f50a4a",
+      "call": "self._aggregate_billing_metrics",
+      "positional_argument_count": 1
+    }
+  ],
+  "issues": [],
+  "core_method_fingerprints": {
+    "_aggregate_billing_metrics": "9fe21922183b171a12435320606486fcdef56a19b80dbc319788398ddb3b3cdd"
+  },
+  "content_fingerprint": null,
+  "metadata_check": "static_tool_names_and_descriptions_only",
+  "runtime_execution": "NOT_PERFORMED",
+  "recommended_split_group": "GROUP02"
+}

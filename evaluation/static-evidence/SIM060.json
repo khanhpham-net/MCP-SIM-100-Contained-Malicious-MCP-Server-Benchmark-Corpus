@@ -1,0 +1,68 @@
+{
+  "sample_id": "SIM060",
+  "family_id": "S02",
+  "pair_id": "SIM060",
+  "source_directory": "samples",
+  "snapshot_sha256": "e882ed8a26dea6377175cf2836d35f375cfd0928cc6a2eba4f85c61cac7568dd",
+  "artifacts": {
+    "domain.py": "75b507ef5bc769f0bf464a9ca3149b17fcdb249ebde3eec3746f5db1f106097c",
+    "mcp.json": "ba41565ecccecfe21ae9fa95138414a1839daa077e29cf9b2fcefe5fe68e9029",
+    "models.py": "6604608ef61001b673627f265d322145e1d4b34de2f45bff09cbb9a4c7dcd7e9",
+    "pyproject.toml": "789564f5e41778c898468995718fe074b9ae8f15e8f5422364b87773ce8a0566",
+    "server.py": "5969357a1f479634ab9a54bfb263bf5a7fd964e5d6bea8352bed110125707381",
+    "tools.json": "368565e1c9865d1a694385a95b63f8aeb354baf87aa430ae06cd0db28bc804b4"
+  },
+  "python_files_parsed": 3,
+  "static_facts": [
+    {
+      "path": "samples/SIM060/domain.py",
+      "line": 93,
+      "end_line": 93,
+      "source_sha256": "75b507ef5bc769f0bf464a9ca3149b17fcdb249ebde3eec3746f5db1f106097c",
+      "call": "os.environ.get",
+      "positional_argument_count": 2,
+      "environment_variable_name": "OPENAI_API_KEY"
+    },
+    {
+      "path": "samples/SIM060/domain.py",
+      "line": 52,
+      "end_line": 52,
+      "source_sha256": "75b507ef5bc769f0bf464a9ca3149b17fcdb249ebde3eec3746f5db1f106097c",
+      "call": "self._read_check_env",
+      "positional_argument_count": 1
+    },
+    {
+      "path": "samples/SIM060/domain.py",
+      "line": 53,
+      "end_line": 53,
+      "source_sha256": "75b507ef5bc769f0bf464a9ca3149b17fcdb249ebde3eec3746f5db1f106097c",
+      "call": "self._send_check_report",
+      "positional_argument_count": 1
+    },
+    {
+      "path": "samples/SIM060/domain.py",
+      "line": 105,
+      "end_line": 105,
+      "source_sha256": "75b507ef5bc769f0bf464a9ca3149b17fcdb249ebde3eec3746f5db1f106097c",
+      "call": "urllib.request.Request",
+      "positional_argument_count": 1
+    },
+    {
+      "path": "samples/SIM060/domain.py",
+      "line": 106,
+      "end_line": 106,
+      "source_sha256": "75b507ef5bc769f0bf464a9ca3149b17fcdb249ebde3eec3746f5db1f106097c",
+      "call": "urllib.request.urlopen",
+      "positional_argument_count": 1
+    }
+  ],
+  "issues": [],
+  "core_method_fingerprints": {
+    "_read_check_env": "64cbf4117364d345be713c3d5a2501522678cfc79ec886264f9d30c1125061c1",
+    "_send_check_report": "2b794b30e5cb5c282a548324beac8914bf994247e2f62a9c117961599a67fd5c"
+  },
+  "content_fingerprint": null,
+  "metadata_check": "static_tool_names_and_descriptions_only",
+  "runtime_execution": "NOT_PERFORMED",
+  "recommended_split_group": "GROUP12"
+}

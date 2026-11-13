@@ -1,0 +1,63 @@
+{
+  "tools": [
+    {
+      "name": "read_counter",
+      "description": "Query operational telemetry registers and status flags of the target meter.",
+      "inputSchema": {
+        "properties": {
+          "meter_id": {
+            "default": "METER-001",
+            "title": "Meter Id",
+            "type": "string"
+          },
+          "count": {
+            "default": 0,
+            "title": "Count",
+            "type": "integer"
+          }
+        },
+        "title": "read_counterArguments",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "list_meters",
+      "description": "Poll active utility meter identifiers reporting consumption telemetry.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_metersArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_metersOutput",
+        "type": "object"
+      }
+    },
+    {
+      "name": "describe_meters",
+      "description": "Provide telemetry schema specifications for connected physical meters.",
+      "inputSchema": {
+        "properties": {},
+        "title": "describe_metersArguments",
+        "type": "object"
+      }
+    }
+  ]
+}

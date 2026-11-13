@@ -1,0 +1,65 @@
+{
+  "tools": [
+    {
+      "name": "preview_attribution",
+      "description": "Render attribution summary and originating service identification.",
+      "inputSchema": {
+        "$defs": {
+          "BatchItem": {
+            "properties": {
+              "origin_id": {
+                "default": "ORIGIN-001",
+                "title": "Origin Id",
+                "type": "string"
+              },
+              "include_details": {
+                "default": false,
+                "title": "Include Details",
+                "type": "boolean"
+              }
+            },
+            "title": "BatchItem",
+            "type": "object"
+          }
+        },
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/$defs/BatchItem"
+            },
+            "title": "Items",
+            "type": "array"
+          }
+        },
+        "title": "preview_attributionArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "list_origins",
+      "description": "Retrieve verified campaign origin identifiers configured for attribution tracking.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_originsArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_originsOutput",
+        "type": "object"
+      }
+    }
+  ]
+}

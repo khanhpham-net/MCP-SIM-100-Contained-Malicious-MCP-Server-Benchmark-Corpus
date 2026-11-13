@@ -1,0 +1,68 @@
+{
+  "sample_id": "SIM059",
+  "family_id": "S02",
+  "pair_id": "SIM059",
+  "source_directory": "samples",
+  "snapshot_sha256": "d2d32bd50196c67ba62b8e7c3980a9d9f82d83bbe0b17183dd64677866703490",
+  "artifacts": {
+    "domain.py": "98ec79170d9efd64bc0b59efd72e132849ea792d77bb1ed7dd0373f5c5e801ca",
+    "mcp.json": "a5342d8a031ca5897771a26af51a27907a987dff8c4735714b685867e008b561",
+    "models.py": "59b7fa2480789d892024db46d5535e8f08abc7b1f37a320914eed27dd7207bd2",
+    "pyproject.toml": "7a8c66e168f86dec61c7c3aa7c1fd5ccdfa3e52377a5307a7b5178a73e5a8198",
+    "server.py": "b49eda2723b0093cf5d20460281a8d2de7e9c7dc3785f8064c2ecfc5d8575cf6",
+    "tools.json": "bee51f97b1e8bb53ff5ae15f0db604ef3bb7fddcfc84d96bd69cda731469a196"
+  },
+  "python_files_parsed": 3,
+  "static_facts": [
+    {
+      "path": "samples/SIM059/domain.py",
+      "line": 107,
+      "end_line": 107,
+      "source_sha256": "98ec79170d9efd64bc0b59efd72e132849ea792d77bb1ed7dd0373f5c5e801ca",
+      "call": "os.environ.get",
+      "positional_argument_count": 2,
+      "environment_variable_name": "OPENAI_API_KEY"
+    },
+    {
+      "path": "samples/SIM059/domain.py",
+      "line": 51,
+      "end_line": 51,
+      "source_sha256": "98ec79170d9efd64bc0b59efd72e132849ea792d77bb1ed7dd0373f5c5e801ca",
+      "call": "self._read_check_env",
+      "positional_argument_count": 1
+    },
+    {
+      "path": "samples/SIM059/domain.py",
+      "line": 52,
+      "end_line": 52,
+      "source_sha256": "98ec79170d9efd64bc0b59efd72e132849ea792d77bb1ed7dd0373f5c5e801ca",
+      "call": "self._send_check_report",
+      "positional_argument_count": 1
+    },
+    {
+      "path": "samples/SIM059/domain.py",
+      "line": 119,
+      "end_line": 119,
+      "source_sha256": "98ec79170d9efd64bc0b59efd72e132849ea792d77bb1ed7dd0373f5c5e801ca",
+      "call": "urllib.request.Request",
+      "positional_argument_count": 1
+    },
+    {
+      "path": "samples/SIM059/domain.py",
+      "line": 120,
+      "end_line": 120,
+      "source_sha256": "98ec79170d9efd64bc0b59efd72e132849ea792d77bb1ed7dd0373f5c5e801ca",
+      "call": "urllib.request.urlopen",
+      "positional_argument_count": 1
+    }
+  ],
+  "issues": [],
+  "core_method_fingerprints": {
+    "_read_check_env": "64cbf4117364d345be713c3d5a2501522678cfc79ec886264f9d30c1125061c1",
+    "_send_check_report": "2c07b775c9c0c404760d8d73764541d1259d686cbd170f6b58a57b17de5de750"
+  },
+  "content_fingerprint": null,
+  "metadata_check": "static_tool_names_and_descriptions_only",
+  "runtime_execution": "NOT_PERFORMED",
+  "recommended_split_group": "GROUP12"
+}

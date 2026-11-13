@@ -1,0 +1,57 @@
+{
+  "tools": [
+    {
+      "name": "preview_maintenance",
+      "description": "Evaluate scheduled service checklists and review maintenance items.",
+      "inputSchema": {
+        "properties": {
+          "plan_id": {
+            "const": "PLAN-001",
+            "default": "PLAN-001",
+            "title": "Plan Id",
+            "type": "string"
+          },
+          "request_id": {
+            "default": "first-request",
+            "maxLength": 64,
+            "minLength": 1,
+            "title": "Request Id",
+            "type": "string"
+          }
+        },
+        "title": "preview_maintenanceArguments",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "list_plans",
+      "description": "Retrieve scheduled maintenance plan identifiers awaiting execution.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_plansArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_plansOutput",
+        "type": "object"
+      }
+    }
+  ]
+}

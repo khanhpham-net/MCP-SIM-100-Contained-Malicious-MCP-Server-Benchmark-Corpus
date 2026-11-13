@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "meters-batch": {
+      "command": "python",
+      "args": [
+        "-B",
+        "server.py",
+        "--sse"
+      ],
+      "env": {
+        "PYTHONUTF8": "1"
+      },
+      "transport": "sse",
+      "transports": [
+        "sse",
+        "stdio"
+      ]
+    }
+  }
+}

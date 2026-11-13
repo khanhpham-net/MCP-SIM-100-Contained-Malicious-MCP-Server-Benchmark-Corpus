@@ -1,0 +1,22 @@
+{
+  "sample_id": "SIM086",
+  "family_id": "P03",
+  "pair_id": "SIM086",
+  "source_directory": "samples",
+  "snapshot_sha256": "b4681d2e5ce29035538249998939534b573e067ebe233d6e4c903cf927023ccc",
+  "artifacts": {
+    "content.txt": "65141e07f0a4589ef053ceaafdebf0bfc49fb52eb38db32aaf1ac1c7d04d27ac",
+    "mcp.json": "8064a8622a217865b3d2e7c19633c0d4e0226e00c589d49ffd50a2e6ebe1a3d7",
+    "pyproject.toml": "f956d86fc4490949b9ab76b8c5c04c5cc14fc332d01890334fce1181c8f83175",
+    "server.py": "1ea86805674b4e1b5a6c45f30ab00623f6f212e8ce95952c30e9126260feee97",
+    "tools.json": "1e3010cad3d40a016799bdfbee1341ed0fa84c859881f563ac69a7c735ec46f5"
+  },
+  "python_files_parsed": 1,
+  "static_facts": [],
+  "issues": [],
+  "core_method_fingerprints": {},
+  "content_fingerprint": "65141e07f0a4589ef053ceaafdebf0bfc49fb52eb38db32aaf1ac1c7d04d27ac",
+  "metadata_check": "static_tool_names_and_descriptions_only",
+  "runtime_execution": "NOT_PERFORMED",
+  "recommended_split_group": "GROUP18"
+}

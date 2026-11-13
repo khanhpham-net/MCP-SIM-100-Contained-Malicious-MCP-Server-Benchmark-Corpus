@@ -1,0 +1,157 @@
+{
+  "counter_sync.py": {
+    "sample_id": "SIM026",
+    "family": "C01",
+    "apply_result": {
+      "stdout": {
+        "completed": "sync_c01",
+        "target": "ROW1",
+        "state": "changed",
+        "status": "ok"
+      },
+      "device_state": {
+        "operation": "sync_c01",
+        "state": "changed",
+        "target": "ROW1"
+      }
+    },
+    "status_result": {
+      "stdout": {
+        "completed": "sync_c01",
+        "target": "ROW1",
+        "state": "unchanged",
+        "status": "ok"
+      },
+      "device_state": {
+        "operation": "sync_c01",
+        "state": "unchanged",
+        "target": "ROW1"
+      }
+    },
+    "verified": true
+  },
+  "indicator_service.py": {
+    "sample_id": "SIM031",
+    "family": "C02",
+    "apply_result": {
+      "stdout": {
+        "completed": "sync_c02",
+        "target": "ROW1",
+        "state": "changed",
+        "status": "ok"
+      },
+      "device_state": {
+        "operation": "sync_c02",
+        "state": "changed",
+        "target": "ROW1"
+      }
+    },
+    "status_result": {
+      "stdout": {
+        "completed": "sync_c02",
+        "target": "ROW1",
+        "state": "unchanged",
+        "status": "ok"
+      },
+      "device_state": {
+        "operation": "sync_c02",
+        "state": "unchanged",
+        "target": "ROW1"
+      }
+    },
+    "verified": true
+  },
+  "device_dispatcher.py": {
+    "sample_id": "SIM036",
+    "family": "C03",
+    "apply_result": {
+      "stdout": {
+        "completed": "sync_c03",
+        "target": "ROW1",
+        "state": "changed",
+        "status": "ok"
+      },
+      "device_state": {
+        "operation": "sync_c03",
+        "state": "changed",
+        "target": "ROW1"
+      }
+    },
+    "status_result": {
+      "stdout": {
+        "completed": "sync_c03",
+        "target": "ROW1",
+        "state": "unchanged",
+        "status": "ok"
+      },
+      "device_state": {
+        "operation": "sync_c03",
+        "state": "unchanged",
+        "target": "ROW1"
+      }
+    },
+    "verified": true
+  },
+  "asset_subsystem.py": {
+    "sample_id": "SIM041",
+    "family": "C04",
+    "apply_result": {
+      "stdout": {
+        "completed": "sync_c04",
+        "target": "ROW1",
+        "state": "changed",
+        "status": "ok"
+      },
+      "device_state": {
+        "operation": "sync_c04",
+        "state": "changed",
+        "target": "ROW1"
+      }
+    },
+    "status_result": {
+      "stdout": {
+        "completed": "sync_c04",
+        "target": "ROW1",
+        "state": "unchanged",
+        "status": "ok"
+      },
+      "device_state": {
+        "operation": "sync_c04",
+        "state": "unchanged",
+        "target": "ROW1"
+      }
+    },
+    "verified": true
+  },
+  "task_executor.py": {
+    "sample_id": "SIM046",
+    "family": "C05",
+    "apply_result": {
+      "stdout": {
+        "completed": "sync_c05",
+        "target": "ROW1",
+        "state": "changed",
+        "status": "ok"
+      },
+      "device_state": {
+        "operation": "sync_c05",
+        "state": "changed",
+        "target": "ROW1"
+      }
+    },
+    "status_result": {
+      "stdout": {
+        "completed": "sync_c05",
+        "target": "ROW1",
+        "state": "unchanged",
+        "status": "ok"
+      },
+      "device_state": {
+        "operation": "sync_c05",
+        "state": "unchanged",
+        "target": "ROW1"
+      }
+    },
+    "verified": true
+  }
+}

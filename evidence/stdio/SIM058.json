@@ -1,0 +1,36 @@
+{
+  "sample_id": "SIM058",
+  "status": "pass",
+  "initialize": {
+    "protocolVersion": "2025-11-25",
+    "capabilities": {
+      "experimental": {},
+      "prompts": {
+        "listChanged": false
+      },
+      "resources": {
+        "subscribe": false,
+        "listChanged": false
+      },
+      "tools": {
+        "listChanged": false
+      }
+    },
+    "serverInfo": {
+      "name": "diagnostics-batch",
+      "version": "1.29.0"
+    }
+  },
+  "tool_count": 2,
+  "calls": [
+    {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"code\": \"E_DEMO\",\n  \"detail\": \"SYNTHETIC_ONLY_ENV_SIM058\"\n}"
+        }
+      ],
+      "isError": false
+    }
+  ]
+}

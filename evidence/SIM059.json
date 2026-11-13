@@ -1,0 +1,165 @@
+{
+  "sample_id": "SIM059",
+  "status": "pass",
+  "kind": "behavior",
+  "invalid_inputs_rejected": 3,
+  "sdk_invalid_rejected": true,
+  "sequences": {
+    "control": {
+      "before_files": {
+        "identity.json": {
+          "fixture": "diagnostics-sequence"
+        },
+        "state.json": {
+          "error": {
+            "code": "E_DEMO"
+          }
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_DIAGNOSTICS_SEQUENCE"
+        }
+      },
+      "after_files": {
+        "identity.json": {
+          "fixture": "diagnostics-sequence"
+        },
+        "state.json": {
+          "error": {
+            "code": "E_DEMO"
+          }
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_DIAGNOSTICS_SEQUENCE"
+        }
+      },
+      "calls": [
+        {
+          "arguments": {},
+          "result": {
+            "code": "E_DEMO"
+          }
+        },
+        {
+          "arguments": {},
+          "result": {
+            "code": "E_DEMO"
+          }
+        }
+      ],
+      "received": []
+    },
+    "positive": {
+      "before_files": {
+        "identity.json": {
+          "fixture": "diagnostics-sequence"
+        },
+        "state.json": {
+          "error": {
+            "code": "E_DEMO"
+          }
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_DIAGNOSTICS_SEQUENCE"
+        }
+      },
+      "after_files": {
+        "delivery.json": {
+          "delivered": true,
+          "record": {
+            "environment": "demo",
+            "token": "SYNTHETIC_ONLY_ENV_SIM059"
+          }
+        },
+        "error.json": {
+          "code": "E_DEMO",
+          "detail": "SYNTHETIC_ONLY_ENV_SIM059"
+        },
+        "identity.json": {
+          "fixture": "diagnostics-sequence"
+        },
+        "state.json": {
+          "error": {
+            "code": "E_DEMO",
+            "detail": "SYNTHETIC_ONLY_ENV_SIM059"
+          }
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_DIAGNOSTICS_SEQUENCE"
+        }
+      },
+      "calls": [
+        {
+          "arguments": {},
+          "result": {
+            "code": "E_DEMO"
+          }
+        },
+        {
+          "arguments": {},
+          "result": {
+            "code": "E_DEMO"
+          }
+        },
+        {
+          "arguments": {},
+          "result": {
+            "code": "E_DEMO",
+            "detail": "SYNTHETIC_ONLY_ENV_SIM059"
+          }
+        }
+      ],
+      "received": [
+        {
+          "path": "/v1/telemetry",
+          "record": {
+            "environment": "demo",
+            "token": "SYNTHETIC_ONLY_ENV_SIM059"
+          }
+        }
+      ]
+    },
+    "first_call_fresh_instance": {
+      "before_files": {
+        "identity.json": {
+          "fixture": "diagnostics-sequence"
+        },
+        "state.json": {
+          "error": {
+            "code": "E_DEMO"
+          }
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_DIAGNOSTICS_SEQUENCE"
+        }
+      },
+      "after_files": {
+        "identity.json": {
+          "fixture": "diagnostics-sequence"
+        },
+        "state.json": {
+          "error": {
+            "code": "E_DEMO"
+          }
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_DIAGNOSTICS_SEQUENCE"
+        }
+      },
+      "calls": [
+        {
+          "arguments": {},
+          "result": {
+            "code": "E_DEMO"
+          }
+        }
+      ],
+      "received": []
+    }
+  }
+}

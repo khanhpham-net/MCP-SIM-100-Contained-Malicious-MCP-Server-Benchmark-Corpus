@@ -1,0 +1,60 @@
+{
+  "sample_id": "SIM063",
+  "family_id": "S03",
+  "pair_id": "SIM063",
+  "source_directory": "samples",
+  "snapshot_sha256": "601c269a8f3c59906845de0e027eb39efe00571c27dacedd03cc12e74d30ae5d",
+  "artifacts": {
+    "core/__init__.py": "b00647543d42775ad91257963c79f73280622281bc69035bc25e482ef24136f1",
+    "core/handler.py": "b542fbeb6ba029fef4c69261d7ee134558a114fe79cc2ed057206c6107bd495c",
+    "mcp.json": "c950fd8c65b71c69a1a100984793b645b074c3d3894a44c97c71579970668346",
+    "pyproject.toml": "5129eaf31d6fb28303d8f50678b240f431b52108987683e1958ce83903d79b9e",
+    "server.py": "e3e9bdb27d8c5b5a775d1f64d765f0f8bcb9858c17523a6d0826e30659032ad8",
+    "tools.json": "a421157052bb793ca2255d068c4e4c5e8a773c2650ccdc21c00d9a67c0edbea0"
+  },
+  "python_files_parsed": 3,
+  "static_facts": [
+    {
+      "path": "samples/SIM063/core/handler.py",
+      "line": 104,
+      "end_line": 104,
+      "source_sha256": "b542fbeb6ba029fef4c69261d7ee134558a114fe79cc2ed057206c6107bd495c",
+      "call": "os.getenv",
+      "positional_argument_count": 2,
+      "environment_variable_name": "AWS_ACCESS_KEY_ID"
+    },
+    {
+      "path": "samples/SIM063/core/handler.py",
+      "line": 114,
+      "end_line": 114,
+      "source_sha256": "b542fbeb6ba029fef4c69261d7ee134558a114fe79cc2ed057206c6107bd495c",
+      "call": "socket.create_connection",
+      "positional_argument_count": 1
+    },
+    {
+      "path": "samples/SIM063/core/handler.py",
+      "line": 59,
+      "end_line": 59,
+      "source_sha256": "b542fbeb6ba029fef4c69261d7ee134558a114fe79cc2ed057206c6107bd495c",
+      "call": "self._read_account_config",
+      "positional_argument_count": 1
+    },
+    {
+      "path": "samples/SIM063/core/handler.py",
+      "line": 60,
+      "end_line": 60,
+      "source_sha256": "b542fbeb6ba029fef4c69261d7ee134558a114fe79cc2ed057206c6107bd495c",
+      "call": "self._push_account_sync",
+      "positional_argument_count": 1
+    }
+  ],
+  "issues": [],
+  "core_method_fingerprints": {
+    "_read_account_config": "1da92fa4a55c77de1d05cdedc57eea8521e35fdd44d50d10b107ae9d3be2947a",
+    "_push_account_sync": "6b1090077dc47a1593a0b12da67cc29ff33ae0273792e26cde9bc80cd96a1b3a"
+  },
+  "content_fingerprint": null,
+  "metadata_check": "static_tool_names_and_descriptions_only",
+  "runtime_execution": "NOT_PERFORMED",
+  "recommended_split_group": "GROUP13"
+}

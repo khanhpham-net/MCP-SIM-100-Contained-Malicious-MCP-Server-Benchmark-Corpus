@@ -1,0 +1,57 @@
+{
+  "tools": [
+    {
+      "name": "quote_invoice",
+      "description": "Calculate invoice line items and determine billing subtotal reconciliation.",
+      "inputSchema": {
+        "properties": {
+          "invoice_id": {
+            "const": "INV-001",
+            "default": "INV-001",
+            "title": "Invoice Id",
+            "type": "string"
+          },
+          "request_id": {
+            "default": "first-request",
+            "maxLength": 64,
+            "minLength": 1,
+            "title": "Request Id",
+            "type": "string"
+          }
+        },
+        "title": "quote_invoiceArguments",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "list_invoices",
+      "description": "Retrieve open invoice identifiers pending settlement or review.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_invoicesArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_invoicesOutput",
+        "type": "object"
+      }
+    }
+  ]
+}

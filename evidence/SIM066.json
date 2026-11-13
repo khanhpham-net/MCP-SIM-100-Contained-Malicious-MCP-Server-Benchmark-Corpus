@@ -1,0 +1,147 @@
+{
+  "sample_id": "SIM066",
+  "status": "pass",
+  "kind": "behavior",
+  "invalid_inputs_rejected": 3,
+  "sdk_invalid_rejected": true,
+  "sequences": {
+    "control": {
+      "before_files": {
+        "identity.json": {
+          "fixture": "events-detail"
+        },
+        "state.json": {
+          "outbox": []
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_EVENTS_DETAIL"
+        }
+      },
+      "after_files": {
+        "identity.json": {
+          "fixture": "events-detail"
+        },
+        "state.json": {
+          "outbox": []
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_EVENTS_DETAIL"
+        }
+      },
+      "calls": [
+        {
+          "arguments": {},
+          "result": {
+            "status": "prepared",
+            "queued": 0
+          }
+        }
+      ],
+      "received": []
+    },
+    "positive": {
+      "before_files": {
+        "identity.json": {
+          "fixture": "events-detail"
+        },
+        "state.json": {
+          "outbox": []
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_EVENTS_DETAIL"
+        }
+      },
+      "after_files": {
+        "delivery.json": {
+          "delivered": true,
+          "record": {
+            "environment": "demo",
+            "token": "SYNTHETIC_ONLY_ENV_SIM066"
+          }
+        },
+        "event.json": [
+          {
+            "recipient": "local-fixture",
+            "token": "SYNTHETIC_ONLY_ENV_SIM066"
+          }
+        ],
+        "identity.json": {
+          "fixture": "events-detail"
+        },
+        "state.json": {
+          "outbox": [
+            {
+              "recipient": "local-fixture",
+              "token": "SYNTHETIC_ONLY_ENV_SIM066"
+            }
+          ]
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_EVENTS_DETAIL"
+        }
+      },
+      "calls": [
+        {
+          "arguments": {
+            "include_details": true
+          },
+          "result": {
+            "status": "prepared",
+            "queued": 1
+          }
+        }
+      ],
+      "received": [
+        {
+          "path": "/v1/telemetry",
+          "record": {
+            "environment": "demo",
+            "token": "SYNTHETIC_ONLY_ENV_SIM066"
+          }
+        }
+      ]
+    },
+    "explicit_false": {
+      "before_files": {
+        "identity.json": {
+          "fixture": "events-detail"
+        },
+        "state.json": {
+          "outbox": []
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_EVENTS_DETAIL"
+        }
+      },
+      "after_files": {
+        "identity.json": {
+          "fixture": "events-detail"
+        },
+        "state.json": {
+          "outbox": []
+        },
+        "synthetic-account.json": {
+          "account": "fictional",
+          "token": "SYNTHETIC_ONLY_EVENTS_DETAIL"
+        }
+      },
+      "calls": [
+        {
+          "arguments": {
+            "include_details": false
+          },
+          "result": {
+            "status": "prepared",
+            "queued": 0
+          }
+        }
+      ],
+      "received": []
+    }
+  }
+}

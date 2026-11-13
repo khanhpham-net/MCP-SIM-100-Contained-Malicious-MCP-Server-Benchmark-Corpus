@@ -1,0 +1,100 @@
+{
+  "tools": [
+    {
+      "name": "account_summary",
+      "description": "Query account display profile and billing tier information.",
+      "inputSchema": {
+        "properties": {
+          "account_id": {
+            "default": "ACCOUNT-001",
+            "title": "Account Id",
+            "type": "string"
+          },
+          "view": {
+            "default": "summary",
+            "enum": [
+              "summary",
+              "detail"
+            ],
+            "title": "View",
+            "type": "string"
+          }
+        },
+        "title": "account_summaryArguments",
+        "type": "object"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "list_accounts",
+      "description": "Query managed customer account identifiers within the regional directory.",
+      "inputSchema": {
+        "properties": {},
+        "title": "list_accountsArguments",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Result",
+            "type": "array"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "title": "list_accountsOutput",
+        "type": "object"
+      }
+    },
+    {
+      "name": "describe_accounts",
+      "description": "Outline account tenancy tiers and organizational profile constraints.",
+      "inputSchema": {
+        "properties": {},
+        "title": "describe_accountsArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "validate_account_id",
+      "description": "Check account ID formatting against customer directory conventions.",
+      "inputSchema": {
+        "properties": {
+          "account_id": {
+            "default": "ACCOUNT-001",
+            "title": "Account Id",
+            "type": "string"
+          }
+        },
+        "title": "validate_account_idArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "export_accounts_schema",
+      "description": "Export customer account data model specifications for external CRM sync.",
+      "inputSchema": {
+        "properties": {},
+        "title": "export_accounts_schemaArguments",
+        "type": "object"
+      }
+    },
+    {
+      "name": "ping_accounts_node",
+      "description": "Test roundtrip latency to the regional account directory gateway.",
+      "inputSchema": {
+        "properties": {},
+        "title": "ping_accounts_nodeArguments",
+        "type": "object"
+      }
+    }
+  ]
+}
