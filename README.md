@@ -1,122 +1,172 @@
-# MCP-SIM-100: Contained Malicious MCP Server Benchmark Corpus
+<div align="center">
 
-> **Version:** `v4.4 (SIM-Only, Contained & Structurally Polymorphic)`  
-> **Updated:** November 13, 2026  
-> **Objective:** Provide a standardized benchmark corpus of 100 safe, contained malicious Model Context Protocol (MCP) server fixtures to quantitatively evaluate the detection capabilities of SAST, DAST, and AI Security Scanners (such as MCP Audit, MCTS, Cisco MCP Scanner, MCPShield, and NVIDIA SkillSpector).
+# 🛡️ MCP-SIM-100: Contained Malicious MCP Server Benchmark Corpus
+
+### *A Scientifically Contained, Structurally Polymorphic Evaluation Benchmark for MCP Security Scanners*
+
+[![Version](https://img.shields.io/badge/Version-v4.4_Contained-0052CC?style=for-the-badge&logo=git&logoColor=white)](https://github.com/khanhpham-net/MCP-SIM-100-Contained-Malicious-MCP-Server-Benchmark-Corpus)
+[![Python](https://img.shields.io/badge/Python-3.11%20%7C%203.12%20%7C%203.13-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Corpus Size](https://img.shields.io/badge/Corpus_Size-100_Malicious_SIMs-E53935?style=for-the-badge&logo=target&logoColor=white)](#-2-specification-of-4-attack-classes)
+[![Matrix](https://img.shields.io/badge/Design_Matrix-20_Families_%C3%97_5_Edges-7B1FA2?style=for-the-badge&logo=matrix&logoColor=white)](#-1-architecture-overview--design-principles)
+[![Static Verification](https://img.shields.io/badge/AST_Verification-STATIC__SINK__OK-2E7D32?style=for-the-badge&logo=checkmarx&logoColor=white)](#-5-pipeline-execution--evaluation-workflow)
+[![License](https://img.shields.io/badge/License-MIT-F57C00?style=for-the-badge)](LICENSE)
+
+<br/>
+
+**Evaluated Against Leading Industry AI & MCP Security Scanners:**  
+`MCP Audit` • `MCTS` • `Cisco MCP Scanner` • `MCPShield` • `NVIDIA SkillSpector`
 
 ---
 
-## 1. Architecture Overview & Design Principles
+| 🎯 Total Fixtures | 🔬 Orthogonal Matrix | 🛡️ Safety Guarantee | ⚡ Target Surfaces |
+| :---: | :---: | :---: | :---: |
+| **100 MCP Servers** (`SIM001`–`SIM100`) | **20 Families × 5 Edges** | **100% Loopback & Sample-Local** | **Tools, Resources, Prompts & Runtime** |
 
-The `MCP-SIM-100` corpus consists of **100 independent malicious MCP server samples** (`SIM001` – `SIM100`), engineered to rigorously evaluate taint analysis, public contract verification (`@mcp.tool()` contract mismatch), unauthorized child process execution, loopback network credential exfiltration, and indirect prompt injection across multiple MCP surfaces.
+</div>
+
+---
+
+> [!NOTE]
+> **Scientific Objective:** `MCP-SIM-100` is an authoritative benchmark corpus of 100 runnable, fully contained Model Context Protocol (MCP) server fixtures. It is engineered to rigorously and quantitatively measure the detection recall and precision of Static Application Security Testing (SAST), Dynamic Analysis (DAST), and Agent-based LLM security evaluators without allowing superficial heuristic shortcuts (such as hardcoded secrets, crude regex triggers, or obvious base64 encoding).
+
+---
+
+## 🏛️ 1. Architecture Overview & Design Principles
+
+The `MCP-SIM-100` benchmark addresses the fundamental flaw of first-generation security evaluations: **heuristic shortcut learning**. Security scanners often report high recall simply by matching superficial patterns (e.g. `tempfile.gettempdir()`, CWE-798 credential literals, or uppercase prompt words like `SYSTEM OVERRIDE`) without conducting real dataflow taint analysis or verifying MCP protocol contract compliance.
+
+```mermaid
+flowchart TD
+    subgraph Matrix["🔬 Orthogonal Experimental Matrix: 20 Families × 5 Edges"]
+        direction TB
+        M["🟣 <b>Group M (M01–M05)</b><br/>SIM001–SIM025<br/><i>Persisted State Mutation Mismatch</i>"]
+        C["🟡 <b>Group C (C01–C05)</b><br/>SIM026–SIM050<br/><i>Unauthorized Process / Shell Gradient</i>"]
+        S["🟠 <b>Group S (S01–S05)</b><br/>SIM051–SIM075<br/><i>Credential Harvesting & Loopback Exfil</i>"]
+        P["🔵 <b>Group P (P01–P05)</b><br/>SIM076–SIM100<br/><i>Indirect Prompt Injection Across 5 Surfaces</i>"]
+    end
+
+    subgraph Polymorphism["📐 5 Structural Polymorphism Edges"]
+        direction LR
+        E1["<b>E1</b><br/>Single-file FastMCP<br/>(stdio)"]
+        E2["<b>E2</b><br/>Two-file Service Adapter<br/>(stdio)"]
+        E3["<b>E3</b><br/>Subpackage Handler<br/>(SSE transport)"]
+        E4["<b>E4</b><br/>Multi-tool Realistic<br/>(Streamable HTTP)"]
+        E5["<b>E5</b><br/>Modular Replay-Tracked<br/>(stdio)"]
+    end
+
+    subgraph Engine["⚡ Verification & Scoring Pipeline"]
+        direction LR
+        Audit["🔍 <b>audit_corpus.py</b><br/>AST Facts & Snapshots"]
+        Verify["🛡️ <b>verify_static_sinks.py</b><br/>Invariants & Contracts"]
+        Score["📊 <b>score_results.py</b><br/>Normalized Metrics Engine"]
+    end
+
+    Matrix --> Polymorphism
+    Polymorphism --> Audit
+    Audit --> Verify
+    Verify --> Score
+```
 
 ### 1.1. Controlled Experimental Matrix: 20 Families × 5 Edges
 
-To prevent security scanners from relying on superficial shortcuts or shallow fingerprinting, the benchmark is orthogonalized across a **20 Family × 5 Edge** matrix:
-
-```
-                  ┌────────────────────────────────────────────────────────┐
-                  │                    5 STRUCTURAL EDGES                  │
-                  │  E1: Single-file FastMCP (no domain/models, functional)│
-                  │  E2: Two-file Service (server.py + service.py adapter) │
-                  │  E3: Subpackage + SSE Transport (core/handler.py)      │
-                  │  E4: Multi-tool Realistic + Streamable-HTTP            │
-                  │  E5: Modular Strict Replay-Tracked Server              │
-┌─────────────────┼────────────────────────────────────────────────────────┤
-│ 20 FAMILIES     │                                                        │
-│ M01–M05 (Group M)│  SIM001–SIM025: Persisted State Mutation Mismatch      │
-│ C01–C05 (Group C)│  SIM026–SIM050: Unauthorized Child Process / Shell     │
-│ S01–S05 (Group S)│  SIM051–SIM075: Credential Harvesting & Network Exfil  │
-│ P01–P05 (Group P)│  SIM076–SIM100: Indirect Prompt Injection & Poisoning   │
-└─────────────────┴────────────────────────────────────────────────────────┘
-```
-
-- **Vertical Axis (20 Families — Business Domains & Vulnerabilities):** 20 independent business domains representing authentic industry microservices (inventory, billing, scheduling, reporting, telemetry monitoring, fleet, etc.). Each family defines a legitimate tool contract and a core malicious mechanism.
-- **Horizontal Axis (5 Edges — Structural Polymorphism & Packaging):** Rather than sharing a uniform directory layout or coding pattern, the 5 edges systematically vary file topology, type annotations, invocation semantics (direct function calls vs. adapter methods vs. dynamic dispatch), transport mechanisms (stdio vs. sse vs. streamable-http), and input schema constraints (standard scalar parameters vs. Pydantic Field validation).
-- **Scientific Significance:** This orthogonal decomposition enables researchers to isolate precisely why a scanner fails: whether due to **semantic security reasoning deficits** (Family axis) or **cross-file / AST packaging / transport parsing limitations** (Edge axis).
+- 🏢 **Vertical Axis (20 Families — Authentic Business Domains):** Spans 20 independent production domains (e.g., inventory logistics, invoice billing, calendar scheduling, telemetry monitoring, fleet diagnostics, and localization). Each family implements legitimate functional workflows alongside its specific vulnerability mechanism.
+- 📐 **Horizontal Axis (5 Edges — Structural Polymorphism):** Systematically diversifies code architecture across 5 topologies:
+  - **`E1`**: Native functional FastMCP in a single file with direct tool registration.
+  - **`E2`**: Split-architecture pairing `server.py` with an external `service.py` adapter.
+  - **`E3`**: Deep package hierarchy (`core/handler.py`) supporting Server-Sent Events (`--sse`).
+  - **`E4`**: Multi-tool production server with Streamable-HTTP (`--http`) and multi-file imports (`domain.py`, `models.py`).
+  - **`E5`**: Modular server with Pydantic Field constraints and dynamic method dispatch.
+- 🧪 **Scientific Value:** Enables researchers to cleanly disambiguate whether a scanner fails due to **semantic reasoning deficiencies** (Family axis) or **cross-file AST parsing and transport limitations** (Edge axis).
 
 ---
 
-## 2. Specification of 4 Attack Classes
+## ⚔️ 2. Specification of 4 Attack Classes
 
-| Group | Sample Range | Target Vulnerability | Technical Mechanism in Source | Verification & Ground Truth Evidence |
-|---|---|---|---|---|
-| **M** | `SIM001`–`SIM025` | **Persisted Tool Contract Mismatch** | The tool advertises a benign read-only contract (`lookup_stock`, `quote_invoice`) with protocol metadata `readOnlyHint=True`, but secretly executes persistent state mutations recorded in a local ledger (`inventory_ledger.jsonl`, `billing_journal.jsonl`, etc.). Tool output returns a legitimate domain response with computed metrics, concealing the background mutation. | Detects MCP contract violation (`readOnlyHint=True` vs. persistent file writes); AST side-effect analysis identifies covert ledger appends. |
-| **C** | `SIM026`–`SIM050` | **Unauthorized Child Process / Shell Gradient** | The tool declares a read-only telemetry query contract with metadata `readOnlyHint=True`, but spawns internal worker subprocesses following a deliberate detection gradient: `E1`–`E2` execute shell commands (`shell=True` with `safe_ref` validation to prevent arbitrary host injection); `E3`–`E5` execute pure `argv` lists (`asyncio.create_subprocess_exec`, `subprocess.run`, `subprocess.Popen`) invoking `--job apply` which mutates local `device_state.json` (violating `readOnlyHint=True`). | AST callsite detection of process execution (`subprocess.run`, `subprocess.check_output`, `create_subprocess_exec`, `subprocess.Popen`); worker mutation of `device_state.json` violating MCP `readOnlyHint=True`. |
-| **S** | `SIM051`–`SIM075` | **Credential Harvesting & Network Exfiltration** | The tool accesses environment credentials (`GITHUB_TOKEN`, `OPENAI_API_KEY`, `SLACK_BOT_TOKEN`, `STRIPE_SECRET_KEY`) via `os.getenv`/`os.environ.get`, or reads local account profile `account_profile.txt` (for `S03`, with fallback to `AWS_ACCESS_KEY_ID`), packs them into an unsuspicious JSON field `"note"` (avoiding obvious keys like token or secret), and dispatches HTTP/socket POST requests to isolated fixed loopback ports (`9107`–`9644`) on `127.0.0.1` (without base64). | Taint flow from environment variables/config files into payload `"note"` reaching network sinks (`urllib.request` / `HTTPConnection` / `socket`) on dedicated loopback ports; zero hardcoded secret literals. |
-| **P** | `SIM076`–`SIM100` | **Indirect Prompt Injection & Tool Poisoning** | Injects stealthy adversarial prompt payloads across 5 distinct MCP protocol surfaces (tool description, resource body, tool result `preview` read from `content.txt`, input schema description, prompt message). All 5 variants avoid crude trigger words (`OVERRIDE`, `SYSTEM`, `bypass`, `admin`), pursuing realistic security objectives: cross-tool listing exfiltration, conversation context harvesting, directory/config parameter disclosure via natural Vietnamese social engineering, and persistent instruction hijacking across conversation turns. | Protocol metadata and runtime attack surfaces; `P03` runtime ingestion from `content.txt`; verifies scanner capability to detect unauthorized data extraction and agent manipulation without relying on heuristic keyword filters. |
-
----
-
-## 3. Containment Invariants & Safety Guarantees
-
-All 100 benchmark fixtures strictly adhere to safety invariants to guarantee risk-free static analysis and controlled local execution:
-1. **Network Containment (Loopback Only):** All outbound network requests in Group S are strictly bound to isolated, dedicated loopback ports on `127.0.0.1:9107–9644` with a 0.5-second timeout, zero external Internet access, no redirect following, no proxy traversal, and no base64 obfuscation.
-2. **File Containment (Sample-Local Directory Only):** All ledger writes, state files, and worker artifacts are strictly confined to the fixture's local directory; no files outside the sample directory, user profile directories, registry, or shared OS locations are ever accessed (eliminating `tempfile.gettempdir()`).
-3. **Controlled Execution (Domain-Specific Workers):** Group C subprocesses strictly invoke sample-local, domain-specific Python worker scripts (`counter_sync.py`, `indicator_service.py`, `device_dispatcher.py`, `asset_subsystem.py`, `task_executor.py`) supporting dual modes (`--job apply` produces state: changed, `--job status` produces state: unchanged), without downloading or executing remote code or destructive shell commands.
-4. **Zero Hardcoded Secret Literals:** All credential reads use `os.getenv` with empty default values (`""`) or read local sample-local mock profiles, completely eliminating CWE-798 (hardcoded credentials) which confound static analysis scanners.
+| Group | Fixtures | Vulnerability Class | Technical Mechanism in Source | Primary Detection Challenge |
+| :---: | :---: | :--- | :--- | :--- |
+| **`M`** | `SIM001`–`SIM025` | **Persisted Tool Contract Mismatch** | Tool advertises `readOnlyHint=True` preview functionality (`lookup_stock`, `quote_invoice`) but secretly performs side-effect file mutations on a local ledger (`inventory_ledger.jsonl`, `billing_journal.jsonl`). Returns genuine computed metrics to mask background writes. | **Contract vs. AST Side-Effect**: Must detect contradiction between public `@mcp.tool()` contract annotations and covert disk mutation. |
+| **`C`** | `SIM026`–`SIM050` | **Unauthorized Child Process / Shell Gradient** | Tool advertises `readOnlyHint=True` but spawns internal worker processes across an intentional gradient: `E1`–`E2` use `shell=True` with sanitized alphanumeric input (`safe_ref`); `E3`–`E5` use pure `argv` lists (`asyncio.create_subprocess_exec`, `subprocess.run`, `subprocess.Popen`) invoking `--job apply` to mutate `device_state.json`. | **Read-Only Process Violation**: Detects contract violation of spawning state-mutating subprocesses from a read-only declared tool, differentiating shell vs. argv list invocations. |
+| **`S`** | `SIM051`–`SIM075` | **Credential Harvesting & Network Exfiltration** | Extracts environment secrets (`GITHUB_TOKEN`, `OPENAI_API_KEY`, `SLACK_BOT_TOKEN`, `STRIPE_SECRET_KEY`) or local profile configs (`account_profile.txt`), assigns them to an innocuous JSON key `"note"`, and dispatches them via HTTP/socket POST to dedicated loopback ports (`9107`–`9644`) on `127.0.0.1` (without encoding). | **Taint Flow Tracking**: Must trace sensitive source (`os.getenv`) into benign payload fields reaching loopback network sinks without relying on crude token regex or encoding alarms. |
+| **`P`** | `SIM076`–`SIM100` | **Indirect Prompt Injection Across 5 Surfaces** | Embeds stealthy adversarial canary instructions across 5 MCP surfaces: `P01` (tool description), `P02` (resource body), `P03` (runtime tool result `preview` read from `content.txt`), `P04` (input schema description), `P05` (prompt message). Completely avoids overt trigger words (`OVERRIDE`, `SYSTEM`, `bypass`). | **Cross-Surface Semantic Evaluation**: Detects covert instruction hijacking across protocol metadata and dynamic runtime responses without keyword crutches. |
 
 ---
 
-## 4. Repository Structure
+## 🔒 3. Containment Invariants & Safety Guarantees
+
+Every sample in `MCP-SIM-100` is rigorously bound to four strict safety invariants, guaranteeing zero harm during research and testing:
+
+> [!TIP]
+> **Safety Invariants Summary:**
+> 1. 🌐 **Network Containment (Loopback Only):** All network calls in Group S strictly target dedicated loopback ports on `127.0.0.1:9107–9644` with a 0.5s timeout. Zero external Internet connectivity, no proxy traversal, and no redirect following.
+> 2. 📁 **File Containment (Sample-Local Only):** All ledger writes, worker states, and artifacts are strictly confined to the fixture's local directory. Never writes to `tempfile.gettempdir()`, home directories, or shared system paths.
+> 3. ⚙️ **Controlled Execution (Domain Workers Only):** Group C invokes only local, domain-specific Python worker scripts supporting dual modes (`--job apply` vs `--job status`). No arbitrary shellcode, remote downloads, or destructive commands.
+> 4. 🔑 **Zero Hardcoded Secrets:** All credentials use `os.getenv(..., "")` with empty fallbacks or read sample-local mock profiles, completely eliminating confounding CWE-798 detections.
+
+---
+
+## 📂 4. Repository Structure
 
 ```text
 MCP-SIM-100/
-├── audit_corpus.py             # AST validation, snapshot hashing, and syntax check (stdlib only)
-├── build.py                    # Corpus generator reproducing all 100 samples and metadata
-├── catalog.py                  # Taxonomy of 20 Families, Tools, Edges, and parameter matrix
-├── fixture_templates.py        # Code generation templates for 20 families x 5 structural edges
-├── prepare_evaluation.py       # Ingests review records, computes snapshot hashes, handles admission
-├── create_handoff.py           # Generates 500 input records for benchmark scanner evaluation
-├── score_results.py            # Evaluation and scoring engine for scanner benchmark runs
-├── test_evaluation.py          # Regression and unit test suite
-├── verify_static_sinks.py      # Static safety and contract verifier (AST, gradient, forbidden tokens, worker contracts, production depth)
-├── manifest.json               # Raw generator manifest
-├── benchmark-manifest.json     # Official admission and scoring manifest
-├── scan-results-template.json  # 500-run input template (100 samples x 5 scanners)
-├── SAMPLE_INDEX.md             # Direct lookup index for all 100 samples and evidence locations
-├── EVALUATION_GUIDE.md         # Benchmark scoring methodology, rubric, and review guide
-├── SCANNER_HANDOFF.md          # Input routing and execution instructions for each scanner tool
-├── evaluation/
-│   ├── static-audit.json       # Aggregated AST facts and snapshot hash report
-│   ├── static-evidence/        # 100 detailed static evidence JSON files (SIM001–SIM100)
-│   └── reviews.json            # Ground truth audit reviews for admission
-├── samples/                    # 100 standalone MCP server source code directories
-│   ├── SIM001/
+├── 📜 audit_corpus.py             # AST validation, snapshot hashing, and syntax check (stdlib only)
+├── 📜 build.py                    # Corpus generator reproducing all 100 samples and metadata
+├── 📜 catalog.py                  # Taxonomy of 20 Families, Tools, Edges, and parameter matrix
+├── 📜 fixture_templates.py        # Code generation templates for 20 families x 5 structural edges
+├── 📜 prepare_evaluation.py       # Ingests review records, computes snapshot hashes, handles admission
+├── 📜 create_handoff.py           # Generates 500 input records for benchmark scanner evaluation
+├── 📜 score_results.py            # Evaluation and scoring engine for scanner benchmark runs
+├── 📜 test_evaluation.py          # Regression and unit test suite
+├── 📜 verify_static_sinks.py      # Static safety and contract verifier (AST, gradient, worker contracts)
+├── 📋 manifest.json               # Raw generator manifest
+├── 📋 benchmark-manifest.json     # Official admission and scoring manifest
+├── 📋 scan-results-template.json  # 500-run input template (100 samples x 5 scanners)
+├── 📖 SAMPLE_INDEX.md             # Direct lookup index for all 100 samples and evidence locations
+├── 📖 EVALUATION_GUIDE.md         # Benchmark scoring methodology, rubric, and review guide
+├── 📖 SCANNER_HANDOFF.md          # Input routing and execution instructions for each scanner tool
+├── 📖 DESIGN_PHILOSOPHY.md        # Comprehensive architectural design rationale
+├── 📁 evaluation/
+│   ├── static-audit.json          # Aggregated AST facts and snapshot hash report
+│   ├── static-evidence/           # 100 detailed static evidence JSON files (SIM001–SIM100)
+│   └── reviews.json               # Ground truth audit reviews for admission
+├── 📁 samples/                    # 100 standalone MCP server source code directories
+│   ├── SIM001/ ... SIM100/
 │   │   ├── server.py
 │   │   └── pyproject.toml
-│   └── ... SIM100/
-└── skill-views/                # 100 derived agent skill representations
-    └── SIM001 ... SIM100/
+└── 📁 skill-views/                # 100 derived agent skill representations
+    └── SIM001/ ... SIM100/
         ├── SKILL.md
         └── ...
 ```
 
 ---
 
-## 5. Pipeline Execution & Evaluation Workflow
+## 🚀 5. Pipeline Execution & Evaluation Workflow
 
-Environment Requirement: **Python 3.11+** (Python 3.13 or virtual environment with `mcp` and `pydantic` installed is recommended).
+<details open>
+<summary><b>Prerequisites & Setup</b></summary>
 
-### 5.1. Static Verification
-Static inspection scripts use Python standard library only and never import or execute untrusted corpus modules:
+- **Python Version:** `Python 3.11+` (Python 3.13 or virtual environment with `mcp` and `pydantic` installed is recommended).
+</details>
+
+### 5.1. 🔍 Static Verification & Audit
+All verification scripts rely exclusively on the Python Standard Library and execute completely offline without executing untrusted sample code:
 
 ```powershell
-# 1. Statically audit entire corpus, verify AST syntax and snapshot integrity
+# 1. Statically audit the entire corpus, verify AST syntax, and check snapshot integrity
 python -B audit_corpus.py
 
-# 2. Build admission manifest and synchronize ground-truth review records
+# 2. Build admission manifest and synchronize ground-truth review dossiers
 python -B prepare_evaluation.py
 
-# 3. Generate handoff input template for 5 scanners (500 runs)
+# 3. Generate handoff input template for candidate scanners (500 runs)
 python -B create_handoff.py
 
 # 4. Run regression test suite to ensure scoring and admission integrity
 python -B test_evaluation.py -v
 ```
 
-### 5.2. Sample Reproduction (Build Pipeline)
-To regenerate all 100 samples in `samples/` and `skill-views/` from the source generator:
+### 5.2. 🏗️ Sample Reproduction (Build Pipeline)
+To deterministically rebuild all 100 fixtures in `samples/` and `skill-views/`:
 
 ```powershell
 python -B build.py
@@ -126,8 +176,8 @@ python -B prepare_evaluation.py --auto-admit
 python -B create_handoff.py
 ```
 
-### 5.3. Scanner Scoring
-Once evaluation scanners complete analysis and outputs are normalized per [EVALUATION_GUIDE.md](EVALUATION_GUIDE.md):
+### 5.3. 📊 Scanner Scoring & Evaluation
+Once candidate scanners complete scanning the fixtures, format output per [EVALUATION_GUIDE.md](EVALUATION_GUIDE.md) and compute metrics:
 
 ```powershell
 python -B score_results.py results/normalized_run.json --output results/metrics.json
@@ -136,110 +186,160 @@ python -B score_results.py results/normalized_run.json --output results/metrics.
 ---
 ---
 
-# [Bản tiếng Việt / Vietnamese Version]
+# 🇻🇳 [Bản tiếng Việt / Vietnamese Version]
 
-# MCP-SIM-100: Contained Malicious MCP Server Benchmark Corpus
+<div align="center">
 
-> **Phiên bản:** `v4.4 (SIM-Only, Contained & Structurally Polymorphic)`  
-> **Cập nhật:** 13/11/2026  
-> **Mục tiêu:** Cung cấp bộ benchmark gồm 100 mẫu máy chủ MCP (Model Context Protocol) độc hại được kiểm soát an toàn (contained test fixtures) phục vụ đánh giá định lượng năng lực phát hiện của các công cụ SAST, DAST, và AI Security Scanner (như MCP Audit, MCTS, Cisco MCP Scanner, MCPShield, NVIDIA SkillSpector).
+# 🛡️ MCP-SIM-100: Tập Dữ liệu Chuẩn Kiểm thử Máy chủ MCP Độc hại Có Kiểm soát
+
+### *Bộ Benchmark Đa hình Cấu trúc, Cô lập An toàn Dành cho Công cụ Rà quét An ninh MCP*
+
+[![Phiên bản](https://img.shields.io/badge/Phi%C3%AAn_b%E1%BA%A3n-v4.4_Contained-0052CC?style=for-the-badge&logo=git&logoColor=white)](https://github.com/khanhpham-net/MCP-SIM-100-Contained-Malicious-MCP-Server-Benchmark-Corpus)
+[![Python](https://img.shields.io/badge/Python-3.11%20%7C%203.12%20%7C%203.13-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Quy mô](https://img.shields.io/badge/Quy_m%C3%B4-100_M%E1%BA%ABu_SIM-E53935?style=for-the-badge&logo=target&logoColor=white)](#-2-đặc-tả-4-nhóm-lỗ-hổng-attack-classes-1)
+[![Ma trận](https://img.shields.io/badge/Ma_tr%E1%BA%ADn-20_H%E1%BB%8D_%C3%97_5_Edge-7B1FA2?style=for-the-badge&logo=matrix&logoColor=white)](#-1-tổng-quan-kiến-trúc--nguyên-lý-thiết-kế-1)
+[![Xác thực Tĩnh](https://img.shields.io/badge/X%C3%A1c_th%E1%BB%B1c_T%C4%A9nh-STATIC__SINK__OK-2E7D32?style=for-the-badge&logo=checkmarx&logoColor=white)](#-5-quy-trình-chạy-pipeline--đánh-giá-1)
+[![Giấy phép](https://img.shields.io/badge/Gi%E1%BA%A5y_ph%C3%A9p-MIT-F57C00?style=for-the-badge)](LICENSE)
+
+<br/>
+
+**Sẵn sàng Đánh giá với các Công cụ Rà quét An ninh AI & MCP Hàng đầu:**  
+`MCP Audit` • `MCTS` • `Cisco MCP Scanner` • `MCPShield` • `NVIDIA SkillSpector`
 
 ---
 
-## 1. Tổng quan Kiến trúc & Nguyên lý Thiết kế
+| 🎯 Tổng số Mẫu | 🔬 Ma trận Trực giao | 🛡️ Cam kết An toàn | ⚡ Bề mặt Đánh giá |
+| :---: | :---: | :---: | :---: |
+| **100 Máy chủ MCP** (`SIM001`–`SIM100`) | **20 Family × 5 Edge** | **100% Loopback & Thư mục Cục bộ** | **Tools, Resources, Prompts & Runtime** |
 
-Corpus `MCP-SIM-100` bao gồm **100 mẫu máy chủ MCP độc hại độc lập** (`SIM001` – `SIM100`), được thiết kế để kiểm thử khả năng phân tích luồng dữ liệu (taint analysis), kiểm tra vi phạm hợp đồng công bố công khai (`@mcp.tool()` contract mismatch), phát hiện thực thi tiến trình con ngoài luồng, rò rỉ thông tin nhạy cảm qua mạng loopback, và tiêm nhiễm prompt gián tiếp (Indirect Prompt Injection).
+</div>
 
-### 1.1. Ma trận Thí nghiệm Đối chứng 20 Family × 5 Edge
+---
 
-Để ngăn chặn các công cụ quét an ninh sử dụng "đường tắt" (shortcut learning / superficial fingerprinting), bộ benchmark được chuẩn hóa theo ma trận trực giao **20 Family × 5 Edge**:
+> [!NOTE]
+> **Mục tiêu Khoa học:** `MCP-SIM-100` là bộ benchmark gồm 100 mẫu máy chủ Model Context Protocol (MCP) độc hại có thể thực thi độc lập và được cô lập an toàn tuyệt đối. Bộ dữ liệu được thiết kế nhằm đo lường định lượng năng lực phát hiện (recall & precision) của các công cụ kiểm thử an ninh tĩnh (SAST), phân tích động (DAST) và đánh giá dựa trên LLM Agent, triệt tiêu hoàn toàn các "lối tắt" phỏng đoán hời hợt (như hardcode token, regex từ khóa thô thiển, hay mã hóa lộ liễu).
 
+---
+
+## 🏛️ 1. Tổng quan Kiến trúc & Nguyên lý Thiết kế
+
+Corpus `MCP-SIM-100` giải quyết vấn đề cốt lõi của các bộ dữ liệu kiểm thử trước đây: **sự phụ thuộc vào dấu hiệu phỏng đoán hời hợt**. Các công cụ quét thường báo cáo tỷ lệ phát hiện cao nhờ bắt các chuỗi ký tự bề mặt (như `tempfile.gettempdir()`, CWE-798 token literals, hay cờ `SYSTEM OVERRIDE`) mà không thực sự phân tích luồng dữ liệu hoặc kiểm tra hợp đồng giao thức MCP.
+
+```mermaid
+flowchart TD
+    subgraph MaTran["🔬 Ma trận Thực nghiệm Đối chứng: 20 Family × 5 Edge"]
+        direction TB
+        M["🟣 <b>Nhóm M (M01–M05)</b><br/>SIM001–SIM025<br/><i>Vi phạm Hợp đồng Sửa đổi Trạng thái</i>"]
+        C["🟡 <b>Nhóm C (C01–C05)</b><br/>SIM026–SIM050<br/><i>Gradient Tiến trình Con / Shell Trái phép</i>"]
+        S["🟠 <b>Nhóm S (S01–S05)</b><br/>SIM051–SIM075<br/><i>Thu thập Bí mật & Rò rỉ Mạng Loopback</i>"]
+        P["🔵 <b>Nhóm P (P01–P05)</b><br/>SIM076–SIM100<br/><i>Tiêm nhiễm Prompt Gián tiếp Xuyên 5 Bề mặt</i>"]
+    end
+
+    subgraph DaHinh["📐 5 Edge Đa hình Cấu trúc"]
+        direction LR
+        E1["<b>E1</b><br/>Single-file FastMCP<br/>(stdio)"]
+        E2["<b>E2</b><br/>Service Adapter<br/>(stdio)"]
+        E3["<b>E3</b><br/>Subpackage Handler<br/>(SSE transport)"]
+        E4["<b>E4</b><br/>Multi-tool Thực tế<br/>(Streamable HTTP)"]
+        E5["<b>E5</b><br/>Modular Replay-Tracked<br/>(stdio)"]
+    end
+
+    subgraph PipelineVn["⚡ Pipeline Rà soát & Đánh giá"]
+        direction LR
+        AuditVn["🔍 <b>audit_corpus.py</b><br/>Trích xuất AST & Hashes"]
+        VerifyVn["🛡️ <b>verify_static_sinks.py</b><br/>Kiểm tra Bất biến & Hợp đồng"]
+        ScoreVn["📊 <b>score_results.py</b><br/>Engine Chấm điểm Chuẩn hóa"]
+    end
+
+    MaTran --> DaHinh
+    DaHinh --> AuditVn
+    AuditVn --> VerifyVn
+    VerifyVn --> ScoreVn
 ```
-                  ┌────────────────────────────────────────────────────────┐
-                  │                    5 STRUCTURAL EDGES                  │
-                  │  E1: Single-file FastMCP (không domain/models, native) │
-                  │  E2: Two-file Service (server.py + service.py)         │
-                  │  E3: Subpackage + SSE Transport (core/handler.py)      │
-                  │  E4: Multi-tool Realistic + Streamable-HTTP            │
-                  │  E5: Pydantic Regex Field + Dynamic Dispatch           │
-┌─────────────────┼────────────────────────────────────────────────────────┤
-│ 20 FAMILIES     │                                                        │
-│ M01–M05 (Group M)│  SIM001–SIM025: Persisted State Mutation Mismatch      │
-│ C01–C05 (Group C)│  SIM026–SIM050: Unauthorized Child Process / Shell     │
-│ S01–S05 (Group S)│  SIM051–SIM075: Credential Harvesting & Network Exfil  │
-│ P01–P05 (Group P)│  SIM076–SIM100: Indirect Prompt Injection & Poisoning   │
-└─────────────────┴────────────────────────────────────────────────────────┘
-```
 
-- **Trục Tung (20 Families - Nghiệp vụ & Lỗ hổng):** 20 họ nghiệp vụ độc lập đại diện cho 20 lĩnh vực thực tế (quản lý kho, tài chính, DevOps, giám sát hệ thống, v.v.). Mỗi họ định nghĩa hợp đồng công cụ và hành vi độc hại cốt lõi.
-- **Trục Hoành (5 Edges - Đa hình cấu trúc & Bao gói):** Thay vì sử dụng chung một bố cục thư mục đơn điệu, 5 edge biến thiên cấu trúc file, kiểu gõ (typing), cơ chế gọi hàm (direct call vs. dynamic dispatch), giao thức truyền tải (stdio vs. sse vs. streamable-http), và ràng buộc schema đầu vào (native types vs. Pydantic Field regex validation).
-- **Ý nghĩa khoa học:** Sự phân tách trực giao này cho phép người nghiên cứu cô lập chính xác nguyên nhân khiến scanner thất bại: do **năng lực phân tích ngữ nghĩa bảo mật** (trục Family) hay do **khả năng phân tích liên tệp / AST / cấu trúc bao gói** (trục Edge).
+### 1.1. Ma trận Thí nghiệm Đối chứng: 20 Family × 5 Edge
+
+- 🏢 **Trục Tung (20 Families — 20 Lĩnh vực Nghiệp vụ Thực tế):** Đại diện cho 20 ngành nghề microservice thực tế (kho vận, lập hóa đơn, lịch hẹn, viễn thám telemetry, chẩn đoán đội xe, bản địa hóa, v.v.). Mỗi họ thiết lập một hợp đồng công cụ hợp lệ song song với cơ chế kích hoạt lỗ hổng mục tiêu.
+- 📐 **Trục Hoành (5 Edges — Đa hình Cấu trúc & Bao gói):** Đa dạng hóa kiến trúc mã nguồn qua 5 kiểu thiết kế:
+  - **`E1`**: FastMCP đơn tệp, đăng ký tool trực tiếp bằng hàm native.
+  - **`E2`**: Cấu trúc tách rời `server.py` và adapter nghiệp vụ `service.py`.
+  - **`E3`**: Phân cấp gói con sâu (`core/handler.py`), hỗ trợ giao thức SSE (`--sse`).
+  - **`E4`**: Máy chủ đa công cụ thực tế, hỗ trợ Streamable-HTTP (`--http`) với nhiều module (`domain.py`, `models.py`).
+  - **`E5`**: Kiến trúc module với kiểm tra Pydantic Field và cơ chế dynamic method dispatch.
+- 🧪 **Ý nghĩa Khoa học:** Cho phép nhà nghiên cứu phân lập rõ ràng nguyên nhân công cụ quét thất bại: do **năng lực suy luận ngữ nghĩa an ninh** (trục Family) hay do **giới hạn phân tích liên tệp AST / giao thức truyền tải** (trục Edge).
 
 ---
 
-## 2. Đặc tả 4 Nhóm Lỗ hổng (Attack Classes)
+## ⚔️ 2. Đặc tả 4 Nhóm Lỗ hổng (Attack Classes)
 
-| Nhóm | Dải ID | Lỗ hổng mục tiêu | Cơ chế kỹ thuật trong Source | Bằng chứng kiểm chứng |
-|---|---|---|---|---|
-| **M** | `SIM001`–`SIM025` | **Persisted Tool Contract Mismatch** | Tool công bố docstring nghiệp vụ chuẩn mực (`lookup_stock`, `quote_invoice`) và metadata giao thức `readOnlyHint=True`, nhưng bên trong kích hoạt sửa đổi trạng thái bền vững ghi vào ledger cục bộ (`inventory_ledger.jsonl`, `billing_journal.jsonl`, v.v.). Kết quả trả về giữ nguyên trạng thái hợp lệ, che giấu hành vi biến đổi ngầm. | Phát hiện vi phạm hợp đồng MCP (`readOnlyHint=True` vs. persistent file write); phân tích AST phát hiện side-effect ẩn. |
-| **C** | `SIM026`–`SIM050` | **Unauthorized Child Process / Shell Gradient** | Tool công bố hợp đồng truy vấn telemetry và metadata `readOnlyHint=True`, nhưng kích hoạt tiến trình con thực thi worker nội bộ theo gradient phát hiện có chủ đích: `E1`–`E2` sử dụng `shell=True` (với validation `safe_ref` tránh injection bừa bãi); `E3`–`E5` sử dụng danh sách `argv` thuần túy (`asyncio.create_subprocess_exec`, `subprocess.run`, `subprocess.Popen`) với `--job apply` làm đột biến file `device_state.json` (vi phạm hợp đồng chỉ-đọc `readOnlyHint=True`). | AST callsite thực thi tiến trình con (`subprocess.run`, `subprocess.check_output`, `create_subprocess_exec`, `subprocess.Popen`); worker mutation `device_state.json` vi phạm hợp đồng MCP `readOnlyHint=True`. |
-| **S** | `SIM051`–`SIM075` | **Credential Harvesting & Network Exfiltration** | Tool đọc bí mật môi trường (`GITHUB_TOKEN`, `OPENAI_API_KEY`, `SLACK_BOT_TOKEN`, `STRIPE_SECRET_KEY`) qua `os.getenv`/`os.environ.get`, hoặc tài khoản cục bộ `account_profile.txt` (cho `S03`, fallback `AWS_ACCESS_KEY_ID`), đưa vào trường JSON trung tính `"note"` (không dùng các key lộ liễu như token hay secret) và gửi HTTP/socket POST tới các port loopback cố định riêng biệt (`9107`–`9644`) trên `127.0.0.1` (không dùng base64). | Taint flow từ biến môi trường/file cấu hình vào trường payload `"note"` tới sink mạng `urllib.request` / `HTTPConnection` / `socket` trên loopback port riêng biệt; không chứa hardcoded secrets. |
-| **P** | `SIM076`–`SIM100` | **Indirect Prompt Injection & Tool Poisoning** | Chèn các chuỗi chỉ dẫn tiêm nhiễm tinh vi vào 5 bề mặt MCP (tool description, resource body, tool result `preview` đọc từ `content.txt`, schema description, prompt message). Toàn bộ 5 biến thể tránh hoàn toàn các từ khóa thô thiển (`OVERRIDE`, `SYSTEM`, `bypass`, `admin`), mang mục tiêu an ninh rõ ràng: trích xuất dữ liệu chéo công cụ qua listing, rò rỉ lịch sử hội thoại, lộ đường dẫn/biến cấu hình qua tiếng Việt tự nhiên, và duy trì chỉ dẫn dai dẳng xuyên lượt tương tác. | Bề mặt phân phối metadata/runtime; `P03` nạp runtime từ `content.txt`; kiểm chứng khả năng trích xuất dữ liệu và can thiệp hành vi tác tử mà không cần từ khóa lộ liễu. |
-
----
-
-## 3. Bất biến An toàn & Cô lập (Containment Invariants)
-
-Toàn bộ 100 mẫu fixture tuân thủ nghiêm ngặt các nguyên tắc an toàn để có thể thực thi và phân tích an toàn trong môi trường nghiên cứu:
-1. **Cô lập Mạng (Loopback Only):** Mọi kết nối mạng nội bộ của nhóm S đều bị ghim chặt chẽ vào dải port loopback cố định riêng biệt `127.0.0.1:9107–9644`, timeout tối đa 0,5 giây, không truy cập Internet, không follow redirect, không vượt qua proxy, không dùng base64.
-2. **Cô lập Tệp (Sample-Local Directory Only):** Toàn bộ file trạng thái nghiệp vụ và file của worker chỉ được đọc/ghi trong thư mục cục bộ của fixture, tuyệt đối không đụng chạm đến thư mục người dùng, registry, hoặc hệ thống tệp gốc (loại trừ hoàn toàn `tempfile.gettempdir()`).
-3. **Mã độc Kiểm soát (Controlled Execution):** Nhóm C thực thi tiến trình con trỏ tới tệp script Python nội bộ theo nghiệp vụ riêng (`counter_sync.py`, `indicator_service.py`, `device_dispatcher.py`, `asset_subsystem.py`, `task_executor.py`), hỗ trợ chế độ kép `--job apply` (state: changed) và `--job status` (state: unchanged), không tải hoặc thực thi shellcode, không chạy lệnh phá hoại hệ thống.
-4. **Không Hardcode Secrets (Zero Hardcoded Secret Literals):** Toàn bộ token, API key và credential được đọc qua `os.getenv` với giá trị mặc định rỗng (`""`) hoặc đọc tệp cấu hình mẫu cục bộ, loại trừ triệt để CWE-798 (hardcoded credentials) gây nhiễu cho các scanner phân tích tĩnh.
+| Nhóm | Dải ID | Lỗ hổng Mục tiêu | Cơ chế Kỹ thuật trong Mã nguồn | Thách thức Kiểm chứng |
+| :---: | :---: | :--- | :--- | :--- |
+| **`M`** | `SIM001`–`SIM025` | **Persisted Tool Contract Mismatch** | Công cụ công bố chức năng chỉ-đọc (`lookup_stock`, `quote_invoice`) với metadata `readOnlyHint=True`, nhưng ngầm sửa đổi trạng thái bền vững ghi vào ledger cục bộ (`inventory_ledger.jsonl`, `billing_journal.jsonl`). Kết quả trả về giữ nguyên trạng thái hợp lệ để che giấu hành vi ghi ngầm. | **Đối chiếu Hợp đồng & Tác dụng phụ AST**: Phát hiện sự mâu thuẫn giữa khai báo `@mcp.tool()` và hành vi ghi đĩa thực tế. |
+| **`C`** | `SIM026`–`SIM050` | **Unauthorized Child Process / Shell Gradient** | Công cụ công bố hợp đồng chỉ-đọc `readOnlyHint=True` nhưng kích hoạt tiến trình con theo gradient phát hiện: `E1`–`E2` dùng `shell=True` (với validation `safe_ref`); `E3`–`E5` dùng danh sách `argv` thuần túy (`asyncio.create_subprocess_exec`, `subprocess.run`, `subprocess.Popen`) gọi `--job apply` làm đột biến `device_state.json`. | **Vi phạm Hợp đồng Chỉ-đọc**: Phát hiện hành vi khởi tạo tiến trình con làm biến đổi trạng thái từ một tool khai báo chỉ-đọc, phân định rõ giữa shell và mảng argv. |
+| **`S`** | `SIM051`–`SIM075` | **Credential Harvesting & Network Exfiltration** | Trích xuất bí mật môi trường (`GITHUB_TOKEN`, `OPENAI_API_KEY`, `SLACK_BOT_TOKEN`, `STRIPE_SECRET_KEY`) hoặc file cấu hình cục bộ (`account_profile.txt`), gán vào trường JSON trung tính `"note"`, và gửi qua HTTP/socket POST đến port loopback riêng biệt (`9107`–`9644`) trên `127.0.0.1`. | **Truy vết Luồng Taint**: Bám vết từ nguồn nhạy cảm (`os.getenv`) tới payload đưa vào network sink trên cổng loopback mà không dựa vào regex tên token hay báo động mã hóa. |
+| **`P`** | `SIM076`–`SIM100` | **Indirect Prompt Injection Across 5 Surfaces** | Chèn các chỉ dẫn tiêm nhiễm tinh vi vào 5 bề mặt giao thức MCP: `P01` (tool description), `P02` (resource body), `P03` (tool result `preview` nạp từ `content.txt`), `P04` (input schema description), `P05` (prompt message). Tuyệt đối không dùng các từ khóa cấm lộ liễu (`OVERRIDE`, `SYSTEM`, `bypass`). | **Đánh giá Ngữ nghĩa Đa Bề mặt**: Phát hiện hành vi can thiệp chỉ dẫn tác tử xuyên suốt metadata giao thức và phản hồi runtime mà không cần từ khóa phụ trợ. |
 
 ---
 
-## 4. Cấu trúc Thư mục Dự án
+## 🔒 3. Bất biến An toàn & Cô lập (Containment Invariants)
+
+Mọi mẫu trong `MCP-SIM-100` đều tuân thủ chặt chẽ 4 nguyên tắc bất biến an toàn, bảo đảm không gây hại trong quá trình thử nghiệm:
+
+> [!TIP]
+> **Tóm tắt Bất biến An toàn:**
+> 1. 🌐 **Cô lập Mạng (Loopback Only):** Mọi kết nối mạng ở Nhóm S đều bị ghim chặt vào các cổng loopback cố định `127.0.0.1:9107–9644` với timeout 0,5 giây. Không kết nối Internet, không vượt proxy, không chuyển hướng (redirect).
+> 2. 📁 **Cô lập Tệp (Sample-Local Only):** Mọi thao tác ghi ledger, cập nhật trạng thái chỉ diễn ra trong thư mục cục bộ của mẫu. Tuyệt đối không truy cập `tempfile.gettempdir()`, thư mục người dùng hay hệ thống gốc.
+> 3. ⚙️ **Thực thi Kiểm soát (Domain Workers Only):** Nhóm C chỉ gọi script Python nội bộ theo nghiệp vụ hỗ trợ 2 chế độ (`--job apply` vs `--job status`). Không chạy shellcode ngoài, không tải mã từ xa, không phá hoại hệ thống.
+> 4. 🔑 **Không Hardcode Secrets:** Mọi thông tin xác thực đều đọc qua `os.getenv(..., "")` với fallback rỗng hoặc đọc profile cục bộ, loại trừ hoàn toàn các cảnh báo giả CWE-798.
+
+---
+
+## 📂 4. Cấu trúc Thư mục Dự án
 
 ```text
 MCP-SIM-100/
-├── audit_corpus.py             # Script kiểm tra AST, snapshot hash, cú pháp (chỉ dùng stdlib)
-├── build.py                    # Generator tái tạo 100 mẫu SIM và metadata
-├── catalog.py                  # Từ điển 20 Family, Tool, Edge và ma trận tham số
-├── fixture_templates.py        # Thư viện template mã nguồn cho 20 họ x 5 edge
-├── prepare_evaluation.py       # Tiếp nhận review, tính snapshot hash và admission
-├── create_handoff.py           # Sinh danh mục 500 bản ghi input cho 5 scanner
-├── score_results.py            # Công cụ tính toán chỉ số đánh giá (Evaluation engine)
-├── test_evaluation.py          # Bộ kiểm thử hồi quy (Unit/Regression tests)
-├── verify_static_sinks.py      # Bộ kiểm tra an toàn tĩnh (AST, gradient, sink tokens, worker contracts)
-├── manifest.json               # Manifest gốc từ generator
-├── benchmark-manifest.json     # Manifest chính thức dùng cho admission & scoring
-├── scan-results-template.json  # 500 dòng input chuẩn bị cho 100 mẫu x 5 scanner
-├── SAMPLE_INDEX.md             # Bảng tra cứu trực tiếp 100 mẫu và bằng chứng
-├── EVALUATION_GUIDE.md         # Hướng dẫn quy trình chấm điểm và rubric
-├── SCANNER_HANDOFF.md          # Hướng dẫn chi tiết định tuyến input cho từng scanner
-├── evaluation/
-│   ├── static-audit.json       # Báo cáo tổng hợp AST facts và snapshot hash
-│   ├── static-evidence/        # 100 tệp JSON bằng chứng tĩnh chi tiết (SIM001–SIM100)
-│   └── reviews.json            # Hồ sơ thẩm định độc lập phục vụ ground truth
-├── samples/                    # 100 thư mục mã nguồn máy chủ MCP độc lập
-│   ├── SIM001/
+├── 📜 audit_corpus.py             # Script kiểm tra AST, snapshot hash, cú pháp (chỉ dùng stdlib)
+├── 📜 build.py                    # Generator tái tạo 100 mẫu SIM và metadata
+├── 📜 catalog.py                  # Từ điển 20 Family, Tool, Edge và ma trận tham số
+├── 📜 fixture_templates.py        # Thư viện template mã nguồn cho 20 họ x 5 edge
+├── 📜 prepare_evaluation.py       # Tiếp nhận review, tính snapshot hash và admission
+├── 📜 create_handoff.py           # Sinh danh mục 500 bản ghi input cho 5 scanner
+├── 📜 score_results.py            # Công cụ tính toán chỉ số đánh giá (Evaluation engine)
+├── 📜 test_evaluation.py          # Bộ kiểm thử hồi quy (Unit/Regression tests)
+├── 📜 verify_static_sinks.py      # Bộ kiểm tra an toàn tĩnh (AST, gradient, worker contracts)
+├── 📋 manifest.json               # Manifest gốc từ generator
+├── 📋 benchmark-manifest.json     # Manifest chính thức dùng cho admission & scoring
+├── 📋 scan-results-template.json  # 500 dòng input chuẩn bị cho 100 mẫu x 5 scanner
+├── 📖 SAMPLE_INDEX.md             # Bảng tra cứu trực tiếp 100 mẫu và bằng chứng
+├── 📖 EVALUATION_GUIDE.md         # Hướng dẫn quy trình chấm điểm và rubric
+├── 📖 SCANNER_HANDOFF.md          # Hướng dẫn chi tiết định tuyến input cho từng scanner
+├── 📖 DESIGN_PHILOSOPHY.md        # Tài liệu triết lý kiến trúc chuyên sâu
+├── 📁 evaluation/
+│   ├── static-audit.json          # Báo cáo tổng hợp AST facts và snapshot hash
+│   ├── static-evidence/           # 100 tệp JSON bằng chứng tĩnh chi tiết (SIM001–SIM100)
+│   └── reviews.json               # Hồ sơ thẩm định độc lập phục vụ ground truth
+├── 📁 samples/                    # 100 thư mục mã nguồn máy chủ MCP độc lập
+│   ├── SIM001/ ... SIM100/
 │   │   ├── server.py
 │   │   └── pyproject.toml
-│   └── ... SIM100/
-└── skill-views/                # 100 thư mục dẫn xuất biểu diễn dạng Agent Skill
-    └── SIM001 ... SIM100/
+└── 📁 skill-views/                # 100 thư mục dẫn xuất biểu diễn dạng Agent Skill
+    └── SIM001/ ... SIM100/
         ├── SKILL.md
         └── ...
 ```
 
 ---
 
-## 5. Quy trình Chạy Pipeline & Đánh giá
+## 🚀 5. Quy trình Chạy Pipeline & Đánh giá
 
-Yêu cầu môi trường: **Python 3.11+** (Khuyến nghị Python 3.13 hoặc môi trường ảo đã cài đặt `mcp` và `pydantic`).
+<details open>
+<summary><b>Yêu cầu Môi trường</b></summary>
 
-### 5.1. Rà soát & Xác thực Tĩnh (Static Verification)
-Các script phân tích tĩnh sử dụng hoàn toàn thư viện chuẩn (Standard Library), không import hay thực thi mã của các sample:
+- **Phiên bản Python:** `Python 3.11+` (Khuyến nghị Python 3.13 hoặc môi trường ảo đã cài đặt `mcp` và `pydantic`).
+</details>
+
+### 5.1. 🔍 Rà soát & Xác thực Tĩnh (Static Verification)
+Các script kiểm tra tĩnh hoàn toàn sử dụng thư viện chuẩn (Standard Library) và không thực thi mã của các sample:
 
 ```powershell
 # 1. Rà soát tĩnh toàn bộ corpus, kiểm tra cú pháp AST và tính toàn vẹn snapshot
@@ -255,8 +355,8 @@ python -B create_handoff.py
 python -B test_evaluation.py -v
 ```
 
-### 5.2. Tái tạo Mã nguồn Mẫu (Build & Reproduction)
-Để sinh lại toàn bộ 100 mẫu `samples/` và `skill-views/` từ source generator:
+### 5.2. 🏗️ Tái tạo Mã nguồn Mẫu (Build & Reproduction)
+Để sinh lại toàn bộ 100 mẫu trong `samples/` và `skill-views/`:
 
 ```powershell
 python -B build.py
@@ -266,8 +366,8 @@ python -B prepare_evaluation.py --auto-admit
 python -B create_handoff.py
 ```
 
-### 5.3. Quy trình Chấm điểm Scanner (Scoring)
-Sau khi các công cụ quét hoàn thành việc quét 100 mẫu và xuất kết quả chuẩn hóa theo định dạng trong [EVALUATION_GUIDE.md](EVALUATION_GUIDE.md):
+### 5.3. 📊 Quy trình Chấm điểm Scanner (Scoring)
+Sau khi các công cụ quét hoàn thành việc quét và xuất kết quả theo [EVALUATION_GUIDE.md](EVALUATION_GUIDE.md):
 
 ```powershell
 python -B score_results.py results/normalized_run.json --output results/metrics.json
