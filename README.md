@@ -1,27 +1,8 @@
-<div align="center">
-
 # MCP-SIM-100: Contained Malicious MCP Server Benchmark Corpus
 
-### *A Scientifically Contained, Structurally Polymorphic Evaluation Benchmark for MCP Security Scanners*
-
-[![Version](https://img.shields.io/badge/Version-v4.4_Contained-0052CC?style=for-the-badge)](https://github.com/khanhpham-net/MCP-SIM-100-Contained-Malicious-MCP-Server-Benchmark-Corpus)
-[![Python](https://img.shields.io/badge/Python-3.11%20%7C%203.12%20%7C%203.13-3776AB?style=for-the-badge)](https://www.python.org/)
-[![Corpus Size](https://img.shields.io/badge/Corpus_Size-100_Malicious_SIMs-E53935?style=for-the-badge)](#2-specification-of-4-attack-classes)
-[![Matrix](https://img.shields.io/badge/Design_Matrix-20_Families_%C3%97_5_Edges-7B1FA2?style=for-the-badge)](#1-architecture-overview--design-principles)
-[![Static Verification](https://img.shields.io/badge/AST_Verification-STATIC__SINK__OK-2E7D32?style=for-the-badge)](#5-pipeline-execution--evaluation-workflow)
-
-<br/>
-
-**Evaluated Against Leading Industry AI & MCP Security Scanners:**  
-`MCP Audit` • `MCTS` • `Cisco MCP Scanner` • `MCPShield` • `NVIDIA SkillSpector`
-
----
-
-| Total Fixtures | Orthogonal Matrix | Safety Guarantee | Target Surfaces |
-| :---: | :---: | :---: | :---: |
-| **100 MCP Servers** (`SIM001`–`SIM100`) | **20 Families × 5 Edges** | **100% Loopback & Sample-Local** | **Tools, Resources, Prompts & Runtime** |
-
-</div>
+> **Version:** `v4.4 (SIM-Only, Contained & Structurally Polymorphic)`  
+> **Updated:** November 13, 2026  
+> **Objective:** Provide a standardized benchmark corpus of 100 safe, contained malicious Model Context Protocol (MCP) server fixtures to quantitatively evaluate the detection capabilities of SAST, DAST, and AI Security Scanners (such as MCP Audit, MCTS, Cisco MCP Scanner, MCPShield, and NVIDIA SkillSpector).
 
 ---
 
@@ -187,30 +168,11 @@ python -B score_results.py results/normalized_run.json --output results/metrics.
 
 # [Bản tiếng Việt / Vietnamese Version]
 
-<div align="center">
-
 # MCP-SIM-100: Tập Dữ liệu Chuẩn Kiểm thử Máy chủ MCP Độc hại Có Kiểm soát
 
-### *Bộ Benchmark Đa hình Cấu trúc, Cô lập An toàn Dành cho Công cụ Rà quét An ninh MCP*
-
-[![Phiên bản](https://img.shields.io/badge/Phi%C3%AAn_b%E1%BA%A3n-v4.4_Contained-0052CC?style=for-the-badge)](https://github.com/khanhpham-net/MCP-SIM-100-Contained-Malicious-MCP-Server-Benchmark-Corpus)
-[![Python](https://img.shields.io/badge/Python-3.11%20%7C%203.12%20%7C%203.13-3776AB?style=for-the-badge)](https://www.python.org/)
-[![Quy mô](https://img.shields.io/badge/Quy_m%C3%B4-100_M%E1%BA%ABu_SIM-E53935?style=for-the-badge)](#2-đặc-tả-4-nhóm-lỗ-hổng-attack-classes-1)
-[![Ma trận](https://img.shields.io/badge/Ma_tr%E1%BA%ADn-20_H%E1%BB%8D_%C3%97_5_Edge-7B1FA2?style=for-the-badge)](#1-tổng-quan-kiến-trúc--nguyên-lý-thiết-kế-1)
-[![Xác thực Tĩnh](https://img.shields.io/badge/X%C3%A1c_th%E1%BB%B1c_T%C4%A9nh-STATIC__SINK__OK-2E7D32?style=for-the-badge)](#5-quy-trình-chạy-pipeline--đánh-giá-1)
-
-<br/>
-
-**Sẵn sàng Đánh giá với các Công cụ Rà quét An ninh AI & MCP Hàng đầu:**  
-`MCP Audit` • `MCTS` • `Cisco MCP Scanner` • `MCPShield` • `NVIDIA SkillSpector`
-
----
-
-| Tổng số Mẫu | Ma trận Trực giao | Cam kết An toàn | Bề mặt Đánh giá |
-| :---: | :---: | :---: | :---: |
-| **100 Máy chủ MCP** (`SIM001`–`SIM100`) | **20 Family × 5 Edge** | **100% Loopback & Thư mục Cục bộ** | **Tools, Resources, Prompts & Runtime** |
-
-</div>
+> **Phiên bản:** `v4.4 (SIM-Only, Contained & Structurally Polymorphic)`  
+> **Cập nhật:** 13/11/2026  
+> **Mục tiêu:** Cung cấp bộ benchmark gồm 100 mẫu máy chủ Model Context Protocol (MCP) độc hại được kiểm soát an toàn (contained test fixtures) phục vụ đánh giá định lượng năng lực phát hiện của các công cụ SAST, DAST, và AI Security Scanner (như MCP Audit, MCTS, Cisco MCP Scanner, MCPShield, NVIDIA SkillSpector).
 
 ---
 
